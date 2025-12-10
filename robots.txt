@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://master-yu-mos.ru/sitemap.xml
