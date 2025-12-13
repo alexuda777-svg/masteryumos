@@ -15,13 +15,13 @@ body {
     position: relative;
 }
 
-/* Строительный фон */
+/* ✅ ИСПРАВЛЕННЫЙ SVG ФОН (rcle → circle) */
 body::before {
     content: '';
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background: 
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><rcle cx="25" cy="25" r="1" fill="%23ddd"/>ircle cx="75" cy="75" r="1.5" fill="%23ccc"/>ircle cx="50" cy="10" r="0.8" fill="%23bbb"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>'),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ddd"/><circle cx="75" cy="75" r="1.5" fill="%23ccc"/><circle cx="50" cy="10" r="0.8" fill="%23bbb"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>'),
         radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255,255,255,0.3) 0%, transparent 50%),
         linear-gradient(60deg, rgba(0,0,0,0.05) 0%, transparent 70%);
     z-index: -2;
@@ -36,27 +36,16 @@ h2 { font-size: 36px; text-align: center; margin-bottom: 50px; color: #34495e; p
 h2:after { content: ''; display: block; width: 80px; height: 4px; background: linear-gradient(90deg, #e74c3c, #f39c12); margin: 20px auto; border-radius: 2px; }
 h3 { font-size: 24px; margin-bottom: 15px; color: #2980b9; }
 
-/* Hero - строительная тема */
+/* Hero */
 .hero { 
-    background: linear-gradient(135deg, rgba(44,62,80,0.95) 0%, rgba(52,73,94,0.95) 100%),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text x="10" y="50" font-family="Arial" font-size="60" fill="rgba(255,255,255,0.03)">BUILD</text><line x1="0" y1="20" x2="100" y2="80" stroke="%23bdc3c7" stroke-width="0.5" opacity="0.3"/><line x1="0" y1="80" x2="100" y2="20" stroke="%23bdc3c7" stroke-width="0.5" opacity="0.3"/></svg>');
+    background: linear-gradient(135deg, rgba(44,62,80,0.95) 0%, rgba(52,73,94,0.95) 100%);
     padding: 120px 0; 
     text-align: center; 
     position: relative;
     overflow: hidden;
+    color: white;
 }
-.hero::before {
-    content: '🏗️🔨⚒️';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    font-size: 200px;
-    opacity: 0.03;
-    z-index: 0;
-    animation: float 20s ease-in-out infinite;
-}
-@keyframes float { 0%,100%{transform:translateY(0px);} 50%{transform:translateY(-20px);} }
 
-/* Бейджи */
 .cities-badge, .master-badge { display: flex; gap: 10px; justify-content: center; margin-bottom: 15px; flex-wrap: wrap; }
 .badge { 
     background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7)); 
@@ -89,8 +78,6 @@ h3 { font-size: 24px; margin-bottom: 15px; color: #2980b9; }
     font-family: 'Roboto Condensed', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
-    position: relative;
-    overflow: hidden;
 }
 .btn-primary { 
     background: linear-gradient(135deg, #e74c3c, #c0392b); 
@@ -100,30 +87,61 @@ h3 { font-size: 24px; margin-bottom: 15px; color: #2980b9; }
 .btn-primary:hover { 
     transform: translateY(-5px); 
     box-shadow: 0 20px 40px rgba(231,76,60,0.6);
-    background: linear-gradient(135deg, #c0392b, #a93226);
 }
 .btn-secondary { 
     background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.8)); 
     color: #2c3e50; 
     border: 3px solid rgba(255,255,255,0.3);
-    backdrop-filter: blur(10px);
 }
 .btn-secondary:hover { 
     background: linear-gradient(135deg, #3498db, #2980b9); 
     color: white; 
-    border-color: transparent;
 }
 
-/* Цветные SVG иконки */
+/* 🆕 НОВЫЕ СТИЛИ ДЛЯ 8 СТРАНИЦ */
+.breadcrumbs {
+    background: rgba(44,62,80,0.9);
+    padding: 15px 0;
+    text-align: center;
+}
+.breadcrumbs a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+}
+.breadcrumbs a:hover { color: #e74c3c; }
+
+.services-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 40px 0;
+}
+.service-link {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 700;
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+}
+.service-link:hover {
+    background: rgba(231,76,60,0.9);
+    transform: translateY(-2px);
+}
+
 .service-icon {
-    width: 200px; height: 200px;
+    width: 120px; height: 120px;
     margin: 0 auto 25px;
     display: block;
     stroke-linejoin: round;
     stroke-linecap: round;
 }
 
-/* Услуги */
 .services { padding: 100px 0; background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%); }
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
 .service-card { 
@@ -132,99 +150,64 @@ h3 { font-size: 24px; margin-bottom: 15px; color: #2980b9; }
     border-radius: 20px; 
     text-align: center; 
     box-shadow: 0 20px 60px rgba(0,0,0,0.15); 
-    transition: all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
-    border: 3px solid transparent;
-    position: relative;
-    backdrop-filter: blur(10px);
-}
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: -2px; left: -2px; right: -2px; bottom: -2px;
-    background: linear-gradient(45deg, #ff9a9e, #fecfef, #fecfef, #ff9a9e);
-    border-radius: 22px;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.4s;
+    transition: all 0.4s;
 }
 .service-card:hover { 
     transform: translateY(-15px) scale(1.02); 
     box-shadow: 0 30px 80px rgba(0,0,0,0.25);
 }
-.service-card:hover::before { opacity: 1; }
-
-.service-card h3 span {
-    font-size: 13px; 
-    background: #34495e; 
-    color: white; 
-    padding: 3px 8px; 
-    border-radius: 10px; 
-    font-weight: 600; 
-    display: inline-block;
-    margin-top: 5px;
+.service-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
-/* Гарантии */
+.service-detail {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.feature {
+    background: rgba(255,255,255,0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+.feature h3 {
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
 .guarantee { padding: 100px 0; background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%); color: white; }
 .guarantee-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
 .guarantee-item { text-align: center; }
 .guarantee-item .icon { font-size: 60px; margin-bottom: 25px; }
-.guarantee-item h4 { font-size: 24px; margin-bottom: 15px; }
 
-/* App Preview */
-.app-preview { padding: 100px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
-.app-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-.app-text h3 { font-size: 28px; margin-bottom: 25px; color: #2c3e50; }
-.app-text ul { list-style: none; padding: 0; margin-bottom: 30px; }
-.app-text li { padding: 15px 0; font-size: 18px; position: relative; padding-left: 50px; }
-.app-text li:before { content: '⚡'; position: absolute; left: 0; font-size: 22px; }
-.app-form { display: flex; gap: 15px; max-width: 450px; }
-#appPhone { 
-    flex: 1; 
-    padding: 20px; 
-    font-size: 18px; 
-    border: 3px solid #bdc3c7; 
-    border-radius: 15px; 
-    background: rgba(255,255,255,0.9);
-    transition: all 0.3s;
-}
-#appPhone:focus { border-color: #3498db; box-shadow: 0 0 20px rgba(52,152,219,0.3); outline: none; }
-.app-mockup img { width: 100%; max-width: 320px; border-radius: 25px; box-shadow: 0 25px 60px rgba(0,0,0,0.3); }
-
-/* Calculator */
-.calculator { padding: 100px 0; background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; }
-.calculator h2 { color: white; }
-.calc-form { max-width: 500px; margin: 0 auto; text-align: center; }
-#area { 
-    width: 100%; 
-    padding: 25px; 
-    font-size: 20px; 
-    border: 3px solid rgba(255,255,255,0.3); 
-    border-radius: 15px; 
-    margin-bottom: 30px; 
-    background: rgba(255,255,255,0.95);
-    font-family: 'Roboto Condensed', sans-serif;
-}
-.calc-result { 
-    font-size: 32px; 
-    font-weight: 700; 
-    margin-top: 20px; 
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
-}
-
-/* Footer */
 .footer { 
     background: linear-gradient(135deg, #1a252f 0%, #137799 100%); 
     color: white; 
     padding: 40px 0; 
     text-align: center;
-    font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-    h1 { font-size: 36px; }
-    .hero-buttons, .app-form { flex-direction: column; align-items: center; }
-    .services-grid, .app-content, .guarantee-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 32px; }
+    h2 { font-size: 28px; }
     .hero { padding: 80px 0; }
+    .hero-buttons, .app-form, .services-menu { 
+        flex-direction: column; 
+        gap: 15px; 
+    }
+    .services-grid, .service-detail, .guarantee-grid { 
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+    }
+    .service-icon { width: 100px; height: 100px; }
+    .btn-primary, .btn-secondary { 
+        padding: 15px 30px; 
+        font-size: 16px; 
+        width: 100%; 
+        max-width: 300px;
+    }
 }
