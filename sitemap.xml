@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://master-yu-mos.ru/</loc>
-    <lastmod>2025-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+    <url><loc>https://master-yu-mos.ru/</loc></url>
+    <url><loc>https://master-yu-mos.ru/pristroyka.html</loc></url>
+    <url><loc>https://master-yu-mos.ru/krysha.html</loc></url>
+    <url><loc>https://master-yu-mos.ru/teplovizor.html</loc></url>
+    <url><loc>https://master-yu-mos.ru/otoplenie.html</loc></url>
+    <url><loc>https://master-yu-mos.ru/elektrika.html</loc></url>
+    <url><loc>https://master-yu-mos.ru/vodosnabzhenie.html</loc></url>
+    <url><loc>https://master-yu-mos.ru/balkony.html</loc></url>
 </urlset>
