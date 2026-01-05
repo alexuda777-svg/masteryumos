@@ -1,16 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="0;url=/teplovizor.html">
+    <meta http-equiv="refresh" content="0;url=/">
+    <title>Страница не найдена — Перенаправление на Главную</title>
+    <meta name="robots" content="noindex, follow">
     <script>
-        // Авторедирект старых 404 из Метрики
-        if(window.location.pathname === '/elektrika.htm') window.location.replace('/elektrika.html');
-        if(window.location.pathname === '/danilovskiy.html') window.location.replace('/teplovizor.html');
-        if(window.location.pathname === '/climovsk.html') window.location.replace('/teplovizor.html');
+        // 🔥 АВТОРЕДИРЕКТЫ ИЗ МЕТРИКИ + GEO-РЕГИОНЫ (2026)
+        const redirects = {
+            // 📱 УСТАРЕВШИЕ ФАЙЛЫ
+            '/elektrika.htm': '/elektrika.html',
+            '/pristroyka.htm': '/pristroyka.html',
+            
+            // 🏘️ НОВЫЕ РЕГИОНЫ (если были старые варианты)
+            '/danilovskiy.html': '/danilovskiy.html', // ✅ СУЩЕСТВУЕТ
+            '/domodedovo.html': '/domodedovo.html',   // ✅ СУЩЕСТВУЕТ
+            '/vidnoe.html': '/vidnoe.html',           // ✅ СУЩЕСТВУЕТ
+            
+            // 🔥 ТЕПЛОВИЗОР — ГЛАВНАЯ УСЛУГА
+            '/teplovizor.htm': '/teplovizor.html',
+            '/thermal.html': '/teplovizor.html',
+            
+            // 🏠 ЮАО РАЙОНЫ (альтернативные варианты)
+            '/biryulevo.html': '/biryulevo-vostok.html',
+            '/chertanovo.html': '/chertanovo-central.html',
+            '/nagatino.html': '/nagatino-sadovniki.html',
+            '/orekhovo.html': '/orekhovo-sever.html',
+            
+            // 🚗 МО РЕГИОНЫ
+            '/podolsk.htm': '/podolsk.html',
+            '/domodedovo.htm': '/domodedovo.html',
+            '/klimovsk.htm': '/klimovsk.html'
+        };
+        
+        // 🔍 ПРОВЕРКА ТЕКУЩЕГО URL
+        const currentPath = window.location.pathname.toLowerCase();
+        if (redirects[currentPath]) {
+            window.location.replace(redirects[currentPath]);
+        } else {
+            // ✅ РЕДИРЕКТ НА ГЛАВНУЮ ПО УМОЛЧАНИЮ
+            window.location.replace('/');
+        }
     </script>
+    <style>
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; 
+            text-align: center; 
+            padding: 80px 20px; 
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container { max-width: 600px; }
+        h1 { font-size: 3em; margin-bottom: 20px; }
+        .btn-home { 
+            display: inline-block; 
+            padding: 15px 40px; 
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            color: white !important; 
+            text-decoration: none; 
+            border-radius: 50px; 
+            font-weight: 700; 
+            font-size: 1.2em;
+            box-shadow: 0 10px 30px rgba(255,107,107,0.4);
+            transition: all 0.3s;
+        }
+        .btn-home:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(255,107,107,0.6); }
+    </style>
 </head>
-<body style="text-align:center;padding:50px">
-    <h1>🔄 Перенаправление...</h1>
-    <p>Страница перемещена на <a href="/teplovizor.html">новую</a></p>
+<body>
+    <div class="container">
+        <h1>🔍 Страница не найдена</h1>
+        <p style="font-size: 1.3em; margin-bottom: 30px;">
+            Перенаправление на <strong>главную страницу</strong> через 3 сек...
+        </p>
+        <a href="/" class="btn-home">🏠 На главную</a>
+        <p style="margin-top: 30px; opacity: 0.8;">
+            Услуги: Тепловизор 2990₽ | Пристройки 220к₽ | Балконы 45к₽
+        </p>
+    </div>
 </body>
 </html>
