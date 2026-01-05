@@ -46,11 +46,47 @@ h4 { font-size: 20px; color: #2c3e50; margin-bottom: 10px; }
 .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
 
 /* КНОПКИ */
-.btn-primary, .btn-secondary { padding: 18px 40px; font-size: 18px; font-weight: 700; text-decoration: none; border-radius: 50px; transition: all 0.4s; display: inline-block; font-family: 'Roboto Condensed', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
-.btn-primary { background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; box-shadow: 0 8px 25px rgba(231,76,60,0.4); }
-.btn-primary:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(231,76,60,0.6); }
-.btn-secondary { background: rgba(255,255,255,0.2); color: white; border: 3px solid rgba(255,255,255,0.3); }
-.btn-secondary:hover { background: linear-gradient(135deg, #3498db, #2980b9); color: white; }
+/* КНОПКИ - 100% АКТИВНЫ */
+.btn { 
+    display: inline-block !important; 
+    padding: 18px 40px; 
+    font-size: 1.3em; 
+    font-weight: 700; 
+    text-decoration: none !important; 
+    border-radius: 50px; 
+    transition: all 0.3s ease; 
+    margin: 0 10px;
+    cursor: pointer !important; 
+    pointer-events: all !important;
+    position: relative; 
+    z-index: 100;
+    text-align: center;
+    border: none;
+}
+
+.btn-primary { 
+    background: linear-gradient(45deg, #ff6b6b, #ffd93d) !important; 
+    color: white !important; 
+    box-shadow: 0 10px 30px rgba(255,107,107,0.4);
+}
+.btn-primary:hover { 
+    transform: translateY(-3px) !important; 
+    box-shadow: 0 15px 40px rgba(255,107,107,0.6) !important; 
+}
+
+.btn-secondary { 
+    background: white !important; 
+    color: #1e3c72 !important; 
+    border: 3px solid white !important; 
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+.btn-secondary:hover { 
+    background: #f8f9fa !important; 
+    transform: translateY(-2px) !important; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25) !important; 
+    color: #1e3c72 !important;
+}
+
 
 /* ГЛАВНЫЕ КАРТОЧКИ (index.html) */
 .services { padding: 100px 0; }
@@ -84,6 +120,7 @@ h4 { font-size: 20px; color: #2c3e50; margin-bottom: 10px; }
     .btn-primary, .btn-secondary { padding: 15px 30px; font-size: 16px; width: 100%; max-width: 300px; }
     .price { font-size: 24px; }
 }
+
 
 
 
