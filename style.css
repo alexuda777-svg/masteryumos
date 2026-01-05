@@ -111,17 +111,124 @@ h4 { font-size: 20px; color: #2c3e50; margin-bottom: 10px; }
 .footer a { color: #3498db; text-decoration: none; }
 .footer a:hover { color: #e74c3c; }
 
-/* МОБИЛЬНАЯ */
-@media (max-width: 768px) {
-    h1 { font-size: 32px; } h2 { font-size: 28px; }
-    .hero { padding: 80px 0; }
-    .hero-buttons, .price-grid, .calc-grid, .service-detail, .guarantee-grid, .services-grid { grid-template-columns: 1fr; gap: 20px; }
-    .service-icon { width: 100px !important; height: 100px !important; }
-    .btn-primary, .btn-secondary { padding: 15px 30px; font-size: 16px; width: 100%; max-width: 300px; }
-    .price { font-size: 24px; }
+/* 🔥 ТЕПЛОВИЗОРНАЯ ТАБЛИЦА - ПРЕМИУМ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Condensed:wght@300;700&display=swap');
+
+.price-table { 
+    max-width: 700px; margin: 3rem auto; padding: 0 20px; 
+    background: rgba(255,255,255,0.95); 
+    border-radius: 25px; 
+    box-shadow: 0 25px 70px rgba(0,0,0,0.15);
+}
+.price-table h2 { 
+    text-align: center; font-size: 2.2em; 
+    background: linear-gradient(45deg, #ff6b35, #f7931e); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    margin-bottom: 2.5rem;
+}
+
+.price-card { 
+    background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(248,249,255,0.95) 100%); 
+    border: 3px solid transparent; border-radius: 20px; 
+    margin-bottom: 2rem; padding: 2rem; 
+    box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+    position: relative; overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.price-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, #ff6b35, #4fc3f7, #ff6b35);
+    background-size: 200% 100%;
+    animation: borderGlow 3s ease infinite;
+}
+@keyframes borderGlow {
+    0%, 100% { background-position: 0% 0; }
+    50% { background-position: 100% 0; }
+}
+.price-card.expanded { border-color: #4fc3f7; box-shadow: 0 25px 60px rgba(79,195,247,0.25); }
+.price-card:hover { 
+    transform: translateY(-8px) scale(1.02); 
+    box-shadow: 0 35px 80px rgba(0,0,0,0.2) !important;
+}
+
+.price-header h3 { margin: 0 0 0.8rem 0; color: #1e3a8a; font-size: 1.6rem; }
+.price-header h3 strong { 
+    background: linear-gradient(45deg, #ff6b35, #f7931e); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    font-size: 1.8em; display: block;
+    animation: pricePulse 2s ease-in-out infinite;
+}
+@keyframes pricePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+.price-header p { margin: 0; color: #64748b; font-weight: 600; font-size: 1.1em; }
+
+.price-list { margin-top: 1.5rem; }
+.check-item { 
+    display: flex; align-items: flex-start; margin-bottom: 1rem; 
+    font-weight: 600; color: #1e40af; font-size: 1.05em;
+    transition: all 0.3s ease;
+}
+.check-item:hover { color: #ff6b35; transform: translateX(5px); }
+.check-item span { margin-right: 0.8rem; font-size: 1.3em; flex-shrink: 0; margin-top: 0.1em; }
+
+.bonus { 
+    color: #059669 !important; font-size: 1.2em; 
+    background: linear-gradient(135deg, rgba(5,150,105,0.1) 0%, transparent 100%);
+    padding: 1rem; border-radius: 12px; border-left: 5px solid #059669;
+    position: relative;
+}
+.bonus::before {
+    content: '🎁'; position: absolute; left: -2rem; font-size: 1.5em; 
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.price-note { 
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); 
+    border: 2px solid #bbf7d0; padding: 1.5rem; border-radius: 16px; 
+    text-align: center; color: #065f46; font-weight: 700;
+    margin-top: 2rem; box-shadow: 0 10px 30px rgba(5,150,105,0.15);
+}
+
+.cta-buttons { text-align: center; margin: 4rem 0 2rem 0; }
+.cta-buttons a { 
+    background: linear-gradient(45deg, #ff6b35, #f7931e) !important; 
+    color: white !important; padding: 1.2rem 3rem !important; 
+    font-size: 1.3rem !important; border-radius: 50px !important; 
+    text-decoration: none !important; margin: 0 1rem !important; 
+    display: inline-block !important; font-weight: 700 !important;
+    box-shadow: 0 15px 40px rgba(255,107,53,0.4) !important;
+    transition: all 0.3s ease !important;
+}
+.cta-buttons a:last-child { 
+    background: linear-gradient(45deg, #25d366, #128c7e) !important; 
+    box-shadow: 0 15px 40px rgba(37,211,102,0.4) !important;
+}
+.cta-buttons a:hover { 
+    transform: translateY(-3px) scale(1.05) !important; 
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3) !important;
 }
 
 
+/* 🔥 ФИНАЛЬНЫЕ МОБИЛЬНЫЕ ФИКСЫ ДЛЯ ТАБЛИЦЫ */
+@media (max-width: 768px) {
+    .price-table { margin: 1rem 10px !important; padding: 1.5rem !important; }
+    .price-card { padding: 1.5rem !important; margin-bottom: 1.5rem !important; }
+    .check-item { font-size: 1rem !important; }
+    .cta-buttons a { 
+        display: block !important; 
+        margin: 1rem auto !important; 
+        max-width: 300px !important; 
+        text-align: center !important;
+    }
+}
 
 
 
