@@ -6,7 +6,16 @@
     <title>Тепловизор Подольск Видное Климовск | Диагностика от 2990₽</title>
     <meta name="description" content="Тепловизор: проводка, батареи, теплые полы, окна. Диагностика домов Подольск+30км, Видное+25км, Климовск. Отчет PDF +790₽. Частный мастер Алексей +7(926)790-42-48">
     <meta name="keywords" content="тепловизор Подольск, тепловизионная диагностика Видное, тепловизор Климовск, проверка проводки тепловизором, батареи тепловизор">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="yandex" content="index, follow">
     
+    <meta property="og:title" content="Тепловизор Подольск Видное | Диагностика 2990₽">
+    <meta property="og:description" content="Тепловизор: проводка, батареи, теплые полы. Подольск+30км, Видное+25км. +7(926)790-42-48">
+    <meta property="og:image" content="https://master-yu-mos.ru/teplovizor.jpg">
+    <meta property="og:url" content="https://master-yu-mos.ru/teplovizor.html">
+    
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -26,20 +35,188 @@
     }
     </script>
     
+    <!-- Yandex Metrika -->
     <script type="text/javascript">
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
         m[i].l=1*new Date();for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-        (window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105722511', 'ym');
-        ym(105722511, 'init', {ssr:true, webvisor:true});
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105722511', 'ym');
+        ym(105722511, 'init', {ssr:true, webvisor:true, clickmap:true});
     </script>
     
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Condensed:wght@300;700&display=swap">
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <nav class="breadcrumbs"><a href="index.html">🏠 Главная</a> → <strong>Тепловизор Подольск</strong></nav>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            line-height: 1.6; 
+            color: #1a1a1a; 
+            background: #f8f9fa;
+            font-size: 16px;
+        }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .breadcrumbs { 
+            background: #2c3e50; 
+            color: white; 
+            padding: 12px 20px; 
+            font-size: 0.9em;
+        }
+        .breadcrumbs a { color: #ffd93d; text-decoration: none; }
+        
+        /* Hero */
+        .hero { 
+            background: linear-gradient(135deg, #ff6b6b, #ffd93d, #ff8e8e); 
+            color: white; 
+            padding: 80px 20px; 
+            text-align: center; 
+        }
+        .cities-badge { 
+            display: flex; 
+            justify-content: center; 
+            gap: 15px; 
+            margin-bottom: 20px; 
+            flex-wrap: wrap;
+        }
+        .badge { 
+            background: rgba(255,255,255,0.2); 
+            padding: 8px 16px; 
+            border-radius: 20px; 
+            font-weight: 700; 
+            font-size: 0.9em;
+        }
+        .hero h1 { font-size: 3em; margin-bottom: 20px; font-weight: 700; }
+        .hero-text { font-size: 1.3em; margin-bottom: 30px; }
+        .btn-primary, .btn-secondary { 
+            display: inline-block; 
+            padding: 16px 40px; 
+            font-weight: 700; 
+            text-decoration: none; 
+            border-radius: 50px; 
+            margin: 0 10px; 
+            transition: all 0.3s;
+        }
+        .btn-primary { 
+            background: white; 
+            color: #ff6b6b !important; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(0,0,0,0.3); }
+        .btn-secondary { 
+            background: rgba(255,255,255,0.2); 
+            color: white !important; 
+            border: 2px solid white;
+        }
+        
+        /* Тепловизор showcase */
+        .teplovizor-showcase { padding: 80px 0; background: white; }
+        .teplovizor-photo { text-align: center; margin-bottom: 60px; }
+        .teplovizor-photo img { 
+            max-width: 100%; 
+            height: 400px; 
+            object-fit: cover; 
+            border-radius: 20px; 
+            box-shadow: 0 20px 60px rgba(255,107,107,0.3);
+        }
+        .comparison-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 40px; 
+            margin-top: 60px;
+        }
+        .comparison-item { 
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); 
+            padding: 40px; 
+            border-radius: 25px; 
+            text-align: center; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        .comparison-item:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+        }
+        .comparison-before { 
+            font-size: 1.8em; 
+            color: #e74c3c; 
+            margin-bottom: 15px; 
+            font-weight: 700;
+        }
+        .comparison-after { 
+            font-size: 1.8em; 
+            color: #27ae60; 
+            margin-bottom: 20px; 
+            font-weight: 700;
+        }
+        .problem-icon { font-size: 4em; margin-bottom: 20px; }
+        
+        /* 🔥 ИДЕАЛЬНАЯ ТАБЛИЦА ЦЕН */
+        .services { padding: 80px 0; background: #f8f9fa; }
+        .price-table { max-width: 600px; margin: 0 auto 4rem auto; padding: 0 20px; }
+        .price-card { 
+            background: linear-gradient(135deg, #fff 0%, #f8f9ff 100%); 
+            border: 2px solid #e3f2fd; border-radius: 16px; 
+            margin-bottom: 1.5rem; padding: 1.5rem; 
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+        }
+        .price-card.expanded { border-color: #4fc3f7; box-shadow: 0 12px 40px rgba(79,195,247,0.2); }
+        .price-header h3 { margin: 0 0 0.5rem 0; color: #1e3a8a; font-size: 1.4rem; }
+        .price-header p { margin: 0; color: #64748b; font-weight: 500; }
+        .price-list { margin-top: 1rem; }
+        .check-item { 
+            display: flex; align-items: flex-start; margin-bottom: 0.8rem; 
+            font-weight: 500; color: #1e40af;
+        }
+        .check-item span { margin-right: 0.5rem; font-size: 1.1rem; }
+        .bonus { color: #059669 !important; font-size: 1.1rem; }
+        .price-note { 
+            background: #ecfdf5; border: 1px solid #bbf7d0; padding: 1rem; 
+            border-radius: 12px; text-align: center; color: #065f46; font-weight: 600;
+            margin-top: 1.5rem;
+        }
+        .cta-buttons { text-align:center; margin:3rem 0 2rem 0; }
+        .cta-buttons a { 
+            background:#ff6b35; color:white; padding:1rem 2rem; 
+            font-size:1.2rem; border-radius:10px; text-decoration:none; 
+            margin:0 0.5rem; display:inline-block; font-weight:600;
+        }
+        .cta-buttons a:last-child { background:#25d366; }
+        
+        /* Advantages */
+        .advantages { padding: 80px 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .advantages h2, .services h2 { text-align: center; font-size: 2.5em; margin-bottom: 3rem; color: #2c3e50; }
+        .features-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+            margin-top: 40px;
+        }
+        .feature { background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 20px; }
+        .feature h3 { color: white; margin-bottom: 1rem; font-size: 1.3em; }
+        
+        /* CTA */
+        .calc { padding: 80px 0; background: #ff6b6b; color: white; text-align: center; }
+        
+        /* Footer */
+        .footer { background: #2c3e50; color: white; padding: 40px 0; text-align: center; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2em; }
+            .btn-primary, .btn-secondary, .cta-buttons a { display: block; margin: 15px auto; max-width: 280px; text-align: center; }
+            .cities-badge { flex-direction: column; align-items: center; }
+            .price-table { margin: 0 10px 2rem 10px; }
+        }
+    </style>
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs">
+        <a href="index.html">🏠 Главная</a> → <strong>Тепловизор Подольск</strong>
+    </nav>
     
+    <!-- Hero -->
     <header class="hero">
         <div class="container">
             <div class="cities-badge">
@@ -47,8 +224,11 @@
                 <span class="badge">🏘️ Видное +25км</span>
                 <span class="badge">🏘️ Климовск +29км</span>
             </div>
-            <h1>Тепловизор <strong>от 2990₽</strong> | 30 минут</h1>
-            <p class="hero-text">Проводка, батареи, теплые полы, окна. Выездная диагностика юг МО. <strong>Отчет +790₽. Выезд сегодня!</strong></p>
+            <h1>🔥 Тепловизор <strong>от 2990₽</strong> | 30 минут</h1>
+            <p class="hero-text">
+                Проводка • Батареи • Теплые полы • Окна<br>
+                <strong>Выездная диагностика юг МО. PDF отчет +790₽. Выезд сегодня до 22:00!</strong>
+            </p>
             <div class="hero-buttons">
                 <a href="tel:+79267904248" class="btn-primary">📞 Заказать +7(926)790-42-48</a>
                 <a href="mailto:lesha.alexandrov2014@yandex.ru" class="btn-secondary">✉️ Написать</a>
@@ -56,108 +236,122 @@
         </div>
     </header>
 
-    <section class="prices container">
-    <h2>💰 Цены на диагностику</h2>
-    <div class="price-grid">
-        <div class="price-card">
-            <h3>🔌 Базовая (до 25км МКАД)</h3>
-            <div class="price">2990₽</div>
-            <p>30 мин: <strong>5 розеток + 4 батареи + 1 пол</strong></p>
-        </div>
-        <div class="price-card">
-            <h3>🔭 Расширенная (до 50км МКАД)</h3>
-            <div class="price">3990₽</div>
-            <p>45 мин: <strong>вся квартира полностью</strong></p>
-        </div>
-        <div class="price-card">
-            <h3>📄 Отчет PDF</h3>
-            <div class="price">+790₽</div>
-            <p>5 фото + рекомендации</p>
-        </div>
-    </div>
-</section>
-
-
-   <section class="services container">
-    <h2>✅ Что проверяю тепловизором</h2>
-    
-    <div class="service-detail full">
-        <div class="service-block">
-            <h3>🔌 БАЗОВАЯ 2990₽ (5 точек)</h3>
-            <p><strong>Квартира:</strong><br>
-            ✅ ЩИТОК — перегрев автоматов<br>
-            ✅ 5 РОЗЕТОК — нагрев проводов<br>
-            ✅ 4 БАТАРЕИ — засор/воздух<br>
-            ✅ 1 ТЕПЛЫЙ ПОЛ — работает ли<br>
-            ✅ 1 ОКНО — дует ли</p>
-            <p><strong>Дом:</strong><br>
-            ✅ ЩИТОК — автоматы<br>
-            ✅ 3 РОЗЕТКИ — основные<br>
-            ✅ КУХНЯ — батарея + трубы<br>
-            ✅ САНУЗЕЛ — батарея + пол<br>
-            ✅ ВХОДНАЯ ДВЕРЬ — продухи</p>
-        </div>
-
-        <div class="service-block">
-            <h3>🔭 РАСШИРЕННАЯ 3990₽ (все точки)</h3>
-            <p><strong>Квартира:</strong><br>
-            ✅ ЩИТОК + ВСЕ РОЗЕТКИ<br>
-            ✅ ВСЕ БАТАРЕИ в квартире<br>
-            ✅ ВСЕ ТЕПЛЫЕ ПОЛЫ<br>
-            ✅ ВСЕ ОКНА + БАЛКОН<br>
-            ✅ ВСЕ ДВЕРИ<br>
-            ✅ УЗО/дифавтомат</p>
-            <p><strong>Дом 100м²:</strong><br>
-            ✅ ЩИТОК + все линии<br>
-            ✅ ВСЕ БАТАРЕИ дома<br>
-            ✅ ВСЕ ТЕПЛЫЕ ПОЛЫ<br>
-            ✅ ВСЕ ОКНА/ДВЕРИ<br>
-            ✅ КРЫША (снизу) если есть чердак</p>
-        </div>
-
-        <div class="service-block">
-            <h3>📄 ОТЧЕТ PDF +790₽</h3>
-            <p>✅ 5-7 ФОТО проблем<br>
-            ✅ ТЕМПЕРАТУРА каждой точки<br>
-            ✅ ЧТО ДЕЛАТЬ (шаги)<br>
-            ✅ СТОИМОСТЬ ремонта</p>
-        </div>
-
-        <div class="service-block">
-            <h3>🔧 НА МЕСТЕ (5 мин)</h3>
-            <p>✅ АВТОМАТ — 700₽<br>
-            ✅ РОЗЕТКА — 1000₽<br>
-        </div>
-    </div>
-</section>
-
-
-    <section class="advantages container">
-        <h2>✅ Почему ко мне</h2>
-        <div class="features-grid">
-            <div class="feature">
-                <h3>Бюджетный профессионал</h3>
-                <p>Тепловизор <strong>Uni-T UTi260B</strong> + 10+ лет в стройке</p>
+    <!-- 🔥 Тепловизор + Сравнения -->
+    <section class="teplovizor-showcase">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.8em; margin-bottom: 20px; color: #ff6b6b;">
+                📸 Мой тепловизор <strong>Uni-T UTi260B</strong>
+            </h2>
+            <div class="teplovizor-photo">
+                <img src="https://via.placeholder.com/800x400/ff6b6b/ffffff?text=🔥+Uni-T+UTi260B+%7C+ТЕПЛОВИЗОР" alt="Тепловизор Uni-T UTi260B">
+                <p style="font-size: 1.2em; color: #666; margin-top: 20px;">
+                    ✅ Профессиональный тепловизor • Разрешение 256x192 • Выезд Подольск+30км
+                </p>
             </div>
-            <div class="feature">
-                <h3>Честная диагностика</h3>
-                <p>Показываю проблемы <strong>на экране сразу</strong>. Никаких "сертификатов"</p>
-            </div>
-            <div class="feature">
-                <h3>Выезд сегодня</h3>
-                <p>До 22:00 ежедневно. <strong>Подольск, Видное, Климовск</strong></p>
-            </div>
-            <div class="feature">
-                <h3>Мелкие работы на месте</h3>
-                <p>Автоматы от 700₽, герметик 500₽, розетки 1000₽</p>
+            <div class="comparison-grid">
+                <div class="comparison-item">
+                    <div class="problem-icon">⚡</div>
+                    <div class="comparison-before">❌ ГЛАЗАМИ: Автомат «как обычно»</div>
+                    <div class="comparison-after">✅ ТЕПЛОВИЗОРОМ: 68°C ПЕРЕГРЕВ!</div>
+                    <p style="color: #27ae60; font-weight: 700; margin-top: 20px;">
+                        🔧 <strong>Замена автомата: 700₽</strong> (5 мин)
+                    </p>
+                </div>
+                <div class="comparison-item">
+                    <div class="problem-icon">🔥</div>
+                    <div class="comparison-before">❌ ГЛАЗАМИ: Батарея теплая</div>
+                    <div class="comparison-after">⚠️ ТЕПЛОВИЗОРОМ: Низ 28°C</div>
+                    <p style="color: #ff6b6b; font-weight: 700; margin-top: 20px;">
+                        📞 <strong>Диагностика выявлена</strong><br>Рекомендация: замена батареи
+                    </p>
+                </div>
+                <div class="comparison-item">
+                    <div class="problem-icon">❄️</div>
+                    <div class="comparison-before">❌ ГЛАЗАМИ: Пол теплый</div>
+                    <div class="comparison-after">✅ ТЕПЛОВИЗОРОМ: 18°C!</div>
+                    <p style="color: #27ae60; font-weight: 700; margin-top: 20px;">
+                        🏠 <strong>Только частный сектор</strong><br>Ремонт от 5000₽
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="calc container">
-        <h2>📞 Заказать прямо сейчас</h2>
-        <div class="call-to-action">
-            <p><strong>30 минут на объекте — и знаешь все проблемы!</strong></p>
+    <!-- ✅ ИДЕАЛЬНАЯ ТАБЛИЦА ЦЕН -->
+    <section class="services">
+        <div class="container">
+            <div class="price-table">
+                <h2>✅ Что проверяю тепловизором</h2>
+                
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3>🔌 БАЗОВАЯ <strong>2990₽</strong></h3>
+                        <p><strong>40 минут • до 80м²</strong> • 5 точек</p>
+                    </div>
+                    <div class="price-list">
+                        <div class="check-item"><span>✅</span>ЩИТОК — перегрев автоматов</div>
+                        <div class="check-item"><span>✅</span>5 РОЗЕТОК — нагрев проводов</div>
+                        <div class="check-item"><span>✅</span>4 БАТАРЕИ — засор/воздух</div>
+                        <div class="check-item"><span>✅</span>1 ТЕПЛЫЙ ПОЛ — работает ли</div>
+                        <div class="check-item"><span>✅</span>1 ОКНО — дует ли</div>
+                    </div>
+                </div>
+
+                <div class="price-card expanded">
+                    <div class="price-header">
+                        <h3>🔭 РАСШИРЕННАЯ <strong>3990₽</strong></h3>
+                        <p><strong>90 минут • до 200м²</strong> • Полная проверка</p>
+                    </div>
+                    <div class="price-list">
+                        <div class="check-item"><span>✅</span>ВСЕ РОЗЕТКИ + ЩИТОК</div>
+                        <div class="check-item"><span>✅</span>ВСЕ БАТАРЕИ</div>
+                        <div class="check-item"><span>✅</span>ВСЕ ТЕПЛЫЕ ПОЛЫ</div>
+                        <div class="check-item"><span>✅</span>ВСЕ ОКНА + БАЛКОН</div>
+                        <div class="check-item"><span>✅</span>КРЫША (снизу) + ДВЕРИ</div>
+                        <div class="check-item bonus"><span>🎁</span><strong>ЧАСТНЫЙ ДОМ ДО 200М²!</strong></div>
+                    </div>
+                </div>
+
+                <div class="price-note">
+                    <p><strong>📏 Дома >200м²:</strong> +25₽/м² | <strong>📄 PDF отчет:</strong> +790₽</p>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="tel:+79267904248">📞 Позвонить</a>
+                    <a href="https://wa.me/79267904248">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages -->
+    <section class="advantages">
+        <div class="container">
+            <h2>🔥 Что получаете с моим тепловизором</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>Профессиональный прибор</h3>
+                    <p><strong>Uni-T UTi260B</strong> • Разрешение 256x192<br>Прошивка 2025 • Калибровка</p>
+                </div>
+                <div class="feature">
+                    <h3>Честная диагностика</h3>
+                    <p>Показываю проблемы <strong>на экране сразу</strong><br>10+ лет в стройке + самозанятый</p>
+                </div>
+                <div class="feature">
+                    <h3>Выезд сегодня</h3>
+                    <p><strong>Подольск 25 мин</strong> | Видное 20 мин | Климовск 30 мин<br>До 22:00 ежедневно</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="calc">
+        <div class="container">
+            <h2>📞 Заказать тепловизор прямо сейчас</h2>
+            <p style="font-size: 1.4em; margin-bottom: 40px;">
+                <strong>30 минут на объекте — и знаешь все проблемы!</strong>
+            </p>
             <div class="hero-buttons">
                 <a href="tel:+79267904248" class="btn-primary">📞 +7(926)790-42-48</a>
                 <a href="mailto:lesha.alexandrov2014@yandex.ru" class="btn-secondary">✉️ Написать</a>
@@ -165,12 +359,14 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p><strong>Частный мастер Алексей</strong> | +7 (926) 790-42-48 | <a href="index.html">← Все услуги</a><br>
-            Подольск • Видное • Климовск • master-yu-mos.ru</p>
+            <p style="font-size: 1.2em;">
+                <strong>Частный мастер Алексей</strong> | Тепловизор Подольск Видное Климовск<br>
+                +7 (926) 790-42-48 | <a href="index.html" style="color: #ffd93d;">← Все услуги</a>
+            </p>
         </div>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
