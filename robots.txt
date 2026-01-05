@@ -1,7 +1,8 @@
 User-agent: *
-Disallow: /admin/
-Disallow: /wp-admin/
-Disallow: /cgi-bin/
 Allow: /
 
+# SITEMAP (31 страниц ЮАО+МО)
 Sitemap: https://master-yu-mos.ru/sitemap.xml
+
+# Главный домен для Яндекса
+Host: master-yu-mos.ru
