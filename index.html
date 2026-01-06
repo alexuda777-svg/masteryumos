@@ -198,12 +198,28 @@
             margin: 0 auto 20px; 
             display: block; 
         }
-        .service-card h3 { 
-            font-size: 1.8em; 
-            margin-bottom: 15px; 
-            color: #2c3e50 !important; 
-            font-weight: 700;
-        }
+        .service-card { 
+    background: white; 
+    padding: 40px 30px; 
+    border-radius: 20px; 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1); 
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    /* 🔥 ИСПРАВЛЯЕТ ПРЯМОКУГОЛЬНИК! */
+    max-width: 350px !important;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+        .service-card a { 
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
         .service-card .price { 
             color: #27ae60 !important; 
             font-size: 1.6em; 
@@ -548,21 +564,18 @@
         </div>
     </section>
 
-                <!-- ВОДОСНАБЖЕНИЕ - точно как ЭЛЕКТРИКА, цена 50 000₽ -->
+                <!-- ✅ ВОДОСНАБЖЕНИЕ - 7-я ВНУТРИ ГРИДА -->
 <div class="service-card">
     <a href="vodosnabzhenie.html">
         <svg class="service-icon" viewBox="0 0 120 140">
-            <!-- Бак (как щиток электрики) -->
-            <rect x="35" y="20" width="50" height="65" rx="8" fill="#3498db"/>
-            <!-- Кран (как розетка электрики) -->
+            <rect x="35" y="20" width="50" height="80" rx="8" fill="#3498db"/>
             <circle cx="47" cy="75" r="8" fill="#e74c3c"/>
-            <!-- Тень (идентично электрике) -->
             <ellipse cx="60" cy="135" rx="38" ry="5" fill="#2c3e50" opacity="0.3"/>
         </svg>
         <h3>🚰 Водоснабжение</h3>
         <p><span class="price">50 000₽ РАБОТА</span><br>Гидроакк + бойлер + 8 точек 100м²</p>
     </a>
-</div>
+</div>>
 
 
 
@@ -722,9 +735,6 @@
     </footer>
 </body>
 </html>
-
-
-
 
 
 
