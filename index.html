@@ -292,7 +292,33 @@
             padding: 40px 0; 
             text-align: center; 
         }
-        
+                /* СТИЛИ ДЛЯ КОНТЕНТ-ХАБА ← ДОБАВИТЬ ЗДЕСЬ */
+        .districts-hub { padding: 80px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
+        .districts-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+            margin-bottom: 30px; 
+        }
+        .district-card { 
+            background: white; 
+            padding: 30px 20px; 
+            border-radius: 20px; 
+            text-align: center; 
+            text-decoration: none; 
+            color: inherit; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            transition: all 0.3s; 
+        }
+        .district-card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15); 
+            color: #e74c3c !important; 
+        }
+        .district-card .emoji { font-size: 3em; display: block; margin-bottom: 15px; }
+        .district-card h3 { font-size: 1.6em; margin-bottom: 10px; color: #2c3e50; }
+        .district-card p { color: #e74c3c; font-weight: 700; font-size: 1.2em; }
+
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5em; }
             .btn { display: block; margin: 10px 0; padding: 15px 20px; }
@@ -522,6 +548,72 @@
         </div>
     </section>
 
+                <!-- ВОДОСНАБЖЕНИЕ - ТОЧНАЯ КОПИЯ СТРУКТУРЫ ЭЛЕКТРИКИ -->
+<div class="service-card">
+    <a href="vodosnabzhenie.html">
+        <svg class="service-icon" viewBox="0 0 120 140">
+            <!-- БАК/НАСОС (аналог щитка) -->
+            <rect x="35" y="20" width="50" height="65" rx="8" fill="#3498db"/>
+            <!-- КРАН (аналог розетки) -->
+            <circle cx="47" cy="75" r="8" fill="#e74c3c"/>
+            <!-- ТЁНЬ (идентично электрике) -->
+            <ellipse cx="60" cy="135" rx="38" ry="5" fill="#2c3e50" opacity="0.3"/>
+        </svg>
+        <h3>🚰 Водоснабжение</h3>
+        <p><span class="price">от 55 000₽ РАБОТА</span><br>Насос + трубы + счётчики 100м²</p>
+    </a>
+</div>
+
+
+
+    <!-- 🔥 КОНТЕНТ-ХАБ ЮАО + МО -->
+<section class="districts-hub">
+    <div class="container">
+        <h2 style="text-align: center; font-size: 2.8em; margin-bottom: 40px;">🚗 Мастер по районам ЮАО + Подмосковье</h2>
+        
+        <div class="districts-grid">
+            <!-- ✅ ТОП-5 РАЙОНОВ -->
+            <a href="/klimovsk.html" class="district-card">
+                <span class="emoji">🌇</span>
+                <h3>Климовск</h3>
+                <p>Тепловизор 2990₽</p>
+            </a>
+            
+            <a href="/domodedovo.html" class="district-card">
+                <span class="emoji">✈️</span>
+                <h3>Домодедово +40км</h3>
+                <p>Пристройки 220к₽</p>
+            </a>
+            
+            <a href="/podolsk.html" class="district-card">
+                <span class="emoji">🏘️</span>
+                <h3>Подольск 35км</h3>
+                <p>Балконы 45к₽</p>
+            </a>
+            
+            <a href="/vidnoe.html" class="district-card">
+                <span class="emoji">🌆</span>
+                <h3>Видное 25км</h3>
+                <p>Электрика 45к₽</p>
+            </a>
+            
+            <a href="/danilovskiy.html" class="district-card">
+                <span class="emoji">🏠</span>
+                <h3>Даниловский ЮАО</h3>
+                <p>Крыша 12к₽/м²</p>
+            </a>
+        </div>
+        
+        <!-- ➕ ПОКАЗАТЬ ВСЕ 31 -->
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="/yuao/" class="btn-primary" style="font-size: 1.3em; padding: 15px 40px;">
+                🗺️ Все районы ЮАО (31)
+            </a>
+        </div>
+    </div>
+</section>
+
+
     <!-- ✅ ИСПРАВЛЕННЫЕ РЕГИОНЫ (только существующие страницы) -->
     <section class="regions">
         <div class="container">
@@ -629,8 +721,6 @@
     </footer>
 </body>
 </html>
-
-
 
 
 
