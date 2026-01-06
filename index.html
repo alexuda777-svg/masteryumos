@@ -368,6 +368,130 @@
         .district-card h3 { font-size: 1.6em; margin-bottom: 10px; color: #2c3e50; }
         .district-card p { color: #e74c3c; font-weight: 700; font-size: 1.2em; }
 
+        /* 🔥 НОВЫЕ СТИЛИ ДЛЯ ГАЛЕРЕИ, ВИДЕО И БЛОГА */
+        .section-title {
+            text-align: center;
+            font-size: 2.4em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+        .gallery-item {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        .gallery-thumb {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-body {
+            padding: 15px 18px 18px;
+        }
+        .gallery-body h3 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        .gallery-body p {
+            font-size: 0.95em;
+            color: #555;
+        }
+        .tag {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 4px 10px;
+            font-size: 0.8em;
+            border-radius: 999px;
+            background: #f1f3f5;
+            color: #555;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        .video-item {
+            background: white;
+            border-radius: 18px;
+            padding: 18px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        .video-item h3 {
+            font-size: 1.25em;
+            margin-bottom: 10px;
+        }
+        .video-item p {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 12px;
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            border:0;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .blog-card {
+            background: white;
+            border-radius: 18px;
+            padding: 20px;
+            box-shadow: 0 10px 28px rgba(0,0,0,0.07);
+        }
+        .blog-card h3 {
+            font-size: 1.25em;
+            margin-bottom: 8px;
+        }
+        .blog-card p {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .blog-meta {
+            font-size: 0.85em;
+            color: #999;
+            margin-bottom: 5px;
+        }
+        .blog-link {
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 0.95em;
+            color: #ff6b6b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .blog-link:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5em; }
             .btn { display: block; margin: 10px 0; padding: 15px 20px; }
@@ -484,14 +608,13 @@
                         🏠 <strong>Полный спектр услуг</strong>
                     </h3>
                     <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; font-size: 1.4em;">
-    <div><strong>🏠 Пристройки</strong><br>220 000₽</div>
-    <div><strong>🔥 Отопление</strong><br>85 000₽</div>
-    <div><strong>🏢 Балконы</strong><br>45 000₽</div>
-    <div><strong>🏚️ Крыша</strong><br>12 000₽/м²</div>
-    <div><strong>⚡ Электрика</strong><br>45 000₽</div>
-    <div><strong>🚰 Водоснабжение</strong><br>50 000₽</div>
-</div>
-
+                        <div><strong>🏠 Пристройки</strong><br>220 000₽</div>
+                        <div><strong>🔥 Отопление</strong><br>85 000₽</div>
+                        <div><strong>🏢 Балконы</strong><br>45 000₽</div>
+                        <div><strong>🏚️ Крыша</strong><br>12 000₽/м²</div>
+                        <div><strong>⚡ Электрика</strong><br>45 000₽</div>
+                        <div><strong>🚰 Водоснабжение</strong><br>50 000₽</div>
+                    </div>
                 </div>
             </div>
 
@@ -502,6 +625,37 @@
             </div>
         </div>
     </section>
+
+    <!-- 🔥 БЛОК: ГАЛЕРЕЯ (ПОКА В ПРОЦЕССЕ) -->
+<section style="padding: 80px 0; background: #ffffff;">
+    <div class="container">
+        <h2 class="section-title">🧱 Галерея выполненных работ</h2>
+        <p class="section-subtitle">
+            Скоро здесь будут реальные фото объектов: тепловизор, балконы, крыша, отопление и водоснабжение.
+        </p>
+        <div class="gallery-grid">
+            <!-- ОДНА КАРТОЧКА-ЗАГЛУШКА -->
+            <div class="gallery-item" style="opacity: 0.7; cursor: default;">
+                <img src="gallery/placeholder.jpg" alt="Галерея работ в процессе подготовки" class="gallery-thumb" loading="lazy">
+                <div class="gallery-body">
+                    <h3>Галерея работ</h3>
+                    <p>Раздел с фото объектов находится в подготовке. Скоро здесь будут подробные примеры выполненных работ.</p>
+                    <span class="tag">В процессе</span>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:40px;">
+            <!-- КНОПКА БЕЗ ПЕРЕХОДА, ПОКА НЕТ СТРАНИЦЫ -->
+            <button class="btn btn-secondary" type="button" style="cursor: default; opacity: 0.7;">
+                📸 Галерея работ в процессе
+            </button>
+            <!-- КОГДА СДЕЛАЕШЬ gallery.html, ЗАМЕНИШЬ НА:
+            <a href="/portfolio/" class="btn btn-secondary">📸 Смотреть все работы</a>
+            -->
+        </div>
+    </div>
+</section>
+
 
     <!-- УСЛУГИ -->
     <section class="services">
@@ -572,6 +726,29 @@
             </div> <!-- .services-grid -->
         </div> <!-- .container -->
     </section> <!-- .services -->
+
+   <!-- 🔥 БЛОК: ВИДЕО (ПОКА В ПРОЦЕССЕ) -->
+<section style="padding: 80px 0; background: #f8fafc;">
+    <div class="container">
+        <h2 class="section-title">🎥 Видео: как проходят работы</h2>
+        <p class="section-subtitle">
+            Раздел с видео сейчас готовится. Скоро здесь будут реальные выезды с тепловизором, утеплением балконов, кровлей и отоплением.
+        </p>
+        <div class="video-grid">
+            <!-- ОДНА КАРТОЧКА-ЗАГЛУШКА -->
+            <div class="video-item" style="opacity: 0.7; cursor: default;">
+                <h3>Видео в процессе подготовки</h3>
+                <p>Скоро здесь появятся подробные ролики с объектов: объяснение этапов работ, ошибки и рекомендации.</p>
+                <div class="video-wrapper" style="background:#e5e7eb; display:flex; align-items:center; justify-content:center;">
+                    <span style="position:absolute; font-size:1.1em; color:#4b5563; padding:0 20px; text-align:center;">
+                        🎬 Видео раздел будет запущен позже
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- КОГДА БУДУТ РОЛИКИ, МОЖНО ДОБАВИТЬ КНОПКУ/ССЫЛКУ НА ОТДЕЛЬНУЮ СТРАНИЦУ -->
+    </div>
+</section>
 
     <!-- 🔥 КОНТЕНТ-ХАБ ЮАО + МО -->
     <section class="districts-hub">
@@ -706,6 +883,35 @@
         </div>
     </section>
 
+    <!-- 🔥 БЛОК: БЛОГ (ПОКА В ПРОЦЕССЕ) -->
+<section style="padding: 80px 0; background: #f3f4f6;">
+    <div class="container">
+        <h2 class="section-title">📝 Блог мастера: как всё делается</h2>
+        <p class="section-subtitle">
+            Готовлю статьи по тепловизору, утеплению, отоплению, балконам, крыше и водоснабжению. Скоро здесь будут подробные разборы работ.
+        </p>
+        <div class="blog-grid">
+            <!-- ОДНА КАРТОЧКА-ЗАГЛУШКА -->
+            <article class="blog-card" style="opacity: 0.7; cursor: default;">
+                <div class="blog-meta">Раздел в разработке</div>
+                <h3>Статьи по работам в процессе подготовки</h3>
+                <p>Запланированы материалы: как подготовить квартиру к тепловизору, какие ошибки бывают в отоплении, чем отличаются варианты утепления балкона и многое другое.</p>
+                <span class="tag">Скоро на сайте</span>
+            </article>
+        </div>
+        <div style="text-align:center; margin-top:40px;">
+            <!-- ПОКА БЕЗ ПЕРЕХОДА НА /blog/ -->
+            <button class="btn btn-secondary" type="button" style="cursor: default; opacity: 0.7;">
+                📚 Блог в процессе подготовки
+            </button>
+            <!-- КОГДА СДЕЛАЕШЬ /blog/, МОЖНО СДЕЛАТЬ:
+            <a href="/blog/" class="btn btn-secondary">📚 Все статьи блога</a>
+            -->
+        </div>
+    </div>
+</section>
+
+
     <!-- ФУТЕР -->
     <footer class="footer">
         <div class="container">
@@ -727,6 +933,10 @@
     </footer>
 </body>
 </html>
+
+
+
+
 
 
 
