@@ -52,7 +52,7 @@
         {"@type": "Offer", "name": "Пристройка каркас 15м²", "price": "220000", "priceCurrency": "RUB"},
         {"@type": "Offer", "name": "Отопление 100м²", "price": "85000", "priceCurrency": "RUB"},
         {"@type": "Offer", "name": "Балкон утепление", "price": "45000", "priceCurrency": "RUB"},
-        {"@type": "Offer", "name": "Ремонт крыши", "price": "12000", "priceCurrency": "RUB", "price": "per m²"}
+        {"@type": "Offer", "name": "Ремонт крыши", "price": "12000", "priceCurrency": "RUB", "unitText": "m²"}
       ],
       "address": {
         "@type": "PostalAddress",
@@ -84,19 +84,7 @@
             font-size: 16px;
         }
         
-        .service-card { 
-            background: white; 
-            padding: 40px 30px; 
-            border-radius: 20px; 
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1); 
-            transition: all 0.3s ease;
-            position: relative;
-            cursor: pointer;
-        }
-        .service-card:hover { 
-            transform: translateY(-10px) !important; 
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15) !important;
-        }
+        /* оставляем только ссылку внутри карточки */
         .service-card a { 
             text-decoration: none; 
             color: inherit; 
@@ -198,71 +186,71 @@
             margin: 0 auto 20px; 
             display: block; 
         }
-       .service-card { 
-    background: linear-gradient(145deg, #ffffff, #f0f0f0); 
-    padding: 40px 30px; 
-    border-radius: 25px; 
-    box-shadow: 
-        0 20px 40px rgba(0,0,0,0.1),
-        0 10px 20px rgba(0,0,0,0.06),
-        inset 0 1px 0 rgba(255,255,255,0.8);
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    position: relative;
-    cursor: pointer;
-    max-width: 350px !important;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    /* 🔥 3D эффект */
-    transform-style: preserve-3d;
-    border: 1px solid rgba(255,255,255,0.2);
-    backdrop-filter: blur(10px);
-}
 
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    border-radius: 25px;
-    padding: 2px;
-    background: linear-gradient(45deg, #ff6b6b, #ffd93d, #4ecdc4, #45b7d1);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    -webkit-mask-composite: xor;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
+        /* 3D‑карточка — основной стиль */
+        .service-card { 
+            background: linear-gradient(145deg, #ffffff, #f0f0f0); 
+            padding: 40px 30px; 
+            border-radius: 25px; 
+            box-shadow: 
+                0 20px 40px rgba(0,0,0,0.1),
+                0 10px 20px rgba(0,0,0,0.06),
+                inset 0 1px 0 rgba(255,255,255,0.8);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            cursor: pointer;
+            max-width: 350px !important;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            transform-style: preserve-3d;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+        }
 
-.service-card:hover {
-    transform: translateY(-15px) rotateX(5deg) rotateY(5deg) !important; 
-    box-shadow: 
-        0 35px 70px rgba(0,0,0,0.2),
-        0 20px 40px rgba(0,0,0,0.15),
-        inset 0 1px 0 rgba(255,255,255,1);
-    border-color: rgba(255,255,255,0.4);
-}
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: 25px;
+            padding: 2px;
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d, #4ecdc4, #45b7d1);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            -webkit-mask-composite: xor;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
 
-.service-card:hover::before {
-    opacity: 1;
-}
+        .service-card:hover {
+            transform: translateY(-15px) rotateX(5deg) rotateY(5deg) !important; 
+            box-shadow: 
+                0 35px 70px rgba(0,0,0,0.2),
+                0 20px 40px rgba(0,0,0,0.15),
+                inset 0 1px 0 rgba(255,255,255,1);
+            border-color: rgba(255,255,255,0.4);
+        }
 
-.service-card:hover .service-icon {
-    transform: scale(1.1) rotate(5deg);
-    filter: drop-shadow(0 10px 20px rgba(52,152,219,0.4));
-}
+        .service-card:hover::before {
+            opacity: 1;
+        }
 
-.service-icon { 
-    width: 120px; 
-    height: 140px; 
-    margin: 0 auto 20px; 
-    display: block;
-    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
-}
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+            filter: drop-shadow(0 10px 20px rgba(52,152,219,0.4));
+        }
 
+        .service-icon { 
+            width: 120px; 
+            height: 140px; 
+            margin: 0 auto 20px; 
+            display: block;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+        }
 
         .service-card .price { 
             color: #27ae60 !important; 
@@ -352,7 +340,8 @@
             padding: 40px 0; 
             text-align: center; 
         }
-                /* СТИЛИ ДЛЯ КОНТЕНТ-ХАБА ← ДОБАВИТЬ ЗДЕСЬ */
+
+        /* СТИЛИ ДЛЯ КОНТЕНТ-ХАБА */
         .districts-hub { padding: 80px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
         .districts-grid { 
             display: grid; 
@@ -495,12 +484,14 @@
                         🏠 <strong>Полный спектр услуг</strong>
                     </h3>
                     <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; font-size: 1.4em;">
-                        <div><strong>🏠 Пристройки</strong><br>220 000₽</div>
-                        <div><strong>🔥 Отопление</strong><br>85 000₽</div>
-                        <div><strong>🏢 Балконы</strong><br>45 000₽</div>
-                        <div><strong>🏚️ Крыша</strong><br>12 000₽/м²</div>
-                        <div><strong>⚡ Электрика</strong><br>45 000₽</div>
-                    </div>
+    <div><strong>🏠 Пристройки</strong><br>220 000₽</div>
+    <div><strong>🔥 Отопление</strong><br>85 000₽</div>
+    <div><strong>🏢 Балконы</strong><br>45 000₽</div>
+    <div><strong>🏚️ Крыша</strong><br>12 000₽/м²</div>
+    <div><strong>⚡ Электрика</strong><br>45 000₽</div>
+    <div><strong>🚰 Водоснабжение</strong><br>50 000₽</div>
+</div>
+
                 </div>
             </div>
 
@@ -521,119 +512,113 @@
             </p>
             <div class="services-grid">
                 <!-- ТЕПЛОВИЗОР -->
-<div class="service-card teplovizor-card">
-    <a href="teplovizor.html">
-        <img src="icons/teplovizor.png" class="service-icon" alt="Тепловизор" loading="lazy" style="filter: drop-shadow(0 5px 15px rgba(255,107,107,0.5));"/>
-        <h3>🔥 Тепловизор</h3>
-        <p><strong>Базовая 5 точек — 2990₽</strong><br>Расширенная вся квартира — 3990₽<br>PDF отчет +790₽</p>
-    </a>
-</div>
-
-
-                <div class="service-card">
-    <a href="pristroyka.html">
-        <img src="icons/pristroyka.png" class="service-icon" alt="Пристройки" loading="lazy"/>
-        <h3>🏠 Пристройки</h3>
-        <p><span class="price">220 000₽ РАБОТА</span><br>Каркас доска 150мм + утепление 15м²</p>
-    </a>
-</div>
-
+                <div class="service-card teplovizor-card">
+                    <a href="teplovizor.html">
+                        <img src="icons/teplovizor.png" class="service-icon" alt="Тепловизор" loading="lazy" style="filter: drop-shadow(0 5px 15px rgba(255,107,107,0.5));"/>
+                        <h3>🔥 Тепловизор</h3>
+                        <p><strong>Базовая 5 точек — 2990₽</strong><br>Расширенная вся квартира — 3990₽<br>PDF отчет +790₽</p>
+                    </a>
+                </div>
 
                 <div class="service-card">
-    <a href="otoplenie.html">
-        <img src="icons/otoplenie.png" class="service-icon" alt="Отопление" loading="lazy"/>
-        <h3>🔥 Отопление</h3>
-        <p><span class="price">85 000₽ РАБОТА</span><br>Котел + 6 радиаторов 100м²</p>
-    </a>
-</div>
+                    <a href="pristroyka.html">
+                        <img src="icons/pristroyka.png" class="service-icon" alt="Пристройки" loading="lazy"/>
+                        <h3>🏠 Пристройки</h3>
+                        <p><span class="price">220 000₽ РАБОТА</span><br>Каркас доска 150мм + утепление 15м²</p>
+                    </a>
+                </div>
 
                 <div class="service-card">
-    <a href="balkony.html">
-        <img src="icons/balkony.png" class="service-icon" alt="Балконы" loading="lazy"/>
-        <h3>🏢 Балконы</h3>
-        <p><span class="price">45 000₽ РАБОТА</span><br>Утепление + ПВХ + линолеум 3.6м²</p>
-    </a>
-</div>
-
-
-                <div class="service-card">
-    <a href="krysha.html">
-        <img src="icons/krysha.png" class="service-icon" alt="Ремонт крыши" loading="lazy"/>
-        <h3>🏚️ Ремонт крыши</h3>
-        <p><span class="price">от 12 000₽/м²</span><br>Обследование + расчет + теплоизоляция</p>
-    </a>
-</div>
-
+                    <a href="otoplenie.html">
+                        <img src="icons/otoplenie.png" class="service-icon" alt="Отопление" loading="lazy"/>
+                        <h3>🔥 Отопление</h3>
+                        <p><span class="price">85 000₽ РАБОТА</span><br>Котел + 6 радиаторов 100м²</p>
+                    </a>
+                </div>
 
                 <div class="service-card">
-    <a href="elektrika.html">
-        <img src="icons/elektrika.png" class="service-icon" alt="Электрика" loading="lazy"/>
-        <h3>⚡ Электрика</h3>
-        <p><span class="price">от 45 000₽ РАБОТА</span><br>Щиток + проводка + розетки 100м²</p>
-    </a>
-</div>
+                    <a href="balkony.html">
+                        <img src="icons/balkony.png" class="service-icon" alt="Балконы" loading="lazy"/>
+                        <h3>🏢 Балконы</h3>
+                        <p><span class="price">45 000₽ РАБОТА</span><br>Утепление + ПВХ + линолеум 3.6м²</p>
+                    </a>
+                </div>
 
+                <div class="service-card">
+                    <a href="krysha.html">
+                        <img src="icons/krysha.png" class="service-icon" alt="Ремонт крыши" loading="lazy"/>
+                        <h3>🏚️ Ремонт крыши</h3>
+                        <p><span class="price">от 12 000₽/м²</span><br>Обследование + расчет + теплоизоляция</p>
+                    </a>
+                </div>
+
+                <div class="service-card">
+                    <a href="elektrika.html">
+                        <img src="icons/elektrika.png" class="service-icon" alt="Электрика" loading="lazy"/>
+                        <h3>⚡ Электрика</h3>
+                        <p><span class="price">от 45 000₽ РАБОТА</span><br>Щиток + проводка + розетки 100м²</p>
+                    </a>
+                </div>
 
                 <!-- ✅ ВОДОСНАБЖЕНИЕ - 7-я ВНУТРИ ГРИДА -->
-<div class="service-card">
-    <a href="vodosnabzhenie.html">
-        <img src="icons/vodosnabzhenie.png" class="service-icon" alt="Водоснабжение" loading="lazy"/>
-        <h3>🚰 Водоснабжение</h3>
-        <p><span class="price">50 000₽ РАБОТА</span><br>Гидроакк + бойлер + 8 точек 100м²</p>
-    </a>
-</div>
+                <div class="service-card">
+                    <a href="vodosnabzhenie.html">
+                        <img src="icons/vodosnabzhenie.png" class="service-icon" alt="Водоснабжение" loading="lazy"/>
+                        <h3>🚰 Водоснабжение</h3>
+                        <p><span class="price">50 000₽ РАБОТА</span><br>Гидроакк + бойлер + 8 точек 100м²</p>
+                    </a>
+                </div>
 
-
-
-
+            </div> <!-- .services-grid -->
+        </div> <!-- .container -->
+    </section> <!-- .services -->
 
     <!-- 🔥 КОНТЕНТ-ХАБ ЮАО + МО -->
-<section class="districts-hub">
-    <div class="container">
-        <h2 style="text-align: center; font-size: 2.8em; margin-bottom: 40px;">🚗 Мастер по районам ЮАО + Подмосковье</h2>
-        
-        <div class="districts-grid">
-            <!-- ✅ ТОП-5 РАЙОНОВ -->
-            <a href="/klimovsk.html" class="district-card">
-                <span class="emoji">🌇</span>
-                <h3>Климовск</h3>
-                <p>Тепловизор 2990₽</p>
-            </a>
+    <section class="districts-hub">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.8em; margin-bottom: 40px;">🚗 Мастер по районам ЮАО + Подмосковье</h2>
             
-            <a href="/domodedovo.html" class="district-card">
-                <span class="emoji">✈️</span>
-                <h3>Домодедово +40км</h3>
-                <p>Пристройки 220к₽</p>
-            </a>
+            <div class="districts-grid">
+                <!-- ✅ ТОП-5 РАЙОНОВ -->
+                <a href="/klimovsk.html" class="district-card">
+                    <span class="emoji">🌇</span>
+                    <h3>Климовск</h3>
+                    <p>Тепловизор 2990₽</p>
+                </a>
+                
+                <a href="/domodedovo.html" class="district-card">
+                    <span class="emoji">✈️</span>
+                    <h3>Домодедово +40км</h3>
+                    <p>Пристройки 220к₽</p>
+                </a>
+                
+                <a href="/podolsk.html" class="district-card">
+                    <span class="emoji">🏘️</span>
+                    <h3>Подольск 35км</h3>
+                    <p>Балконы 45к₽</p>
+                </a>
+                
+                <a href="/vidnoe.html" class="district-card">
+                    <span class="emoji">🌆</span>
+                    <h3>Видное 25км</h3>
+                    <p>Электрика 45к₽</p>
+                </a>
+                
+                <a href="/danilovskiy.html" class="district-card">
+                    <span class="emoji">🏠</span>
+                    <h3>Даниловский ЮАО</h3>
+                    <p>Крыша 12к₽/м²</p>
+                </a>
+            </div>
             
-            <a href="/podolsk.html" class="district-card">
-                <span class="emoji">🏘️</span>
-                <h3>Подольск 35км</h3>
-                <p>Балконы 45к₽</p>
-            </a>
-            
-            <a href="/vidnoe.html" class="district-card">
-                <span class="emoji">🌆</span>
-                <h3>Видное 25км</h3>
-                <p>Электрика 45к₽</p>
-            </a>
-            
-            <a href="/danilovskiy.html" class="district-card">
-                <span class="emoji">🏠</span>
-                <h3>Даниловский ЮАО</h3>
-                <p>Крыша 12к₽/м²</p>
-            </a>
+            <!-- ➕ ПОКАЗАТЬ ВСЕ 31 -->
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="/yuao/" class="btn btn-primary" style="font-size: 1.3em; padding: 15px 40px;">
+                    🗺️ Все районы ЮАО (31)
+                </a>
+            </div>
         </div>
-        
-        <!-- ➕ ПОКАЗАТЬ ВСЕ 31 -->
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="/yuao/" class="btn-primary" style="font-size: 1.3em; padding: 15px 40px;">
-                🗺️ Все районы ЮАО (31)
-            </a>
-        </div>
-    </div>
-</section>
-
+    </section>
 
     <!-- ✅ ИСПРАВЛЕННЫЕ РЕГИОНЫ (только существующие страницы) -->
     <section class="regions">
@@ -742,7 +727,6 @@
     </footer>
 </body>
 </html>
-
 
 
 
