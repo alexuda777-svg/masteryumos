@@ -1,17 +1,14 @@
 User-agent: *
 Allow: /
 
-# Блокируем UTM-мусор и админки
 Disallow: /*?*utm_
 Disallow: /*?*session*
 Disallow: /admin/
 Disallow: /wp-admin/
 Disallow: /bitrix/
 
-# ✅ ПРАВИЛЬНЫЙ Clean-param (БЕЗ звёздочек)
-Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&ref&session /
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&ref&session/
 
-# Кэш-файлы
 Allow: /favicon*.*
 Allow: /*.ico$
 Allow: /*.png$
@@ -22,10 +19,8 @@ Allow: /*.js$
 Allow: /*.woff$
 Allow: /*.woff2$
 
-# YANDEX
 User-agent: Yandex
 Allow: /
-Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&ref&session /
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&ref&session/
 
-# SITEMAP 28 страниц
 Sitemap: https://master-yu-mos.ru/sitemap.xml
