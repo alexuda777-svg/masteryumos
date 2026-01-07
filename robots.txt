@@ -9,5 +9,8 @@ Allow: /favicon*.*
 Allow: /*.ico$
 Allow: /*.png$
 Allow: /*.jpg$
+Allow: /*.svg$
+Allow: /*.css$
+Allow: /*.js$
 
 Sitemap: https://master-yu-mos.ru/sitemap.xml
