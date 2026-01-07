@@ -8,7 +8,7 @@ Disallow: /admin/
 Disallow: /wp-admin/
 Disallow: /bitrix/
 
-# Чистим параметры для Яндекса
+# ✅ ПРАВИЛЬНЫЙ Clean-param (БЕЗ звёздочек)
 Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&ref&session /
 
 # Кэш-файлы
@@ -22,10 +22,10 @@ Allow: /*.js$
 Allow: /*.woff$
 Allow: /*.woff2$
 
-# YANDEX СПЕЦИФИКА
+# YANDEX
 User-agent: Yandex
 Allow: /
-Clean-param: utm_*&ref*&session* /
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&ref&session /
 
-# SITEMAP (28 страницы ЮАО+МО)
+# SITEMAP 28 страниц
 Sitemap: https://master-yu-mos.ru/sitemap.xml
