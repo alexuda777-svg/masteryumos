@@ -27,5 +27,5 @@ User-agent: Yandex
 Allow: /
 Clean-param: utm_*&ref*&session* /
 
-# SITEMAP (24 страницы ЮАО+МО)
+# SITEMAP (28 страницы ЮАО+МО)
 Sitemap: https://master-yu-mos.ru/sitemap.xml
