@@ -8,10 +8,10 @@ Disallow: /admin/
 Disallow: /wp-admin/
 Disallow: /bitrix/
 
-# Чистим параметры для Яндекса (критично!)
+# Чистим параметры для Яндекса
 Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&ref&session /
 
-# Кэш-файлы (ускоряет индексацию)
+# Кэш-файлы
 Allow: /favicon*.*
 Allow: /*.ico$
 Allow: /*.png$
@@ -27,5 +27,5 @@ User-agent: Yandex
 Allow: /
 Clean-param: utm_*&ref*&session* /
 
-# SITEMAP (31 страниц ЮАО+МО)
+# SITEMAP (24 страницы ЮАО+МО)
 Sitemap: https://master-yu-mos.ru/sitemap.xml
