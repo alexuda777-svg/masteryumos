@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="0;url=/elektrika.html">
-    <title>Страница не найдена — Перенаправление на Электрику</title>
+    <meta http-equiv="refresh" content="0;url=/">
+    <title>Страница не найдена — Мастер Подольск Видное</title>
     <meta name="robots" content="noindex, follow">
     <script>
 const redirects = {
@@ -11,6 +11,8 @@ const redirects = {
   '/teplovizor.htm': '/teplovizor.html',
   '/otoplenie.htm': '/otoplenie.html',
   '/vodosnabzhenie.htm': '/vodosnabzhenie.html',
+  '/krysha.htm': '/krysha.html',
+  '/balkony.htm': '/balkony.html',
   '/rayoni.htm': '/rayoni.html',
   '/Rayoni-obl.htm': '/Rayoni-obl.html',
   '/podolsk.htm': '/podolsk.html',
@@ -22,11 +24,8 @@ const redirects = {
 const currentPath = window.location.pathname.toLowerCase();
 const targetUrl = redirects[currentPath] || '/';
 window.location.replace(targetUrl);
-</script>
-
-
+    </script>
     <style>
-        /* Ваш стиль без изменений */
         body { 
             font-family: 'Montserrat', sans-serif; 
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -41,9 +40,24 @@ window.location.replace(targetUrl);
         }
         .container { max-width: 600px; }
         h1 { font-size: 3em; margin-bottom: 20px; }
+        .services { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin: 30px 0; }
+        .btn-service { 
+            padding: 12px 25px; 
+            background: rgba(255,255,255,0.2);
+            color: white !important; 
+            text-decoration: none; 
+            border-radius: 25px; 
+            font-weight: 600; 
+            transition: all 0.3s;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        .btn-service:hover { 
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
         .btn-home { 
             display: inline-block; 
-            padding: 15px 40px; 
+            padding: 18px 45px; 
             background: linear-gradient(45deg, #ff6b6b, #feca57);
             color: white !important; 
             text-decoration: none; 
@@ -61,13 +75,23 @@ window.location.replace(targetUrl);
 </head>
 <body>
     <div class="container">
-        <h1>🔌 Электрика</h1>
+        <h1>🔧 Мастер Подольск +30км</h1>
         <p style="font-size: 1.3em; margin-bottom: 30px;">
-            Перенаправление на <strong>услуги по электрике</strong>...
+            Найдём ближайшую услугу в вашем районе...
         </p>
-        <a href="/elektrika.html" class="btn-home">⚡ Монтаж электрики</a>
+        
+        <div class="services">
+            <a href="/elektrika.html" class="btn-service">⚡ Электрика</a>
+            <a href="/teplovizor.html" class="btn-service">🔥 Тепловизор</a>
+            <a href="/pristroyka.html" class="btn-service">🏠 Пристройка</a>
+            <a href="/otoplenie.html" class="btn-service">🌡️ Отопление</a>
+            <a href="/vodosnabzhenie.html" class="btn-service">💧 Водоснабжение</a>
+            <a href="/rayoni.html" class="btn-service">🏘️ Районы</a>
+        </div>
+        
+        <a href="/" class="btn-home">🏠 Главная - все услуги</a>
         <p style="margin-top: 30px; opacity: 0.8;">
-            от 3000₽ | Тепловизор 2990₽ | Пристройки 220к₽
+            Подольск • Видное • Климовск • Бирюлёво • Царицыно | от 3000₽
         </p>
     </div>
 </body>
