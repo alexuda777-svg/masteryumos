@@ -1,47 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="0;url=/">
-    <title>Страница не найдена — Перенаправление на Главную</title>
+    <meta http-equiv="refresh" content="0;url=/elektrika.html">
+    <title>Страница не найдена — Перенаправление на Электрику</title>
     <meta name="robots" content="noindex, follow">
     <script>
         // 🔥 АВТОРЕДИРЕКТЫ ИЗ МЕТРИКИ + GEO-РЕГИОНЫ (2026)
         const redirects = {
-            // 📱 УСТАРЕВШИЕ ФАЙЛЫ
             '/elektrika.htm': '/elektrika.html',
             '/pristroyka.htm': '/pristroyka.html',
-            
-            // 🏘️ НОВЫЕ РЕГИОНЫ (если были старые варианты)
-            '/danilovskiy.html': '/danilovskiy.html', // ✅ СУЩЕСТВУЕТ
-            '/domodedovo.html': '/domodedovo.html',   // ✅ СУЩЕСТВУЕТ
-            '/vidnoe.html': '/vidnoe.html',           // ✅ СУЩЕСТВУЕТ
-            
-            // 🔥 ТЕПЛОВИЗОР — ГЛАВНАЯ УСЛУГА
+            '/danilovskiy.html': '/danilovskiy.html',
+            '/domodedovo.html': '/domodedovo.html',
+            '/vidnoe.html': '/vidnoe.html',
             '/teplovizor.htm': '/teplovizor.html',
             '/thermal.html': '/teplovizor.html',
-            
-            // 🏠 ЮАО РАЙОНЫ (альтернативные варианты)
             '/biryulevo.html': '/biryulevo-vostok.html',
             '/chertanovo.html': '/chertanovo-central.html',
             '/nagatino.html': '/nagatino-sadovniki.html',
             '/orekhovo.html': '/orekhovo-sever.html',
-            
-            // 🚗 МО РЕГИОНЫ
             '/podolsk.htm': '/podolsk.html',
             '/domodedovo.htm': '/domodedovo.html',
             '/klimovsk.htm': '/klimovsk.html'
         };
         
-        // 🔍 ПРОВЕРКА ТЕКУЩЕГО URL
         const currentPath = window.location.pathname.toLowerCase();
-        if (redirects[currentPath]) {
-            window.location.replace(redirects[currentPath]);
-        } else {
-            // ✅ РЕДИРЕКТ НА ГЛАВНУЮ ПО УМОЛЧАНИЮ
-            window.location.replace('/');
-        }
+        const targetUrl = redirects[currentPath] || '/';
+        
+        // ✅ Немедленный редирект + заголовок для ботов
+        window.location.replace(targetUrl);
+        
+        // Для ботов без JS — кастомный заголовок (работает в GitHub Pages)
+        document.write('<meta http-equiv="refresh" content="0;url=' + targetUrl + '">');
     </script>
     <style>
+        /* Ваш стиль без изменений */
         body { 
             font-family: 'Montserrat', sans-serif; 
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -68,18 +60,21 @@
             box-shadow: 0 10px 30px rgba(255,107,107,0.4);
             transition: all 0.3s;
         }
-        .btn-home:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(255,107,107,0.6); }
+        .btn-home:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 15px 40px rgba(255,107,107,0.6); 
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🔍 Страница не найдена</h1>
+        <h1>🔌 Электрика</h1>
         <p style="font-size: 1.3em; margin-bottom: 30px;">
-            Перенаправление на <strong>главную страницу</strong> через 3 сек...
+            Перенаправление на <strong>услуги по электрике</strong>...
         </p>
-        <a href="/" class="btn-home">🏠 На главную</a>
+        <a href="/elektrika.html" class="btn-home">⚡ Монтаж электрики</a>
         <p style="margin-top: 30px; opacity: 0.8;">
-            Услуги: Тепловизор 2990₽ | Пристройки 220к₽ | Балконы 45к₽
+            от 3000₽ | Тепловизор 2990₽ | Пристройки 220к₽
         </p>
     </div>
 </body>
