@@ -93,7 +93,14 @@
    <changefreq>daily</changefreq>
    <priority>0.9</priority>
 </url>
-  
+  <url>
+        <loc>https://master-yu-mos.ru/Rayoni-obl.html</loc>
+        <lastmod>2026-01-08</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+
   <!-- 🏘️ ЮАО РАЙОНЫ (приоритет 0.8) -->
   <url>
     <loc>https://master-yu-mos.ru/biryulevo-vostok.html</loc>
