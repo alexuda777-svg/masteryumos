@@ -5,33 +5,25 @@
     <title>Страница не найдена — Перенаправление на Электрику</title>
     <meta name="robots" content="noindex, follow">
     <script>
-        // 🔥 АВТОРЕДИРЕКТЫ ИЗ МЕТРИКИ + GEO-РЕГИОНЫ (2026)
-        const redirects = {
-            '/elektrika.htm': '/elektrika.html',
-            '/pristroyka.htm': '/pristroyka.html',
-            '/danilovskiy.html': '/danilovskiy.html',
-            '/domodedovo.html': '/domodedovo.html',
-            '/vidnoe.html': '/vidnoe.html',
-            '/teplovizor.htm': '/teplovizor.html',
-            '/thermal.html': '/teplovizor.html',
-            '/biryulevo.html': '/biryulevo-vostok.html',
-            '/chertanovo.html': '/chertanovo-central.html',
-            '/nagatino.html': '/nagatino-sadovniki.html',
-            '/orekhovo.html': '/orekhovo-sever.html',
-            '/podolsk.htm': '/podolsk.html',
-            '/domodedovo.htm': '/domodedovo.html',
-            '/klimovsk.htm': '/klimovsk.html'
-        };
-        
-        const currentPath = window.location.pathname.toLowerCase();
-        const targetUrl = redirects[currentPath] || '/';
-        
-        // ✅ Немедленный редирект + заголовок для ботов
-        window.location.replace(targetUrl);
-        
-        // Для ботов без JS — кастомный заголовок (работает в GitHub Pages)
-        document.write('<meta http-equiv="refresh" content="0;url=' + targetUrl + '">');
-    </script>
+const redirects = {
+  '/elektrika.htm': '/elektrika.html',
+  '/pristroyka.htm': '/pristroyka.html',
+  '/teplovizor.htm': '/teplovizor.html',
+  '/otoplenie.htm': '/otoplenie.html',
+  '/vodosnabzhenie.htm': '/vodosnabzhenie.html',
+  '/rayoni.htm': '/rayoni.html',
+  '/rayoni-obl.htm': '/Rayoni-obl.html',
+  '/podolsk.htm': '/podolsk.html',
+  '/vidnoe.htm': '/vidnoe.html',
+  '/klimovsk.htm': '/klimovsk.html',
+  '/domodedovo.htm': '/domodedovo.html'
+};
+
+const currentPath = window.location.pathname.toLowerCase();
+const targetUrl = redirects[currentPath] || '/';
+window.location.replace(targetUrl);
+</script>
+
     <style>
         /* Ваш стиль без изменений */
         body { 
