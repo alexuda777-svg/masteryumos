@@ -5,25 +5,25 @@
     <title>Страница не найдена — Мастер Подольск Видное</title>
     <meta name="robots" content="noindex, follow">
     <script>
-const redirects = {
-  '/elektrika.htm': '/elektrika.html',
-  '/pristroyka.htm': '/pristroyka.html',
-  '/teplovizor.htm': '/teplovizor.html',
-  '/otoplenie.htm': '/otoplenie.html',
-  '/vodosnabzhenie.htm': '/vodosnabzhenie.html',
-  '/krysha.htm': '/krysha.html',
-  '/balkony.htm': '/balkony.html',
-  '/rayoni.htm': '/rayoni.html',
-  '/Rayoni-obl.htm': '/Rayoni-obl.html',
-  '/podolsk.htm': '/podolsk.html',
-  '/vidnoe.htm': '/vidnoe.html',
-  '/klimovsk.htm': '/klimovsk.html',
-  '/domodedovo.htm': '/domodedovo.html'
-};
+    const redirects = {
+      '/elektrika.htm': './elektrika.html',
+      '/pristroyka.htm': './pristroyka.html',
+      '/teplovizor.htm': './teplovizor.html',
+      '/otoplenie.htm': './otoplenie.html',
+      '/vodosnabzhenie.htm': './vodosnabzhenie.html',
+      '/krysha.htm': './krysha.html',
+      '/balkony.htm': './balkony.html',
+      '/rayoni.htm': './rayoni.html',
+      '/Rayoni-obl.htm': './Rayoni-obl.html',
+      '/podolsk.htm': './podolsk.html',
+      '/vidnoe.htm': './vidnoe.html',
+      '/klimovsk.htm': './klimovsk.html',
+      '/domodedovo.htm': './domodedovo.html'
+    };
 
-const currentPath = window.location.pathname.toLowerCase();
-const targetUrl = redirects[currentPath] || '/';
-window.location.replace(targetUrl);
+    const currentPath = window.location.pathname.toLowerCase();
+    const targetUrl = redirects[currentPath] || '/';
+    window.location.replace(targetUrl);
     </script>
     <style>
         body { 
