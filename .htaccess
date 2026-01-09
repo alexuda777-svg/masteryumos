@@ -1,1 +1,6 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.master-yu-mos\.ru [NC]
+RewriteRule ^(.*)$ https://master-yu-mos.ru/$1 [L,R=301]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://master-yu-mos.ru/$1 [L,R=301]
 ErrorDocument 404 /404.html
