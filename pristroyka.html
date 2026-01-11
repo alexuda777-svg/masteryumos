@@ -138,6 +138,8 @@ body {
 
 @media (max-width: 1024px) {
     .feature { grid-template-columns: 1fr !important; }
+    .stoiki-blok { max-width: 100% !important; padding: 20px 10px !important; }
+.stoiki-blok h3 { font-size: 1.5em !important; line-height: 1.2 !important; }
 }
 </style>
 </head>
@@ -299,33 +301,35 @@ body {
             </div>
         </div>
 
-        <!-- СТОЙКИ + УКОСИНЫ -->
-        <div style="background: #fff3cd; padding: 40px; border-radius: 20px; border-left: 6px solid #f39c12; margin: 50px 0;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
-                <div>
-                    <h3 style="font-size: 1.8em; color: #e67e22;">📏 Стойки через 60см</h3>
-                    <ul style="font-size: 1.1em; line-height: 1.6;">
-                        <li><strong>Прочность:</strong> нагрузка распределяется</li>
-                        <li><strong>Устойчивость:</strong> прогибы исключены</li>
-                        <li><strong>Экономия:</strong> оптимальный расход доски</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 style="font-size: 1.8em; color: #e67e22;">🔧 Укосины + мауэрлат</h3>
-                    <p><strong>Укосины:</strong> защита от ветра<br>
-                    <strong>Мауэрлат:</strong> нагрузка крыши на фундамент</p>
-                </div>
-            </div>
-        </div>
+        <!-- СТОЙКИ + УКОСИНЫ (МОБИЛКА OK) -->
+<div style="background: #fff3cd; padding: 30px 20px; border-radius: 20px; border-left: 6px solid #f39c12; margin: 40px 10px; max-width: 100%; box-sizing: border-box;">
+    
+    <!-- 📏 СТОЙКИ -->
+    <div style="margin-bottom: 30px; text-align: center;">
+        <h3 style="font-size: 1.6em; color: #e67e22; margin-bottom: 20px; word-break: break-word;">📏 Стойки через 60см</h3>
+        <ul style="font-size: 1.1em; line-height: 1.6; text-align: left; max-width: 100%; padding-left: 20px;">
+            <li><strong>Прочность:</strong> нагрузка распределяется</li>
+            <li><strong>Устойчивость:</strong> прогибы исключены</li>
+            <li><strong>Экономия:</strong> оптимальный расход доски</li>
+        </ul>
+    </div>
+    
+    <!-- 🔧 УКОСИНЫ -->
+    <div style="text-align: center;">
+        <h3 style="font-size: 1.6em; color: #e67e22; margin-bottom: 15px; word-break: break-word;">🔧 Укосины + мауэрлат</h3>
+        <p style="font-size: 1.1em; line-height: 1.6;"><strong>Укосины:</strong> защита от ветра<br><strong>Мауэрлат:</strong> нагрузка крыши на фундамент</p>
+    </div>
 
-        <!-- ГОСТЫ -->
-        <div style="background: #d4edda; padding: 30px; border-radius: 15px; text-align: center; border: 2px solid #28a745;">
-            <h3 style="color: #155724; font-size: 1.6em;">📋 Нормативная база</h3>
-            <p style="font-size: 1.3em; font-weight: 700; color: #155724;">
-                ✅ <strong>СНиП II-26-76:</strong> вентзазор до 5см<br>
-                ✅ <strong>ГОСТ Р 56709–2015:</strong> ширина по климату
-            </p>
-        </div>
+</div>
+
+<!-- ГОСТЫ (остаётся как есть) -->
+<div style="background: #d4edda; padding: 25px 20px; border-radius: 15px; text-align: center; border: 2px solid #28a745; margin: 20px 10px; max-width: 100%;">
+    <h3 style="color: #155724; font-size: 1.5em;">📋 Нормативная база</h3>
+    <p style="font-size: 1.2em; font-weight: 700; color: #155724; line-height: 1.4;">
+        ✅ <strong>СНиП II-26-76:</strong> вентзазор до 5см<br>
+        ✅ <strong>ГОСТ Р 56709–2015:</strong> ширина по климату
+    </p>
+</div>
     </div>
     
     <div style="text-align: center; margin-top: 60px;">
