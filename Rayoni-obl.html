@@ -191,7 +191,7 @@
         }
 
         function orderService() {
-            const message = `Хочу заказать услугу в районе ${districts[Math.floor(Math.floor()*districts.length)]}`;
+            const message = `Хочу заказать услугу в районе ${districts[Math.floor(Math.random()*districts.length)]`;
             window.location.href = `https://wa.me/79267904248?text=${encodeURIComponent(message)}`;
         }
 
