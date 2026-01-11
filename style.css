@@ -1,8 +1,11 @@
-/* 🔥 АНТИ-ВИБРАЦИЯ — ВСТАВЬ ПЕРВЫМ! */
+/* 🔥 АНТИ-ВИБРАЦИЯ + БАЗОВЫЕ СТИЛИ (объединено) */
 * {
     -webkit-user-select: none;
     user-select: none;
     touch-action: manipulation;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 a[href^="tel:"] {
@@ -124,7 +127,7 @@ h4 { font-size: 20px; color: #2c3e50; margin-bottom: 10px; }
 .footer a:hover { color: #e74c3c; }
 
 /* 🔥 ТЕПЛОВИЗОРНАЯ ТАБЛИЦА - ПРЕМИУМ */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Condensed:wght@300;700&display=swap');
+
 
 .price-table { 
     max-width: 700px; margin: 3rem auto; padding: 0 20px; 
@@ -241,6 +244,7 @@ h4 { font-size: 20px; color: #2c3e50; margin-bottom: 10px; }
         text-align: center !important;
     }
 }
+
 
 
 
