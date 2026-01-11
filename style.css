@@ -1,11 +1,7 @@
-/* 🔥 АНТИ-ВИБРАЦИЯ + БАЗОВЫЕ СТИЛИ (объединено) */
 * {
     -webkit-user-select: none;
     user-select: none;
     touch-action: manipulation;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 a[href^="tel:"] {
@@ -244,6 +240,7 @@ h4 { font-size: 20px; color: #2c3e50; margin-bottom: 10px; }
         text-align: center !important;
     }
 }
+
 
 
 
