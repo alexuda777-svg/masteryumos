@@ -543,10 +543,82 @@
             text-decoration: underline;
         }
 
-        @media (max-width: 768px) {
-    .hero h1 { font-size: 2.5em; }
-    .btn { display: block; margin: 10px 0; padding: 15px 20px; }
-    .services-grid { grid-template-columns: 1fr; }
+        /* ✅ МОБИЛЬНАЯ ОПТИМИЗАЦИЯ (заменить существующие @media) */
+@media (max-width: 768px) {
+    /* Hero секция */
+    .hero-video { height: 70vh; min-height: 450px; }
+    .hero-video video { opacity: 0.35; }
+    .hero-video h1 { font-size: 2.2em; line-height: 1.1; }
+    .hero-text { font-size: 1.1em; }
+    .price-big { font-size: 1.8em; }
+    .badges { gap: 10px; }
+    .badge { padding: 8px 15px; font-size: 0.9em; }
+    
+    /* КНОПКИ компактнее */
+    .btn { 
+        display: block; 
+        margin: 8px 0; 
+        padding: 14px 25px; 
+        font-size: 1.1em; 
+        width: 100%; 
+        max-width: 320px;
+    }
+    
+    /* ✅ ЗНАЧКИ МЕНЬШЕ (было 120x140 → стало 90x110) */
+    .service-icon { 
+        width: 90px !important; 
+        height: 110px !important; 
+        margin-bottom: 15px;
+    }
+    
+    /* Карточки услуг - 1 колонка + компактнее */
+    .services-grid { 
+        grid-template-columns: 1fr !important; 
+        gap: 20px; 
+        max-width: 380px; 
+        margin: 0 auto;
+    }
+    .service-card { 
+        padding: 25px 20px !important; 
+        max-width: 380px;
+        margin: 0 auto;
+    }
+    .service-card h3 { font-size: 1.4em; }
+    .service-card p { font-size: 1em; }
+    .service-card .price { font-size: 1.4em; }
+    
+    /* Таблицы компактные */
+    .prices table { font-size: 0.95em; }
+    .prices td, .prices th { padding: 12px 8px !important; }
+    
+    /* Районы - 2 колонки max */
+    .districts-grid, .regions-links-grid { 
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 12px;
+    }
+    .district-card, .regions-links-grid a { 
+        padding: 12px !important; 
+        font-size: 1em;
+    }
+    
+    /* Гарантии 1 колонка */
+    .guarantee-grid { grid-template-columns: 1fr !important; }
+    .guarantee-item { padding: 25px 20px; }
+    
+    /* Баннер */
+    .banner { padding: 15px; margin: -5px -5px 20px; }
+    .banner h2 { font-size: 1.6em; }
+    
+    /* Горизонтальная прокрутка 0 */
+    * { max-width: 100%; overflow-x: hidden; }
+}
+
+/* ✅ СВЕРХМАЛЕНЬКИЕ ЭКРАНЫ (<360px) */
+@media (max-width: 360px) {
+    .service-icon { width: 75px !important; height: 95px !important; }
+    .hero-video h1 { font-size: 1.9em; }
+    .btn { padding: 12px 20px; font-size: 1em; }
+    .districts-grid { grid-template-columns: 1fr !important; }
 }
 
     </style>
@@ -1023,6 +1095,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
