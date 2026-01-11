@@ -1,3 +1,15 @@
+/* 🔥 АНТИ-ВИБРАЦИЯ — ВСТАВЬ ПЕРВЫМ! */
+* {
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+a[href^="tel:"] {
+    -webkit-user-select: text;
+    user-select: text;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Condensed:wght@300;700&display=swap');
 
 /* БАЗОВЫЕ СТИЛИ */
@@ -229,6 +241,7 @@ h4 { font-size: 20px; color: #2c3e50; margin-bottom: 10px; }
         text-align: center !important;
     }
 }
+
 
 
 
