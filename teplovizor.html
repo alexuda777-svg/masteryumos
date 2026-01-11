@@ -43,6 +43,7 @@
         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105722511', 'ym');
         ym(105722511, 'init', {ssr:true, webvisor:true, clickmap:true});
     </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/105722511" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 
     <!-- Шрифты -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
@@ -205,6 +206,20 @@
         /* Footer */
         .footer { background: #2c3e50; color: white; padding: 40px 0; text-align: center; }
 
+@media (max-width: 992px) {
+    .comparison-grid { grid-template-columns: 1fr; }
+    .features-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .hero h1 { font-size: 1.8em !important; }
+    .hero-text { font-size: 1.1em; }
+    .price-card { padding: 1rem; }
+}
+
+/* ✅ Lazy loading */
+img { loading: lazy; }
+        
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2em; }
             .btn-primary, .btn-secondary, .cta-buttons a { display: block; margin: 15px auto; max-width: 280px; text-align: center; }
@@ -219,6 +234,7 @@
     <nav class="breadcrumbs">
         <a href="index.html">🏠 Главная</a> → <strong>Тепловизор Подольск</strong>
     </nav>
+    <main>
 
     <!-- Hero -->
     <header class="hero">
@@ -248,7 +264,7 @@
                 📸 Мой тепловизор <strong>Uni-T UTi260B</strong>
             </h2>
             <div class="teplovizor-photo">
-                <img src="https://i.ibb.co/vvjwKQCH/IMG-20260106-010500.jpg" alt="Тепловизор Uni-T UTi260B">
+                <img src="https://i.ibb.co/vvjwKQCH/IMG-20260106-010500.jpg" alt="Тепловизор Uni-T UTi260B" loading="lazy">
                 <p style="font-size: 1.2em; color: #666; margin-top: 20px;">
                     ✅ Профессиональный тепловизор • Разрешение 256x192
                     <strong style="color: #ff6b6b;">• Выезд ЮГ МО + Подмосковье</strong>
@@ -423,7 +439,7 @@
                     </div>
                 </div>
 
-                <div class="price-card expanded">
+                <div class="price-card recommended">
                     <div class="price-header">
                         <h3>🔭 РАСШИРЕННАЯ <strong>3990₽</strong></h3>
                         <p><strong>90 минут • до 200м²</strong> • Полная проверка</p>
@@ -485,7 +501,8 @@
             </div>
         </div>
     </section>
-
+</main>
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
