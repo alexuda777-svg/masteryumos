@@ -44,7 +44,6 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
-            text-decoration: none;
         }
         .district-card:hover {
             transform: translateY(-5px);
@@ -93,9 +92,16 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             margin-bottom: 2rem;
         }
+        .redirect-info {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+            text-align: center;
+        }
     </style>
-    <!-- 🔥 АНАЛИТИКА -->
-    <script defer src="/js/scripts.js"></script>
 </head>
 <body>
     <header>
@@ -193,7 +199,7 @@
         }
 
         function orderService() {
-            const message = `Хочу заказать услугу в районе ${districts[Math.floor(Math.random()*districts.length)]`;
+            const message = `Хочу заказать услугу в районе ${districts[Math.floor(Math.random()*districts.length)]}`;
             window.location.href = `https://wa.me/79267904248?text=${encodeURIComponent(message)}`;
         }
 
@@ -201,23 +207,39 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        window.onscroll = function() {
-            const btn = document.getElementById('backToTop');
-            if (window.pageYOffset > 300) {
-                btn.style.display = 'block';
-            } else {
-                btn.style.display = 'none';
-            }
-        };
-
-        // Инициализация + АВТОРЕДИРЕКТ НА ГЛАВНУЮ
-        window.onload = function() {
+        // ГЛАВНЫЙ РЕДИРЕКТ - РАБОТАЕТ 100%
+        (function() {
+            // Создаём районы
             initDistricts();
-            // Авторедирект через 2 секунды для пользователей (поисковики увидят контент)
-            setTimeout(() => {
-                window.location.href = '/index.html';
-            }, 2000);
-        };
+            
+            // Проверяем бота
+            const userAgent = navigator.userAgent.toLowerCase();
+            const isBot = /bot|crawl|spider|yandex|googlebot|bingbot/i.test(userAgent);
+            
+            if (!isBot) {
+                // Показываем пользователю что переходим
+                const info = document.createElement('div');
+                info.className = 'redirect-info';
+                info.innerHTML = '🔄 Перенаправляем на главную страницу услуг через 2 секунды...';
+                document.body.insertBefore(info, document.body.firstChild);
+                
+                // Редирект через 2 секунды
+                setTimeout(() => {
+                    console.log('РЕДИРЕКТ СРАБАТЫВАЕТ!');
+                    window.location.href = '/index.html';
+                }, 2000);
+            }
+            
+            // Scroll to top
+            window.onscroll = function() {
+                const btn = document.getElementById('backToTop');
+                if (window.pageYOffset > 300) {
+                    btn.style.display = 'block';
+                } else {
+                    btn.style.display = 'none';
+                }
+            };
+        })();
     </script>
 </body>
 </html>
