@@ -121,7 +121,16 @@
   position: relative; 
   z-index: 3;
 }
+.hero-video::before { 
+  content: ''; 
+  position: absolute; 
+  top: 0; left: 0; right: 0; bottom: 0; 
+  background: url('data:image/svg+xml,<svg...') repeat; 
+  animation: snowfall 20s linear infinite; 
+  z-index: 0;
+}
 
+        
 /* Мобильные */
 @media (max-width: 768px) {
   .hero-video { height: 75vh; min-height: 500px; }
@@ -1140,6 +1149,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
