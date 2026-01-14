@@ -381,6 +381,29 @@ img { loading: lazy; }
 .extra-works.mobile-small div[style*="1.2em"] { 
     font-size: 12px !important;     /* За МКАД */
 }
+    /* 🔥 ЗИМА - КРУПНЫЙ ЗАГОЛОВОК + МЕЛКИЙ ТЕКСТ */
+.winter-electricity.mobile-small {
+    padding: 20px 15px !important;
+    margin: 20px 0 !important;
+}
+.winter-electricity.mobile-small h2 { 
+    font-size: 26px !important;        /* КРУПНО "ЗИМА = ЭЛЕКТРИКА НА ГРАНИ" */
+    margin-bottom: 15px !important;
+}
+.winter-electricity.mobile-small h2 div { 
+    font-size: 12px !important;        /* мелко "мороз + обогреватели" */
+}
+.winter-electricity.mobile-small h3 { 
+    font-size: 14px !important;        /* БАТАРЕИ, ТЕПЛЫЙ ПОЛ */
+}
+.winter-electricity.mobile-small p, 
+.winter-electricity.mobile-small div[style*="font-size: 1.35em"] { 
+    font-size: 12px !important;        /* весь текст мелкий */
+    line-height: 1.3 !important;
+}
+.winter-electricity.mobile-small div[style*="5em"] { 
+    font-size: 3em !important;         /* эмодзи поменьше */
+}
     }
     
     /* ТЕПЛОВИЗОР ПРИМЕР */
@@ -430,6 +453,9 @@ img { loading: lazy; }
     .btn-primary, .btn-secondary { padding: 14px 20px !important; max-width: 280px !important; }
     .teplovizor-photo-item img { height: 200px !important; }
     .temp-value { font-size: 2em !important; }
+}
+    .seo-geo { 
+    display: none !important; 
 }
 </style>
 
@@ -552,7 +578,7 @@ img { loading: lazy; }
 
 
   <!-- 🔥 ЗИМА = ОПАСНОСТЬ! -->
-<section class="winter-electricity" style="padding: 100px 0; background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%); color: white; margin: 80px 0; position: relative; overflow: hidden;">
+<section class="winter-electricity mobile-small" style="padding: 100px 0; background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%); color: white; margin: 80px 0; position: relative; overflow: hidden;">
     <div style="position: absolute; top: 0; left: 0; right: 0; height: 10px; background: linear-gradient(90deg, #ffd93d, #ff6b6b, #10b981); box-shadow: 0 4px 20px rgba(255,217,61,0.4);"></div>
     <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 200px; background: linear-gradient(transparent, rgba(255,255,255,0.1));"></div>
     
@@ -603,7 +629,7 @@ img { loading: lazy; }
         </div>
 
        <!-- 🔥 ГЕО + CTA (ЕДИНСТВЕННЫЙ!) -->
-<div style="text-align: center; padding: 60px 0; background: rgba(255,255,255,0.08); border-radius: 30px; backdrop-filter: blur(15px); margin-top: 50px;">
+<div class="seo-geo" style="text-align: center; padding: 60px 0; background: rgba(255,255,255,0.08); border-radius: 30px; backdrop-filter: blur(15px); margin-top: 50px;">
     <p style="font-size: 1.8em; margin-bottom: 50px; color: #ffd93d; font-weight: 900; line-height: 1.3;">
         🏘️ <strong>Климовск • Подольск • Видное • Домодедово</strong><br>
         <span style="font-size: 1.2em; color: #cbd5e1;">🔥 ЮГ МОСКВЫ • Выезд СЕГОДНЯ • От 2990₽</span>
