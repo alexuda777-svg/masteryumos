@@ -295,15 +295,38 @@ img { loading: lazy; }
 
 /* 🔥 МОБИЛА 768px - ВСЁ МАЛЕНЬКОЕ */
 @media (max-width: 768px) {
-    /* ТЕПЛОВИЗОР */
-    #teplo {
-        padding: 15px 12px !important;
-        margin: 15px 0 !important;
-    }
-    #teplo h3 { font-size: 16px !important; margin-bottom: 8px !important; }
-    #teplo img { width: 70px !important; height: 55px !important; border-radius: 6px !important; }
-    #teplo div { font-size: 11px !important; line-height: 1.2 !important; }
-    #teplo p { font-size: 11px !important; }
+#teplo {
+    padding: 12px 8px !important;     /* заходил внутрь экрана */
+    margin: 15px -8px !important;     /* на всю ширину */
+    border-radius: 15px !important;
+}
+#teplo h3 { 
+    font-size: 20px !important;       /* заголовок крупнее */
+    margin-bottom: 20px !important;
+}
+#teplo .container { padding: 0 !important; }
+
+/* ФОТО ×3 БОЛЬШЕ */
+#teplo img { 
+    width: 100% !important; 
+    height: 180px !important;         /* было 55px → 180px */
+    max-width: none !important;
+}
+
+/* ТЕМПЕРАТУРЫ В ГОРИЗОНТАЛЬНЫЙ РЯД */
+#teplo div[style*="repeat(auto-fit"] {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+}
+#teplo div[style*="padding: 30px"] { 
+    padding: 12px 8px !important;     /* маленькие карточки */
+}
+#teplo h5 { font-size: 12px !important; }
+#teplo p[style*="2.8em"], 
+#teplo div[style*="font-size: 2.8em"] { 
+    font-size: 1.4em !important;      /* температуры поменьше */
+}
+}
     
     /* ЭЛЕКТРИКА + ДОПОЛНИТЕЛЬНЫЕ */
     .mobile-small, .detailed-check {
