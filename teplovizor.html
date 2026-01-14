@@ -293,39 +293,77 @@ img { loading: lazy; }
     }
 }
 
-/* 🔥 МОБИЛА 768px - ВСЁ МАЛЕНЬКОЕ */
-#teplo[data-mobile-small="true"] {
-    padding: 4px 2px !important;
-    margin: 6px -2px !important;
-    border-radius: 8px !important;
-}
-#teplo h3 {  
-    font-size: 20px !important;       
-    margin-bottom: 20px !important;
-}
-#teplo .container { padding: 0 !important; }
-#teplo .container { padding: 0 !important; }
-
-/* ФОТО ×3 БОЛЬШЕ */
-#teplo img { 
-    width: 100% !important; 
-    height: 180px !important;         /* было 55px → 180px */
-    max-width: none !important;
-}
-
-/* ТЕМПЕРАТУРЫ В ГОРИЗОНТАЛЬНЫЙ РЯД */
-#teplo div[style*="repeat(auto-fit"] {
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 8px !important;
-}
-#teplo div[style*="padding: 30px"] { 
-    padding: 12px 8px !important;     /* маленькие карточки */
-}
-#teplo h5 { font-size: 12px !important; }
-#teplo p[style*="2.8em"], 
-#teplo div[style*="font-size: 2.8em"] { 
-    font-size: 1.4em !important;      /* температуры поменьше */
-}
+/* 🔥 МОБИЛА 768px - УМЕНЬШЕННЫЙ ТЕПЛОВИЗОР */
+@media (max-width: 768px) {
+    #teplo[data-mobile-small="true"] {
+        padding: 8px 12px !important;      /* чуть больше отступов */
+        margin: 12px 0 !important;         /* нормальные отступы */
+        border-radius: 12px !important;
+    }
+    
+    #teplo h3 {  
+        font-size: 18px !important;        /* меньше заголовок */
+        margin-bottom: 15px !important;    /* меньше отступ */
+        line-height: 1.3 !important;
+    }
+    
+    /* ГРИД ФОТО в 1 колонку */
+    #teplo div[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    
+    /* ФОТО МЕНЬШЕ */
+    #teplo img { 
+        height: 140px !important;          /* было 180px → 140px */
+        max-width: 300px !important;
+        margin: 0 auto !important;
+    }
+    
+    /* ЛЕЙБЛЫ НА ФОТО */
+    #teplo div[style*="padding: 10px 25px"] {
+        padding: 6px 15px !important;
+        font-size: 1em !important;
+    }
+    
+    /* ТЕКСТ ПОД ФОТО */
+    #teplo p[style*="1.4em"] {
+        font-size: 1.1em !important;
+        margin-top: 15px !important;
+    }
+    
+    /* КАРТОЧКИ ТЕМПЕРАТУР - 1 КОЛОНКА */
+    #teplo div[style*="repeat(auto-fit"] {
+        grid-template-columns: 1fr !important;  /* 1 колонка вместо 3 */
+        gap: 12px !important;
+        max-width: 100% !important;
+    }
+    
+    /* КАРТОЧКИ МЕНЬШЕ */
+    #teplo div[style*="padding: 30px"] { 
+        padding: 15px 12px !important;    /* компактные */
+    }
+    
+    #teplo h5 { 
+        font-size: 14px !important;       /* чуть крупнее */
+        margin: 10px 0 8px 0 !important;
+    }
+    
+    /* ТЕМПЕРАТУРЫ МЕНЬШЕ */
+    #teplo p[style*="2.8em"], 
+    #teplo div[style*="font-size: 2.8em"] { 
+        font-size: 1.6em !important;      /* было 1.4em → 1.6em но меньше */
+    }
+    
+    /* ИКОНКИ МЕНЬШЕ */
+    #teplo div[style*="4em"] {
+        font-size: 2.5em !important;
+    }
+    
+    /* КОНТЕЙНЕР */
+    #teplo .container { 
+        padding: 0 5px !important; 
+    }
 }
     
     /* ЭЛЕКТРИКА + ДОПОЛНИТЕЛЬНЫЕ */
