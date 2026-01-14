@@ -55,8 +55,9 @@
 
 
 <style>
-
+/* БАЗА */
 * { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
@@ -64,18 +65,11 @@ body {
     background: #f8f9fa;
     font-size: 16px;
 }
-
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
 /* НАВИГАЦИЯ */
-.breadcrumbs {
-    background: #2c3e50;
-    color: white;
-    padding: 12px 20px;
-    font-size: 0.9em;
-}
+.breadcrumbs { background: #2c3e50; color: white; padding: 12px 20px; font-size: 0.9em; }
 .breadcrumbs a { color: #ffd93d; text-decoration: none; }
-
 .mobile-nav {
     position: fixed; top: 20px; right: 20px; z-index: 1000;
     display: flex; gap: 12px; background: rgba(44,62,80,0.95);
@@ -87,286 +81,131 @@ body {
 }
 .mobile-nav a:hover { background: rgba(255,217,61,0.3); }
 
-/* HERO ✅ ПЕРЕДВИНУТ ПОСЛЕ БАЗЫ */
+/* HERO */
 .hero {
     background: linear-gradient(135deg, #ff6b6b, #ffd93d, #ff8e8e);
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
+    color: white; padding: 80px 20px; text-align: center;
 }
 .cities-badge {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
+    display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; flex-wrap: wrap;
 }
 .badge {
-    background: rgba(255,255,255,0.2);
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-weight: 700;
-    font-size: 0.9em;
+    background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px;
+    font-weight: 700; font-size: 0.9em;
 }
 .badge.orange { background: linear-gradient(135deg, #f39c12, #e67e22); }
 .hero h1 { font-size: 3em; margin-bottom: 20px; font-weight: 700; }
 .hero-text { font-size: 1.3em; margin-bottom: 30px; }
 
-/* КНОПКИ ✅ ДОБАВЛЕН .hero-buttons */
+/* КНОПКИ */
 .hero-buttons, .cta-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;
 }
 .btn-primary, .btn-secondary, .cta-buttons a {
-    display: inline-block;
-    padding: 16px 40px;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 50px;
-    margin: 0 10px;
+    display: inline-block; padding: 16px 40px; font-weight: 700;
+    text-decoration: none; border-radius: 50px; margin: 0 10px;
     transition: all 0.3s;
 }
 .btn-primary {
-    background: white;
-    color: #ff6b6b !important;
+    background: white; color: #ff6b6b !important;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
-.btn-primary:hover { 
-    transform: translateY(-3px); 
-    box-shadow: 0 15px 40px rgba(0,0,0,0.3); 
+.btn-primary:hover {
+    transform: translateY(-3px); box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
 .btn-secondary {
-    background: rgba(255,255,255,0.2);
-    color: white !important;
-    border: 2px solid white;
+    background: rgba(255,255,255,0.2); color: white !important; border: 2px solid white;
 }
 .btn-secondary:hover { background: rgba(255,255,255,0.3); transform: translateY(-2px); }
 
-/* ТЕПЛОВИЗОР ✅ ПОЛНЫЕ СТИЛИ */
-.teplovizor-showcase .feature h3 { 
-    color: #1a1a1a !important; 
-    font-weight: 700; 
-    margin-bottom: 1rem; 
-    font-size: 1.4em;
+/* ТЕПЛОВИЗОР */
+.teplovizor-showcase { padding: 80px 0; background: white; }
+.teplovizor-showcase h2 {
+    font-size: 2.8em; color: #1a1a1a; margin-bottom: 30px; font-weight: 700; text-align: center;
 }
-.teplovizor-showcase .feature { 
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important; 
-    padding: 2.5rem; 
-    border-radius: 20px; 
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+.teplovizor-subtitle {
+    font-size: 1.4em; color: #ff6b6b; margin-bottom: 40px; text-align: center; font-weight: 600;
+}
+.teplovizor-text {
+    font-size: 1.2em; color: #4a5568; line-height: 1.7; max-width: 800px;
+    margin: 0 auto 50px; text-align: center;
+}
+.teplovizor-photo { text-align: center; margin-bottom: 60px; }
+.teplovizor-photo img {
+    max-width: 100%; height: 400px; object-fit: cover; border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(255,107,107,0.3);
+}
+.teplovizor-showcase .features-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px; margin-top: 50px;
+}
+.teplovizor-showcase .feature {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+    padding: 2.5rem; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.1);
     transition: all 0.3s;
 }
 .teplovizor-showcase .feature:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    transform: translateY(-8px); box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+.teplovizor-showcase .feature h3 {
+    color: #1a1a1a !important; font-weight: 700; margin-bottom: 1rem; font-size: 1.4em;
 }
 .teplovizor-showcase .feature p {
-    color: #4a5568 !important;
-    font-size: 1.1em;
-    line-height: 1.6;
-}
-.teplovizor-showcase .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-}
-.teplovizor-showcase { padding: 80px 0; background: white; }
-.teplovizor-showcase h2 {
-    font-size: 2.8em;
-    color: #1a1a1a;
-    margin-bottom: 30px;
-    font-weight: 700;
-    text-align: center;
-}
-.teplovizor-subtitle {
-    font-size: 1.4em;
-    color: #ff6b6b;
-    margin-bottom: 40px;
-    text-align: center;
-    font-weight: 600;
-}
-.teplovizor-text {
-    font-size: 1.2em;
-    color: #4a5568;
-    line-height: 1.7;
-    max-width: 800px;
-    margin: 0 auto 50px;
-    text-align: center;
-}
-.teplovizor-photo { 
-    text-align: center; 
-    margin-bottom: 60px; 
-}
-.teplovizor-photo img {
-    max-width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(255,107,107,0.3);
+    color: #4a5568 !important; font-size: 1.1em; line-height: 1.6;
 }
 .comparison-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
-    margin-top: 60px;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px; margin-top: 60px;
 }
 .comparison-item {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    padding: 40px;
-    border-radius: 25px;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-    transition: all 0.3s;
+    padding: 40px; border-radius: 25px; text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1); transition: all 0.3s;
 }
 .comparison-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+    transform: translateY(-10px); box-shadow: 0 25px 60px rgba(0,0,0,0.15);
 }
 .comparison-before {
-    font-size: 1.8em; 
-    color: #e74c3c; 
-    margin-bottom: 15px; 
-    font-weight: 700;
+    font-size: 1.8em; color: #e74c3c; margin-bottom: 15px; font-weight: 700;
 }
 .comparison-after {
-    font-size: 1.8em; 
-    color: #27ae60; 
-    margin-bottom: 20px; 
-    font-weight: 700;
+    font-size: 1.8em; color: #27ae60; margin-bottom: 20px; font-weight: 700;
 }
-.problem-icon { 
-    font-size: 4em; 
-    margin-bottom: 20px; 
-}
-.problem-text {
-    font-size: 1.1em;
-    color: #666;
-    margin-top: 15px;
-}
-.tariff-header { text-align: center; margin-bottom: 2rem; }
-.tariff-header h3 {
-    font-size: 2em;
-    font-weight: 800;
-    margin-bottom: 0.5rem;
-    margin-top: 1rem;
-}
-/* ТАРИФЫ ✅ ИЗ ГЛАВНОЙ */
+.problem-icon { font-size: 4em; margin-bottom: 20px; }
+.problem-text { font-size: 1.1em; color: #666; margin-top: 15px; }
+
+/* ТАРИФЫ */
 .price-table-new { max-width: 900px; margin: 0 auto 4rem auto; padding: 0 20px; }
 .tariff-card {
     background: linear-gradient(135deg, #fff 0%, #f0f9ff 100%);
-    border: 3px solid transparent; 
-    border-radius: 24px;
-    margin-bottom: 2.5rem; 
-    padding: 2.5rem;
-    box-shadow: 0 12px 48px rgba(59,130,246,0.15);
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 3px solid transparent; border-radius: 24px; margin-bottom: 2.5rem;
+    padding: 2.5rem; box-shadow: 0 12px 48px rgba(59,130,246,0.15);
+    position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .tariff-card::before {
     content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px;
     background: linear-gradient(90deg, #3b82f6, #10b981, #f59e0b);
 }
 .tariff-card.recommended {
-    border-color: #10b981; 
-    box-shadow: 0 20px 60px rgba(16,185,129,0.25);
+    border-color: #10b981; box-shadow: 0 20px 60px rgba(16,185,129,0.25);
     transform: scale(1.02);
 }
 .tariff-card.recommended::before { background: linear-gradient(90deg, #10b981, #059669); }
 .tariff-header { text-align: center; margin-bottom: 2rem; }
 .tariff-icon { font-size: 3.5em; margin-bottom: 1rem; }
-.tariff-price { 
-    font-size: 2.8em; font-weight: 800; 
-    background: linear-gradient(135deg, #ef4444, #f59e0b); 
+.tariff-header h3 {
+    font-size: 2em; font-weight: 800; margin-bottom: 0.5rem; margin-top: 1rem;
+}
+.tariff-card:nth-child(1) .tariff-header h3 { color: #1e40af !important; }
+.tariff-card.recommended .tariff-header h3 { color: #059669 !important; }
+.tariff-price {
+    font-size: 2.8em; font-weight: 800;
+    background: linear-gradient(135deg, #ef4444, #f59e0b);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     margin-bottom: 0.5rem;
 }
-.extra-works { 
-    background: #f8fafc; 
-    border-radius: 20px; 
-    padding: 2.5rem; 
-    margin: 3rem 0; 
-}
-.extra-item {
-    display: grid; 
-    grid-template-columns: 1fr auto; 
-    gap: 1rem;
-    padding: 1rem 0; 
-    border-bottom: 1px solid #e2e8f0;
-}
-.extra-price { font-weight: 700; color: #dc2626; font-size: 1.2em; }
-
-/* CTA */
-.calc { padding: 80px 0; background: #ff6b6b; color: white; text-align: center; }
-
-/* FOOTER */
-.footer { 
-    background: #2c3e50; 
-    color: white; 
-    padding: 40px 0; 
-    text-align: center; 
-}
-
-/* ✅ МОБИЛЬНЫЕ МЕДИА - ПЕРЕДВИНУТЫ В КОНЕЦ */
-@media (max-width: 768px) {
-    .hero { padding: 40px 15px !important; }
-    .hero h1 { font-size: 2em !important; line-height: 1.2 !important; }
-    .hero-text { font-size: 1.1em !important; }
-    
-    /* КНОПКИ В СТОЛБИК ✅ РАБОТАЕТ */
-    .hero-buttons, .cta-buttons { flex-direction: column !important; align-items: center !important; }
-    .hero-buttons a, .btn-primary, .btn-secondary { 
-        width: 100% !important; max-width: 280px !important; margin: 10px 0 !important; 
-        padding: 14px 20px !important; font-size: 1.1em !important;
-    }
-    
-    .extra-works { padding: 1.5rem 1rem !important; margin: 2rem 0.5rem !important; }
-    .extra-works h3 { font-size: 1.6em !important; }
-    .extra-item { font-size: 0.95em !important; padding: 0.8rem 0 !important; }
-    .extra-price { font-size: 1.15em !important; }
-    
-    .teplovizor-showcase h2, .price-table-new h2 { font-size: 1.8em !important; }
-    .teplovizor-photo img { height: 250px !important; }
-    .comparison-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
-    
-    /* НАВИГАЦИЯ СПРАВА ✅ КЛАСС mobile-nav */
-    .mobile-nav { 
-        right: 15px !important; top: 15px !important; gap: 8px !important;
-    }
-    .mobile-nav a { 
-        padding: 8px 14px !important; font-size: 0.85em !important; 
-    }
-    
-    .tariff-card { padding: 1.5rem !important; margin-bottom: 1.5rem !important; }
-}
-
-@media (max-width: 480px) {
-    .hero h1 { font-size: 1.6em !important; }
-    .extra-works h3 { font-size: 1.4em !important; }
-    .extra-item { font-size: 0.9em !important; }
-}
-@media (max-width: 768px) {
-    .teplovizor-showcase .features-grid { 
-        grid-template-columns: 1fr !important; 
-        gap: 20px !important; 
-    }
-    .teplovizor-showcase .feature { padding: 2rem 1.5rem !important; }
-}
-img { loading: lazy; }
-
-/* ✅ ЦВЕТА ДЛЯ ТАРИФОВ - КОПИРУЙТЕ ЦЕЛИКОМ */
-.tariff-icon { font-size: 3.5em; margin-bottom: 1rem; }
-.tariff-price { 
-    font-size: 2.8em; font-weight: 800; 
-    background: linear-gradient(135deg, #ef4444, #f59e0b); 
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    margin-bottom: 0.5rem;
-}
-.tariff-specs { 
-    display: grid; grid-template-columns: 1fr; gap: 0.8rem; 
+.tariff-specs {
+    display: grid; grid-template-columns: 1fr; gap: 0.8rem;
     font-size: 1.1em; font-weight: 600; color: #1e40af; margin-bottom: 1.5rem;
 }
 .check-group { margin-bottom: 1.5rem; }
@@ -374,21 +213,79 @@ img { loading: lazy; }
     display: flex; align-items: flex-start; margin-bottom: 0.8rem;
     font-weight: 500; color: #1e40af; line-height: 1.4; font-size: 1.1em;
 }
-.check-item span { 
-    margin-right: 0.8rem; font-size: 1.4em; color: #10b981; 
+.check-item span {
+    margin-right: 0.8rem; font-size: 1.4em; color: #10b981;
     font-weight: 700; min-width: 30px;
 }
 .bonus-item {
-    background: linear-gradient(135deg, #ecfdf5, #d1fae5); 
-    border: 2px solid #10b981; border-radius: 12px;
-    padding: 1.2rem; margin-top: 1.5rem;
+    background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+    border: 2px solid #10b981; border-radius: 12px; padding: 1.2rem; margin-top: 1.5rem;
+}
+.extra-works {
+    background: #f8fafc; border-radius: 20px; padding: 2.5rem; margin: 3rem 0;
+}
+.extra-item {
+    display: grid; grid-template-columns: 1fr auto; gap: 1rem;
+    padding: 1rem 0; border-bottom: 1px solid #e2e8f0;
+}
+.extra-price { font-weight: 700; color: #dc2626; font-size: 1.2em; }
+
+/* CTA + FOOTER */
+.calc { padding: 80px 0; background: #ff6b6b; color: white; text-align: center; }
+.footer { background: #2c3e50; color: white; padding: 40px 0; text-align: center; }
+img { loading: lazy; }
+
+/* 🚀 МОБИЛЬНАЯ АДАПТАЦИЯ */
+@media (max-width: 1024px) {
+    .container { padding: 0 15px; }
+    .hero h1 { font-size: 2.5em; }
 }
 
-/* 🔵 БАЗОВЫЙ = СИНИЙ */
-.tariff-card:nth-child(1) .tariff-header h3 { color: #1e40af !important; }
+@media (max-width: 768px) {
+    .hero { padding: 50px 15px !important; }
+    .hero h1 { font-size: 2em !important; line-height: 1.2 !important; }
+    .hero-text { font-size: 1.1em !important; }
+    .cities-badge { flex-direction: column; align-items: center; gap: 10px; }
+    
+    .hero-buttons, .cta-buttons {
+        flex-direction: column !important; align-items: center !important; gap: 15px !important;
+    }
+    .btn-primary, .btn-secondary {
+        width: 100% !important; max-width: 300px !important;
+        padding: 16px 25px !important; font-size: 1.1em !important;
+    }
+    
+    .mobile-nav { right: 12px !important; top: 12px !important; gap: 8px !important; padding: 10px; }
+    .mobile-nav a { padding: 10px 16px !important; font-size: 0.9em !important; flex: 1; }
+    
+    .teplovizor-showcase { padding: 60px 0 !important; }
+    .teplovizor-showcase h2 { font-size: 2.2em !important; }
+    .teplovizor-subtitle { font-size: 1.25em !important; }
+    .teplovizor-photo img { height: 280px !important; }
+    
+    .features-grid, .comparison-grid { grid-template-columns: 1fr !important; gap: 25px !important; }
+    .teplovizor-showcase .feature { padding: 2rem 1.5rem !important; text-align: center; }
+    .comparison-item { padding: 30px 20px !important; }
+    
+    .price-table-new { padding: 0 10px; }
+    .tariff-card { padding: 2rem 1.5rem !important; margin-bottom: 2rem !important; }
+    .tariff-header h3 { font-size: 1.7em !important; }
+    .tariff-price { font-size: 2.4em !important; }
+    
+    .extra-works { padding: 2rem 1.5rem !important; margin: 2rem 0.5rem !important; }
+    .extra-works h3 { font-size: 1.6em !important; }
+    
+    .calc { padding: 60px 0 !important; }
+}
 
-/* 🟢 РАСШИРЁННЫЙ = ЗЕЛЁНЫЙ */
-.tariff-card.recommended .tariff-header h3 { color: #059669 !important; }
+@media (max-width: 480px) {
+    .hero h1 { font-size: 1.7em !important; }
+    .teplovizor-showcase h2 { font-size: 1.9em !important; }
+    .teplovizor-photo img { height: 240px !important; }
+    .tariff-header h3 { font-size: 1.5em !important; }
+    .tariff-price { font-size: 2.1em !important; }
+    .btn-primary, .btn-secondary { padding: 14px 20px !important; max-width: 280px !important; }
+}
 </style>
 
 <!-- 🔥 КНОПКИ НАВИГАЦИИ - ФИКС В УГЛУ -->
