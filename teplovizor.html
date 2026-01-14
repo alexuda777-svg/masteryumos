@@ -294,11 +294,11 @@ img { loading: lazy; }
 }
 
 /* 🔥 МОБИЛА 768px - ВСЁ МАЛЕНЬКОЕ */
-@media (max-width: 768px) {
-#teplo {
-    padding: 6px 4px !important;      /* ← МИНИМАЛЬНЫЙ */
-    margin: 8px -4px !important;      /* ← ЗАКРУГЛЕНИЯ ВИДНЫ */
-    border-radius: 10px !important;
+#teplo, #teplo[style*="padding: 60px"] {
+    padding: 3px 1px !important;
+    margin: 4px -1px !important;
+    border-radius: 6px !important;
+    min-height: 220px !important;
 }
 #teplo h3 {  
     font-size: 20px !important;       
