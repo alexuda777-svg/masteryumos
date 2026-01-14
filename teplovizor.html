@@ -260,100 +260,80 @@ img { loading: lazy; }
     .container { padding: 0 15px; }
     .hero h1 { font-size: 2.5em; }
 }
-@media (max-width: 768px) {
-    .hero { padding: 50px 15px !important; }
-    .hero h1 { font-size: 2em !important; line-height: 1.2 !important; }
-    .hero-text { font-size: 1.1em !important; }
-    .cities-badge { flex-direction: column; align-items: center; gap: 10px; }
-    
-    .container { 
-        padding: 0 8px !important; 
-        max-width: 100% !important; 
-        width: 100vw !important;
+
+/* 🔥 ДЕСКТОП ЗИМА - БОЛЬШАЯ */
+@media (min-width: 769px) {
+    .winter-electricity {
+        padding: 100px 0 !important;
+        margin: 80px 0 !important;
     }
-    
-    /* 🔥 ТЕПЛОВИЗОР МЕНЬШЕ ×3 */
+    .winter-electricity h2 {
+        font-size: 3.5em !important;
+        margin-bottom: 70px !important;
+        text-align: center !important;
+    }
+    .winter-electricity h3 {
+        font-size: 2.2em !important;
+        margin-bottom: 25px !important;
+    }
+    .winter-electricity p {
+        font-size: 1.35em !important;
+        line-height: 1.7 !important;
+    }
+    .winter-electricity div[style*="5em"] {
+        font-size: 5em !important;
+    }
+    .winter-electricity div[style*="45px"] {
+        padding: 45px !important;
+    }
+    .winter-electricity > div {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)) !important;
+        gap: 50px !important;
+    }
+}
+
+/* 🔥 МОБИЛА 768px - ВСЁ МАЛЕНЬКОЕ */
+@media (max-width: 768px) {
+    /* ТЕПЛОВИЗОР */
     #teplo {
         padding: 15px 12px !important;
         margin: 15px 0 !important;
     }
-    #teplo h3 { 
-        font-size: 16px !important; 
-        margin-bottom: 8px !important;
-    }
-    #teplo img { 
-        width: 70px !important; 
-        height: 55px !important;
-        border-radius: 6px !important;
-    }
-    #teplo div { 
-        font-size: 11px !important; 
-        line-height: 1.2 !important;
-    }
+    #teplo h3 { font-size: 16px !important; margin-bottom: 8px !important; }
+    #teplo img { width: 70px !important; height: 55px !important; border-radius: 6px !important; }
+    #teplo div { font-size: 11px !important; line-height: 1.2 !important; }
     #teplo p { font-size: 11px !important; }
-}
     
-    /* ТЕПЛОВИЗОР НА ТЕЛЕФОНЕ */
-    #teplo div[style*="1fr 1fr"] { 
-        grid-template-columns: repeat(2, 1fr) !important; 
-        gap: 15px !important; 
-    }
-    #teplo img[style*="height: 320px"] { 
-        height: 180px !important; 
-        max-width: 100% !important; 
-    }
-    #teplo div[style*="repeat(auto-fit"] { 
-        grid-template-columns: repeat(3, 1fr) !important; 
-        gap: 10px !important; 
-    }
-    #teplo div[style*="font-size: 4em"] { 
-        font-size: 2.2em !important; 
-    }
-    #teplo div[style*="padding: 30px"] { 
-        padding: 15px 10px !important; 
-    }
-    /* 🔥 ЭЛЕКТРИКА - АККОРДЕОН МЕЛКИЙ */
-.detailed-check {
-        padding: 15px !important;
-        margin: 20px 0 !important;
-    }
-    .detailed-check h3 { 
-        font-size: 22px !important;     /* КРУПНЫЙ заголовок */
-        margin-bottom: 12px !important;
-    }
-    .detailed-check h4 { 
-        font-size: 14px !important;     /* МЕЛЬЧЕ подзаголовки */
-        margin-bottom: 6px !important;
-    }
-    .detailed-check ul, .detailed-check p { 
-        font-size: 12px !important;     /* ТЕКСТ МЕЛКИЙ */
-        line-height: 1.3 !important;
-    }
-
-    {
-        transform: scale(1.02);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-    }
+    /* ЭЛЕКТРИКА + ДОПОЛНИТЕЛЬНЫЕ */
     .mobile-small, .detailed-check {
-    padding: 12px 10px !important;
-    margin: 15px 0 !important;
-}
-.mobile-small h3 { 
-    font-size: 24px !important;
-    margin-bottom: 10px !important;
-}
-.mobile-small h4, .detailed-check h4 { 
-    font-size: 13px !important;
-    margin-bottom: 5px !important;
-}
-.mobile-small ul, .mobile-small p, 
-.detailed-check ul, .detailed-check p { 
-    font-size: 11px !important;
-    line-height: 1.25 !important;
-    margin-bottom: 8px !important;
-}
-.mobile-small * { 
-    max-font-size: 24px !important;
+        padding: 12px 10px !important;
+        margin: 15px 0 !important;
+    }
+    .mobile-small h3, .detailed-check h3 { font-size: 24px !important; margin-bottom: 10px !important; }
+    .mobile-small h4, .detailed-check h4 { font-size: 13px !important; margin-bottom: 5px !important; }
+    .mobile-small ul, .mobile-small p, .detailed-check ul, .detailed-check p { 
+        font-size: 11px !important; line-height: 1.25 !important; margin-bottom: 8px !important;
+    }
+    
+    /* ЗИМА МОБИЛА - МАЛЕНЬКАЯ */
+    .winter-electricity.mobile-small {
+        padding: 15px 10px !important;
+        margin: 15px 0 !important;
+        text-align: center !important;
+    }
+    .winter-electricity h2 { font-size: 22px !important; margin-bottom: 12px !important; }
+    .winter-electricity h3 { font-size: 12px !important; margin-bottom: 8px !important; }
+    .winter-electricity p, .winter-electricity span { font-size: 10px !important; line-height: 1.2 !important; }
+    .winter-electricity div[style*="5em"] { font-size: 2em !important; }
+    .winter-electricity div[style*="45px"] { padding: 15px 12px !important; }
+    .winter-electricity > div {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
 }
  /* 🔥 ДОПОЛНИТЕЛЬНЫЕ РАБОТЫ - МЕЛКИЙ ТЕКСТ */
 .extra-works.mobile-small {
