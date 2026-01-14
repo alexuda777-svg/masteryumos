@@ -260,7 +260,6 @@ img { loading: lazy; }
     .container { padding: 0 15px; }
     .hero h1 { font-size: 2.5em; }
 }
-
 @media (max-width: 768px) {
     .hero { padding: 50px 15px !important; }
     .hero h1 { font-size: 2em !important; line-height: 1.2 !important; }
@@ -271,17 +270,31 @@ img { loading: lazy; }
         padding: 0 8px !important; 
         max-width: 100% !important; 
         width: 100vw !important;
-    }  
+    }
+    
+    /* ТЕПЛОВИЗОР НА ТЕЛЕФОНЕ */
+    #teplo div[style*="1fr 1fr"] { 
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 15px !important; 
+    }
+    #teplo img[style*="height: 320px"] { 
+        height: 180px !important; 
+        max-width: 100% !important; 
+    }
+    #teplo div[style*="repeat(auto-fit"] { 
+        grid-template-columns: repeat(3, 1fr) !important; 
+        gap: 10px !important; 
+    }
+    #teplo div[style*="font-size: 4em"] { 
+        font-size: 2.2em !important; 
+    }
+    #teplo div[style*="padding: 30px"] { 
+        padding: 15px 10px !important; 
+    }
+}
     
     /* ТЕПЛОВИЗОР ПРИМЕР */
-    .teplovizor-example { padding: 40px 15px !important; margin: 40px 10px !important; }
-    .teplovizor-example h3 { font-size: 2em !important; margin-bottom: 40px !important; }
-    .teplovizor-photos { grid-template-columns: 1fr !important; gap: 30px !important; }
-    .teplovizor-photo-item img { height: 220px !important; max-width: 100% !important; }
-    .temp-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
-    .temp-card { padding: 20px 15px !important; }
-    .temp-icon { font-size: 3em !important; }
-    .temp-value { font-size: 2.2em !important; }
+
     
     body, html { 
         width: 100%; 
@@ -316,9 +329,7 @@ img { loading: lazy; }
     
     .extra-works { padding: 2rem 1.5rem !important; margin: 2rem 0.5rem !important; }
     .extra-works h3 { font-size: 1.6em !important; }
-    
     .calc { padding: 60px 0 !important; }
-}
 
 @media (max-width: 480px) {
     .hero h1 { font-size: 1.7em !important; }
@@ -400,7 +411,7 @@ img { loading: lazy; }
         
 
     <!-- 🔥 РЕАЛЬНЫЙ ПРИМЕР ТЕПЛОВИЗОРА -->
-<div style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 60px 40px; margin: 60px 0; border-radius: 30px;">
+<div id="teplo" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 60px 40px; margin: 60px 0; border-radius: 30px;">
     <div class="container">
         <h3 style="font-size: 2.8em; text-align: center; margin-bottom: 50px; font-weight: 800;">
             📸 <strong>НА ЭКРАНЕ ТЕПЛОВИЗОРА:</strong>
