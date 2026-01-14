@@ -294,11 +294,10 @@ img { loading: lazy; }
 }
 
 /* 🔥 МОБИЛА 768px - ВСЁ МАЛЕНЬКОЕ */
-#teplo, #teplo[style*="padding: 60px"] {
-    padding: 3px 1px !important;
-    margin: 4px -1px !important;
-    border-radius: 6px !important;
-    min-height: 220px !important;
+#teplo[data-mobile-small="true"] {
+    padding: 4px 2px !important;
+    margin: 6px -2px !important;
+    border-radius: 8px !important;
 }
 #teplo h3 {  
     font-size: 20px !important;       
@@ -540,7 +539,7 @@ img { loading: lazy; }
         
 
     <!-- 🔥 РЕАЛЬНЫЙ ПРИМЕР ТЕПЛОВИЗОРА -->
-<div id="teplo" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 60px 40px; margin: 60px 0; border-radius: 30px;">
+<div id="teplo" data-mobile-small="true" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 60px 40px; margin: 60px 0; border-radius: 30px;">
     <div class="container">
         <h3 style="font-size: 2.8em; text-align: center; margin-bottom: 50px; font-weight: 800;">
             📸 <strong>НА ЭКРАНЕ ТЕПЛОВИЗОРА:</strong>
