@@ -80,6 +80,52 @@
         padding: 80px 20px;
         text-align: center;
     }
+/* 🔥 МОБИЛЬНАЯ АДАПТАЦИЯ - КРИТИЧНО */
+@media (max-width: 768px) {
+    .hero { padding: 40px 15px !important; }
+    .hero h1 { font-size: 2em !important; line-height: 1.2 !important; }
+    .hero-text { font-size: 1.1em !important; }
+    
+    /* КНОПКИ В СТОЛБИК */
+    .hero-buttons, .cta-buttons { flex-direction: column !important; align-items: center !important; }
+    .hero-buttons a, .btn-primary, .btn-secondary { 
+        width: 100% !important; max-width: 280px !important; margin: 10px 0 !important; 
+        padding: 14px 20px !important; font-size: 1.1em !important;
+    }
+    
+    /* ТАБЛИЦА - УМЕНЬШИТЬ ВСЁ */
+    .extra-works { padding: 1.5rem 1rem !important; margin: 2rem 0.5rem !important; }
+    .extra-works h3 { font-size: 1.6em !important; }
+    .extra-works [style*="1.6em"] { font-size: 1.3em !important; }
+    .extra-item { font-size: 0.95em !important; padding: 0.8rem 0 !important; }
+    .extra-price { font-size: 1.15em !important; }
+    
+    /* ТЕПЛОВИЗОР + БЛОКИ */
+    .teplovizor-showcase h2, .price-table-new h2 { font-size: 1.8em !important; }
+    .teplovizor-photo img { height: 250px !important; }
+    .comparison-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+    
+    /* КНОПКИ НАВИГАЦИИ СПРАВА */
+    nav[style*="position: fixed"] { 
+        left: auto !important; right: 15px !important; top: 15px !important; 
+        flex-direction: row !important; gap: 8px !important;
+    }
+    nav[style*="position: fixed"] a { 
+        padding: 8px 14px !important; font-size: 0.85em !important; 
+    }
+    
+    /* ТАРИФЫ */
+    .tariff-card { padding: 1.5rem !important; margin-bottom: 1.5rem !important; }
+    .tariff-price { font-size: 1.8em !important; }
+}
+
+@media (max-width: 480px) {
+    .hero h1 { font-size: 1.6em !important; }
+    .extra-works h3 { font-size: 1.4em !important; }
+    .extra-item { font-size: 0.9em !important; }
+}
+
+    
     .cities-badge {
         display: flex;
         justify-content: center;
