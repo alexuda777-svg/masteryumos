@@ -55,68 +55,258 @@
 
 
 <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-        font-family: 'Montserrat', sans-serif;
-        line-height: 1.6;
-        color: #1a1a1a;
-        background: #f8f9fa;
-        font-size: 16px;
-    }
 
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    .breadcrumbs {
-        background: #2c3e50;
-        color: white;
-        padding: 12px 20px;
-        font-size: 0.9em;
-    }
-    .breadcrumbs a { color: #ffd93d; text-decoration: none; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #f8f9fa;
+    font-size: 16px;
+}
 
-    /* Hero */
-    .hero {
-        background: linear-gradient(135deg, #ff6b6b, #ffd93d, #ff8e8e);
-        color: white;
-        padding: 80px 20px;
-        text-align: center;
-    }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
+/* НАВИГАЦИЯ */
+.breadcrumbs {
+    background: #2c3e50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 0.9em;
+}
+.breadcrumbs a { color: #ffd93d; text-decoration: none; }
+
+.mobile-nav {
+    position: fixed; top: 20px; right: 20px; z-index: 1000;
+    display: flex; gap: 12px; background: rgba(44,62,80,0.95);
+    padding: 12px; border-radius: 25px; backdrop-filter: blur(10px);
+}
+.mobile-nav a {
+    color: #ffd93d; text-decoration: none; padding: 10px 18px;
+    font-weight: 700; font-size: 0.9em; border-radius: 20px; transition: all 0.3s;
+}
+.mobile-nav a:hover { background: rgba(255,217,61,0.3); }
+
+/* HERO ✅ ПЕРЕДВИНУТ ПОСЛЕ БАЗЫ */
+.hero {
+    background: linear-gradient(135deg, #ff6b6b, #ffd93d, #ff8e8e);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+.cities-badge {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.badge {
+    background: rgba(255,255,255,0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9em;
+}
+.badge.orange { background: linear-gradient(135deg, #f39c12, #e67e22); }
+.hero h1 { font-size: 3em; margin-bottom: 20px; font-weight: 700; }
+.hero-text { font-size: 1.3em; margin-bottom: 30px; }
+
+/* КНОПКИ ✅ ДОБАВЛЕН .hero-buttons */
+.hero-buttons, .cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.btn-primary, .btn-secondary, .cta-buttons a {
+    display: inline-block;
+    padding: 16px 40px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    margin: 0 10px;
+    transition: all 0.3s;
+}
+.btn-primary {
+    background: white;
+    color: #ff6b6b !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.btn-primary:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3); 
+}
+.btn-secondary {
+    background: rgba(255,255,255,0.2);
+    color: white !important;
+    border: 2px solid white;
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.3); transform: translateY(-2px); }
+
+/* ТЕПЛОВИЗОР ✅ ПОЛНЫЕ СТИЛИ */
+.teplovizor-showcase { padding: 80px 0; background: white; }
+.teplovizor-showcase h2 {
+    font-size: 2.8em;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+.teplovizor-subtitle {
+    font-size: 1.4em;
+    color: #ff6b6b;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 600;
+}
+.teplovizor-text {
+    font-size: 1.2em;
+    color: #4a5568;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+.teplovizor-photo { 
+    text-align: center; 
+    margin-bottom: 60px; 
+}
+.teplovizor-photo img {
+    max-width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(255,107,107,0.3);
+}
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+.comparison-item {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+.comparison-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+.comparison-before {
+    font-size: 1.8em; 
+    color: #e74c3c; 
+    margin-bottom: 15px; 
+    font-weight: 700;
+}
+.comparison-after {
+    font-size: 1.8em; 
+    color: #27ae60; 
+    margin-bottom: 20px; 
+    font-weight: 700;
+}
+.problem-icon { 
+    font-size: 4em; 
+    margin-bottom: 20px; 
+}
+.problem-text {
+    font-size: 1.1em;
+    color: #666;
+    margin-top: 15px;
+}
+
+/* ТАРИФЫ ✅ ИЗ ГЛАВНОЙ */
+.price-table-new { max-width: 900px; margin: 0 auto 4rem auto; padding: 0 20px; }
+.tariff-card {
+    background: linear-gradient(135deg, #fff 0%, #f0f9ff 100%);
+    border: 3px solid transparent; 
+    border-radius: 24px;
+    margin-bottom: 2.5rem; 
+    padding: 2.5rem;
+    box-shadow: 0 12px 48px rgba(59,130,246,0.15);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tariff-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px;
+    background: linear-gradient(90deg, #3b82f6, #10b981, #f59e0b);
+}
+.tariff-card.recommended {
+    border-color: #10b981; 
+    box-shadow: 0 20px 60px rgba(16,185,129,0.25);
+    transform: scale(1.02);
+}
+.tariff-card.recommended::before { background: linear-gradient(90deg, #10b981, #059669); }
+.tariff-header { text-align: center; margin-bottom: 2rem; }
+.tariff-icon { font-size: 3.5em; margin-bottom: 1rem; }
+.tariff-price { 
+    font-size: 2.8em; font-weight: 800; 
+    background: linear-gradient(135deg, #ef4444, #f59e0b); 
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+.extra-works { 
+    background: #f8fafc; 
+    border-radius: 20px; 
+    padding: 2.5rem; 
+    margin: 3rem 0; 
+}
+.extra-item {
+    display: grid; 
+    grid-template-columns: 1fr auto; 
+    gap: 1rem;
+    padding: 1rem 0; 
+    border-bottom: 1px solid #e2e8f0;
+}
+.extra-price { font-weight: 700; color: #dc2626; font-size: 1.2em; }
+
+/* CTA */
+.calc { padding: 80px 0; background: #ff6b6b; color: white; text-align: center; }
+
+/* FOOTER */
+.footer { 
+    background: #2c3e50; 
+    color: white; 
+    padding: 40px 0; 
+    text-align: center; 
+}
+
+/* ✅ МОБИЛЬНЫЕ МЕДИА - ПЕРЕДВИНУТЫ В КОНЕЦ */
 @media (max-width: 768px) {
     .hero { padding: 40px 15px !important; }
     .hero h1 { font-size: 2em !important; line-height: 1.2 !important; }
     .hero-text { font-size: 1.1em !important; }
     
-    /* КНОПКИ В СТОЛБИК */
+    /* КНОПКИ В СТОЛБИК ✅ РАБОТАЕТ */
     .hero-buttons, .cta-buttons { flex-direction: column !important; align-items: center !important; }
     .hero-buttons a, .btn-primary, .btn-secondary { 
         width: 100% !important; max-width: 280px !important; margin: 10px 0 !important; 
         padding: 14px 20px !important; font-size: 1.1em !important;
     }
     
-    /* ТАБЛИЦА - УМЕНЬШИТЬ ВСЁ */
     .extra-works { padding: 1.5rem 1rem !important; margin: 2rem 0.5rem !important; }
     .extra-works h3 { font-size: 1.6em !important; }
-    .extra-works [style*="1.6em"] { font-size: 1.3em !important; }
     .extra-item { font-size: 0.95em !important; padding: 0.8rem 0 !important; }
     .extra-price { font-size: 1.15em !important; }
     
-    /* ТЕПЛОВИЗОР + БЛОКИ */
     .teplovizor-showcase h2, .price-table-new h2 { font-size: 1.8em !important; }
     .teplovizor-photo img { height: 250px !important; }
     .comparison-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
     
-    /* КНОПКИ НАВИГАЦИИ СПРАВА */
-    nav[style*="position: fixed"] { 
-        left: auto !important; right: 15px !important; top: 15px !important; 
-        flex-direction: row !important; gap: 8px !important;
+    /* НАВИГАЦИЯ СПРАВА ✅ КЛАСС mobile-nav */
+    .mobile-nav { 
+        right: 15px !important; top: 15px !important; gap: 8px !important;
     }
-    nav[style*="position: fixed"] a { 
+    .mobile-nav a { 
         padding: 8px 14px !important; font-size: 0.85em !important; 
     }
     
-    /* ТАРИФЫ */
     .tariff-card { padding: 1.5rem !important; margin-bottom: 1.5rem !important; }
-    .tariff-price { font-size: 1.8em !important; }
 }
 
 @media (max-width: 480px) {
@@ -125,187 +315,7 @@
     .extra-item { font-size: 0.9em !important; }
 }
 
-    
-    .cities-badge {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-bottom: 20px;
-        flex-wrap: wrap;
-    }
-    .badge {
-        background: rgba(255,255,255,0.2);
-        padding: 8px 16px;
-        border-radius: 20px;
-        font-weight: 700;
-        font-size: 0.9em;
-    }
-    .badge.orange { background: linear-gradient(135deg, #f39c12, #e67e22); }
-    .hero h1 { font-size: 3em; margin-bottom: 20px; font-weight: 700; }
-    .hero-text { font-size: 1.3em; margin-bottom: 30px; }
-    .btn-primary, .btn-secondary, .cta-buttons a {
-        display: inline-block;
-        padding: 16px 40px;
-        font-weight: 700;
-        text-decoration: none;
-        border-radius: 50px;
-        margin: 0 10px;
-        transition: all 0.3s;
-    }
-    .btn-primary {
-        background: white;
-        color: #ff6b6b !important;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(0,0,0,0.3); }
-    .btn-secondary {
-        background: rgba(255,255,255,0.2);
-        color: white !important;
-        border: 2px solid white;
-    }
-
-    /* Тепловизор showcase */
-    .teplovizor-showcase { padding: 80px 0; background: white; }
-    .teplovizor-photo { text-align: center; margin-bottom: 60px; }
-    .teplovizor-photo img {
-        max-width: 100%;
-        height: 400px;
-        object-fit: cover;
-        border-radius: 20px;
-        box-shadow: 0 20px 60px rgba(255,107,107,0.3);
-    }
-    .comparison-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 40px;
-        margin-top: 60px;
-    }
-    .comparison-item {
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        padding: 40px;
-        border-radius: 25px;
-        text-align: center;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-        transition: all 0.3s;
-    }
-    .comparison-item:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 25px 60px rgba(0,0,0,0.15);
-    }
-    .comparison-before {
-        font-size: 1.8em; color: #e74c3c; margin-bottom: 15px; font-weight: 700;
-    }
-    .comparison-after {
-        font-size: 1.8em; color: #27ae60; margin-bottom: 20px; font-weight: 700;
-    }
-    .problem-icon { font-size: 4em; margin-bottom: 20px; }
-
-    .price-table-new { max-width: 900px; margin: 0 auto 4rem auto; padding: 0 20px; }
-    .tariff-card {
-        background: linear-gradient(135deg, #fff 0%, #f0f9ff 100%);
-        border: 3px solid transparent; 
-        border-radius: 24px;
-        margin-bottom: 2.5rem; 
-        padding: 2.5rem;
-        box-shadow: 0 12px 48px rgba(59,130,246,0.15);
-        position: relative;
-        overflow: hidden;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .tariff-card::before {
-        content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px;
-        background: linear-gradient(90deg, #3b82f6, #10b981, #f59e0b);
-    }
-    .tariff-card.recommended {
-        border-color: #10b981; 
-        box-shadow: 0 20px 60px rgba(16,185,129,0.25);
-        transform: scale(1.02);
-    }
-    .tariff-card.recommended::before { background: linear-gradient(90deg, #10b981, #059669); }
-    .tariff-header { text-align: center; margin-bottom: 2rem; }
-    .tariff-icon { font-size: 3.5em; margin-bottom: 1rem; }
-    .tariff-price { 
-        font-size: 2.8em; font-weight: 800; 
-        background: linear-gradient(135deg, #ef4444, #f59e0b); 
-        -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        margin-bottom: 0.5rem;
-    }
-    .tariff-specs { 
-        display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; 
-        font-size: 1.1em; font-weight: 600; color: #1e40af; margin-bottom: 1.5rem;
-    }
-    .check-group { margin-bottom: 1.5rem; }
-    .check-item {
-        display: flex; align-items: flex-start; margin-bottom: 0.8rem;
-        font-weight: 500; color: #1e40af; line-height: 1.4;
-    }
-    .check-item span { 
-        margin-right: 0.8rem; font-size: 1.3em; color: #10b981; 
-        font-weight: 700; min-width: 25px;
-    }
-    .bonus-item {
-        background: linear-gradient(135deg, #ecfdf5, #d1fae5); 
-        border: 2px solid #10b981; border-radius: 12px;
-        padding: 1rem 1.2rem; margin-top: 1rem;
-    }
-    .detailed-check { 
-        background: linear-gradient(135deg, #fef3c7, #fde68a); 
-        border: 2px solid #f59e0b; border-radius: 20px;
-        padding: 2.5rem; margin: 3rem 0;
-    }
-    .warning-box {
-        background: linear-gradient(135deg, #fee2e2, #fecaca); 
-        border: 2px solid #ef4444; border-radius: 16px;
-        padding: 2rem; margin: 2rem 0;
-    }
-    .extra-works { background: #f8fafc; border-radius: 20px; padding: 2.5rem; margin: 3rem 0; }
-    .extra-item {
-        display: grid; grid-template-columns: 1fr auto; gap: 1rem;
-        padding: 1rem 0; border-bottom: 1px solid #e2e8f0;
-    }
-    .extra-price { font-weight: 700; color: #dc2626; font-size: 1.2em; }
-    .preparation-guide {
-        background: linear-gradient(135deg, #f0fdf4, #dcfce7);
-        border: 3px solid #22c55e; border-radius: 24px;
-        padding: 3rem; margin: 4rem 0;
-    }
-
-    /* Advantages */
-    .advantages { padding: 80px 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
-    .advantages h2, .services h2 { text-align: center; font-size: 2.5em; margin-bottom: 3rem; color: #2c3e50; }
-    .features-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
-    }
-    .feature { background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 20px; }
-    .feature h3 { color: white; margin-bottom: 1rem; font-size: 1.3em; }
-
-    /* CTA */
-    .calc { padding: 80px 0; background: #ff6b6b; color: white; text-align: center; }
-    .cta-buttons a { display: inline-block; padding: 16px 40px; margin: 0 10px; }
-
-    /* Footer */
-    .footer { background: #2c3e50; color: white; padding: 40px 0; text-align: center; }
-
-    /* Media Queries */
-    @media (max-width: 992px) {
-        .comparison-grid { grid-template-columns: 1fr; }
-        .features-grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 768px) {
-        .hero h1 { font-size: 2.2em; }
-        .tariff-specs { grid-template-columns: 1fr; }
-        .tariff-price { font-size: 2.2em; }
-        .btn-primary, .btn-secondary, .cta-buttons a { display: block; margin: 15px auto; max-width: 280px; text-align: center; }
-        .cities-badge { flex-direction: column; align-items: center; }
-    }
-    @media (max-width: 480px) {
-        .hero h1 { font-size: 1.8em !important; }
-        .hero-text { font-size: 1.1em; }
-    }
-    img { loading: lazy; }
+img { loading: lazy; }
 </style>
 
 <!-- 🔥 КНОПКИ НАВИГАЦИИ - ФИКС В УГЛУ -->
