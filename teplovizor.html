@@ -381,28 +381,39 @@ img { loading: lazy; }
 .extra-works.mobile-small div[style*="1.2em"] { 
     font-size: 12px !important;     /* За МКАД */
 }
-    /* 🔥 ЗИМА - КРУПНЫЙ ЗАГОЛОВОК + МЕЛКИЙ ТЕКСТ */
+    /* 🔥 ЗИМА - ОТЦЕНТРОВКА + ТЕМПЕРАТУРЫ ×3 */
 .winter-electricity.mobile-small {
-    padding: 20px 15px !important;
+    padding: 20px 12px !important;
     margin: 20px 0 !important;
+    text-align: center !important;
+}
+.winter-electricity.mobile-small > div {
+    justify-content: center !important;
+    gap: 20px !important;
 }
 .winter-electricity.mobile-small h2 { 
-    font-size: 26px !important;        /* КРУПНО "ЗИМА = ЭЛЕКТРИКА НА ГРАНИ" */
+    font-size: 26px !important;
     margin-bottom: 15px !important;
+    text-align: center !important;
 }
-.winter-electricity.mobile-small h2 div { 
-    font-size: 12px !important;        /* мелко "мороз + обогреватели" */
-}
+.winter-electricity.mobile-small h2 div { font-size: 12px !important; }
 .winter-electricity.mobile-small h3 { 
-    font-size: 14px !important;        /* БАТАРЕИ, ТЕПЛЫЙ ПОЛ */
+    font-size: 13px !important;
+    margin-bottom: 12px !important;
 }
-.winter-electricity.mobile-small p, 
-.winter-electricity.mobile-small div[style*="font-size: 1.35em"] { 
-    font-size: 12px !important;        /* весь текст мелкий */
+.winter-electricity.mobile-small p { 
+    font-size: 11px !important;
     line-height: 1.3 !important;
 }
+/* ТЕМПЕРАТУРЫ ×3 МЕНЬШЕ */
+.winter-electricity.mobile-small span {
+    font-size: 12px !important;
+}
 .winter-electricity.mobile-small div[style*="5em"] { 
-    font-size: 3em !important;         /* эмодзи поменьше */
+    font-size: 2.2em !important;
+}
+.winter-electricity.mobile-small div[style*="45px"] { 
+    padding: 20px 15px !important;
 }
     }
     
