@@ -643,56 +643,89 @@ img { loading: lazy; }
 
 <!-- Светлый разделитель между синим блоком и «ЗИМА» -->
 <div style="height: 40px; background: #f8f9fa;"></div>
-  <!-- 🔥 ЗИМА = ОПАСНОСТЬ! -->
-<section class="winter-electricity mobile-small" style="padding: 100px 0; background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%); color: white; margin: 80px 0; position: relative; overflow: hidden;">
+  
+    <!-- 🔥 ЗИМА = ОПАСНОСТЬ! -->
+<section class="winter-electricity"
+         style="
+           padding: 80px 20px;
+           margin: 60px auto 80px auto;
+           max-width: 1200px;
+         ">
+  <div style="
+        position: relative;
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        color: white;
+        border-radius: 30px;
+        overflow: hidden;
+        padding: 80px 30px;
+        box-shadow: 0 20px 50px rgba(15,23,42,0.6);
+      ">
+    <!-- верхняя цветная полоска -->
     <div style="position: absolute; top: 0; left: 0; right: 0; height: 10px; background: linear-gradient(90deg, #ffd93d, #ff6b6b, #10b981); box-shadow: 0 4px 20px rgba(255,217,61,0.4);"></div>
-    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 200px; background: linear-gradient(transparent, rgba(255,255,255,0.1));"></div>
-    
-    <div class="container">
-        <!-- Заголовок -->
-        <h2 style="text-align: center; font-size: 3.5em; margin-bottom: 70px; color: #ffd93d; font-weight: 900; text-shadow: 0 6px 30px rgba(255,217,61,0.5); position: relative;">
-            ❄️🔥 <strong>ЗИМА = ЭЛЕКТРИКА НА ГРАНИ</strong>
-            <div style="font-size: 0.4em; color: #94a3b8; margin-top: 15px;">мороз + обогреватели = ПОЖАР</div>
-        </h2>
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 200px; background: linear-gradient(transparent, rgba(255,255,255,0.08));"></div>
 
-        <!-- 3 КАРТОЧКИ ЗИМНИХ РИСКОВ -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 50px; margin-bottom: 70px;">
-            
-            <!-- 1. БАТАРЕИ -->
-            <div style="background: rgba(255,255,255,0.08); backdrop-filter: blur(20px); padding: 45px; border-radius: 30px; border: 2px solid rgba(255,255,255,0.15); position: relative; overflow: hidden;">
-                <div style="position: absolute; top: 25px; right: 25px; font-size: 5em; opacity: 0.1;">🔥</div>
-                <div style="font-size: 5em; margin-bottom: 30px; text-align: center;">🌡️</div>
-                <h3 style="font-size: 2.2em; margin-bottom: 25px; color: #ffd93d; font-weight: 800; text-align: center;">❄️ БАТАРЕИ ХОЛОДНЫЕ СНИЗУ</h3>
-                <p style="font-size: 1.35em; line-height: 1.7; text-align: center;">
-                    Верх <span style="color: #ffd93d;">60°C</span><br>
-                    Низ <span style="color: #ff6b6b; font-weight: 900;">25°C</span><br>
-                    <strong>ЗАСОР ИЛИ ВОЗДУХ!</strong>
-                </p>
-            </div>
+    <div class="container" style="max-width: 1100px; margin: 0 auto; position: relative; z-index: 1;">
+      <!-- Заголовок -->
+      <h2 style="text-align: center; font-size: 3.2em; margin-bottom: 60px; color: #ffd93d; font-weight: 900; text-shadow: 0 6px 30px rgba(255,217,61,0.5);">
+        ❄️🔥 <strong>ЗИМА = ЭЛЕКТРИКА НА ГРАНИ</strong>
+        <div style="font-size: 0.4em; color: #94a3b8; margin-top: 15px;">мороз + обогреватели = ПОЖАР</div>
+      </h2>
 
-            <!-- 2. ТЁПЛЫЙ ПОЛ -->
-            <div style="background: rgba(255,255,255,0.08); backdrop-filter: blur(20px); padding: 45px; border-radius: 30px; border: 2px solid rgba(255,255,255,0.15); position: relative; overflow: hidden;">
-                <div style="position: absolute; top: 25px; right: 25px; font-size: 5em; opacity: 0.1;">🏠</div>
-                <div style="font-size: 5em; margin-bottom: 30px; text-align: center;">🏠</div>
-                <h3 style="font-size: 2.2em; margin-bottom: 25px; color: #ffd93d; font-weight: 800; text-align: center;">❄️ ТЁПЛЫЙ ПОЛ 18°C</h3>
-                <p style="font-size: 1.35em; line-height: 1.7; text-align: center;">
-                    Норма <span style="color: #ffd93d;">35°C</span><br>
-                    Показывает <span style="color: #ff6b6b; font-weight: 900;">18°C</span><br>
-                    <strong>СЛОМАН ДАТЧИК!</strong>
-                </p>
-            </div>
-
-            <!-- 3. ОКНА -->
-            <div style="background: rgba(255,255,255,0.08); backdrop-filter: blur(20px); padding: 45px; border-radius: 30px; border: 2px solid rgba(255,255,255,0.15); position: relative; overflow: hidden;">
-                <div style="position: absolute; top: 25px; right: 25px; font-size: 5em; opacity: 0.1;">❄️</div>
-                <div style="font-size: 5em; margin-bottom: 30px; text-align: center;">🪟</div>
-                <h3 style="font-size: 2.2em; margin-bottom: 25px; color: #ffd93d; font-weight: 800; text-align: center;">❄️ ОКНА ДУЮТ 10°C</h3>
-                <p style="font-size: 1.35em; line-height: 1.7; text-align: center;">
-                    По периметру <span style="color: #ff6b6b; font-weight: 900;">-10°C</span><br>
-                    <strong>УПЛОТНИТЕЛИ СТАРЫЕ!</strong>
-                </p>
-            </div>
+      <!-- 3 КАРТОЧКИ ЗИМНИХ РИСКОВ -->
+      <div style="
+           display: grid;
+           grid-template-columns: repeat(3, minmax(0, 1fr));
+           gap: 40px;
+           margin-bottom: 40px;
+         ">
+        <!-- 1. БАТАРЕИ -->
+        <div style="background: rgba(255,255,255,0.08); backdrop-filter: blur(20px); padding: 40px; border-radius: 24px; border: 2px solid rgba(255,255,255,0.15); position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 20px; right: 20px; font-size: 5em; opacity: 0.08;">🔥</div>
+          <div style="font-size: 4.2em; margin-bottom: 24px; text-align: center;">🌡️</div>
+          <h3 style="font-size: 2em; margin-bottom: 20px; color: #ffd93d; font-weight: 800; text-align: center;">
+            ❄️ БАТАРЕИ ХОЛОДНЫЕ СНИЗУ
+          </h3>
+          <p style="font-size: 1.25em; line-height: 1.7; text-align: center;">
+            Верх <span style="color: #ffd93d;">60°C</span><br>
+            Низ <span style="color: #ff6b6b; font-weight: 900;">25°C</span><br>
+            <strong>ЗАСОР ИЛИ ВОЗДУХ!</strong>
+          </p>
         </div>
+
+        <!-- 2. ТЁПЛЫЙ ПОЛ -->
+        <div style="background: rgba(255,255,255,0.08); backdrop-filter: blur(20px); padding: 40px; border-radius: 24px; border: 2px solid rgba(255,255,255,0.15); position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 20px; right: 20px; font-size: 5em; opacity: 0.08;">🏠</div>
+          <div style="font-size: 4.2em; margin-bottom: 24px; text-align: center;">🏠</div>
+          <h3 style="font-size: 2em; margin-bottom: 20px; color: #ffd93d; font-weight: 800; text-align: center;">
+            ❄️ ТЁПЛЫЙ ПОЛ 18°C
+          </h3>
+          <p style="font-size: 1.25em; line-height: 1.7; text-align: center;">
+            Норма <span style="color: #ffd93d;">35°C</span><br>
+            Показывает <span style="color: #ff6b6b; font-weight: 900;">18°C</span><br>
+            <strong>СЛОМАН ДАТЧИК!</strong>
+          </p>
+        </div>
+
+        <!-- 3. ОКНА -->
+        <div style="background: rgba(255,255,255,0.08); backdrop-filter: blur(20px); padding: 40px; border-radius: 24px; border: 2px solid rgba(255,255,255,0.15); position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 20px; right: 20px; font-size: 5em; opacity: 0.08;">❄️</div>
+          <div style="font-size: 4.2em; margin-bottom: 24px; text-align: center;">🪟</div>
+          <h3 style="font-size: 2em; margin-bottom: 20px; color: #ffd93d; font-weight: 800; text-align: center;">
+            ❄️ ОКНА ДУЮТ 10°C
+          </h3>
+          <p style="font-size: 1.25em; line-height: 1.7; text-align: center;">
+            <p style="font-size: 1.25em; line-height: 1.7; text-align: center;">
+            По периметру <span style="color: #ff6b6b; font-weight: 900;">-10°C</span><br>
+            <strong>УПЛОТНИТЕЛИ СТАРЫЕ!</strong>
+          </p>
+        </div>
+      </div> <!-- конец grid с 3 карточками -->
+    </div> <!-- конец .container внутри зимней карточки -->
+  </div> <!-- конец закруглённого тёмного блока -->
+</section>
+
+<!-- Светлый разделитель между "Зимой" и SEO-блоком -->
+<div style="height: 40px; background: #f8f9fa;"></div>>
 
        <!-- 🔥 ГЕО + CTA (ЕДИНСТВЕННЫЙ!) -->
 <div class="seo-geo" style="text-align: center; padding: 60px 0; background: rgba(255,255,255,0.08); border-radius: 30px; backdrop-filter: blur(15px); margin-top: 50px;">
