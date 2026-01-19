@@ -373,7 +373,7 @@ img { loading: lazy; }
     
    
 
-/* ✅ ЗИМА на мобильном – как teplo: то же, только меньше */
+* ✅ ЗИМА: простое уменьшение на мобиле, без переломов */
 @media (max-width: 768px) {
   .winter-electricity {
     padding: 20px 8px !important;
@@ -381,60 +381,28 @@ img { loading: lazy; }
     max-width: 100% !important;
   }
 
-  /* Внутренняя тёмная карточка */
   .winter-electricity > div {
     padding: 24px 10px !important;
     border-radius: 20px !important;
+    transform: scale(0.9);          /* уменьшили всё содержимое */
+    transform-origin: top center;
   }
 
   .winter-electricity h2 {
-    font-size: 18px !important;
-    margin-bottom: 16px !important;
+    font-size: 1.5em !important;
+    margin-bottom: 14px !important;
   }
 
   .winter-electricity h2 div {
-    font-size: 0.6em !important;
-    margin-top: 6px !important;
+    font-size: 0.65em !important;
+    margin-top: 4px !important;
   }
 
-  /* Сетка трёх карточек – остаётся в ряд, но компактнее */
-  .winter-electricity div[style*="grid-template-columns: repeat(3"] {
-    gap: 10px !important;
-    margin-bottom: 10px !important;
-  }
-
-  /* Каждая из трёх карточек зимы */
-  .winter-electricity div[style*="background: rgba(255, 255, 255, 0.08)"] {
-    padding: 14px 8px !important;
-    border-radius: 14px !important;
-  }
-
-  /* Большие эмодзи сверху (🌡️ 🏠 🪟) меньше */
-  .winter-electricity div[style*="margin-bottom: 24px; text-align: center;"],
-  .winter-electricity div[style*="margin-bottom: 18px; text-align: center;"] {
-    font-size: 1.8em !important;
-    margin-bottom: 8px !important;
-  }
-
-  /* Заголовки внутри карточек (h3) меньше */
-  .winter-electricity h3 {
-    font-size: 1em !important;
-    margin-bottom: 6px !important;
-  }
-
-  /* Текст внутри карточек компактный */
   .winter-electricity p {
     font-size: 0.9em !important;
-    line-height: 1.35 !important;
+    line-height: 1.4 !important;
   }
-
-  /* Большие бледные иконки в углу (🔥 🏠 ❄️) тоже меньше */
-  .winter-electricity div[style*="font-size: 4em; opacity: 0.08"],
-  .winter-electricity div[style*="font-size: 5em; opacity: 0.08"] {
-    font-size: 2.2em !important;
-  }
-}
- /* 🔥 ДОПОЛНИТЕЛЬНЫЕ РАБОТЫ - МЕЛКИЙ ТЕКСТ */
+} /* 🔥 ДОПОЛНИТЕЛЬНЫЕ РАБОТЫ - МЕЛКИЙ ТЕКСТ */
 .extra-works.mobile-small {
     padding: 12px 10px !important;
     margin: 15px 0 !important;
