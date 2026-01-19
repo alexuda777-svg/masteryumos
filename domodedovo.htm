@@ -1,1 +1,210 @@
-<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0;url=/domodedovo.html"></head><script>window.location.replace('/domodedovo.html')</script></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ВАЖНО: закрываем страницу от индексации -->
+    <meta name="robots" content="noindex,follow">
+
+    <title>Частный мастер Алексей | Район юга Москвы</title>
+    <meta name="description" content="Страница района юга Москвы. Все актуальные услуги и цены — на главной: тепловизор, ремонт крыши, балконы, отопление, электрика и водоснабжение. Самозанятый, чек Мой Налог.">
+
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <style>
+        :root {
+            --green-main: #4CAF50;
+            --green-light: #8BC34A;
+            --bg-light: #f4f6f9;
+            --text-main: #2b2b2b;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Montserrat", Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: radial-gradient(circle at top left, #00d4ff 0, #1e3c72 40%, #111827 100%);
+            color: white;
+            text-align: center;
+            padding: 2.4rem 1.2rem 2.0rem;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255,255,255,0.12) 0, transparent 60%),
+                radial-gradient(circle at 80% 10%, rgba(255,255,255,0.08) 0, transparent 55%);
+            opacity: 0.9;
+            pointer-events: none;
+        }
+        .hero-inner {
+            position: relative;
+            max-width: 960px;
+            margin: 0 auto;
+            z-index: 1;
+        }
+        header h1 {
+            margin: 0 0 0.4rem 0;
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+        header p {
+            margin: 0.1rem 0 0.4rem 0;
+            font-size: 0.98rem;
+            opacity: 0.96;
+        }
+        .hero-note {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .hero-note a {
+            color: #bbf7d0;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        section {
+            padding: 1.8rem 1.2rem;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #111827;
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+        .card {
+            background: #ffffff;
+            padding: 1.5rem 1.4rem;
+            border-radius: 14px;
+            box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+            margin-bottom: 1.4rem;
+        }
+        .btn-main {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--green-main), var(--green-light));
+            color: white;
+            padding: 9px 22px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            box-shadow: 0 8px 20px rgba(22, 163, 74, 0.35);
+        }
+        #contact {
+            text-align: center;
+            background: #f3f4f6;
+            border-radius: 16px 16px 0 0;
+            box-shadow: 0 -8px 24px rgba(15, 23, 42, 0.06);
+        }
+        #contact h2 { margin-bottom: 0.3rem; }
+        #contact p { margin: 0.1rem 0; font-size: 0.9rem; }
+        #contact a { color: var(--green-main); text-decoration: none; font-weight: 600; }
+        .floating-main-btn {
+            position: fixed;
+            bottom: 70px;
+            right: 14px;
+            z-index: 999;
+            background: linear-gradient(135deg, var(--green-main), var(--green-light));
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            box-shadow: 0 10px 24px rgba(22, 163, 74, 0.4);
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 18px;
+            right: 18px;
+            background: var(--green-main);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: none;
+            font-size: 1.2em;
+            box-shadow: 0 10px 24px rgba(22, 163, 74, 0.4);
+            z-index: 1000;
+        }
+        @media (max-width: 480px) {
+            header h1 { font-size: 1.5rem; }
+            section { padding: 1.4rem 1rem; }
+            .card { padding: 1.3rem 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="hero-inner">
+        <h1>Страница района юга Москвы</h1>
+        <p>Тепловизор, ремонт крыши, утепление балконов, отопление, электрика и водоснабжение — услуги частного мастера Алексея.</p>
+        <p class="hero-note">
+            Эта страница сделана для удобства жителей района. Актуальные цены, подробные описания услуг и примеры работ — на главной.
+            <br><a href="/index.html">Перейти на главную со всеми услугами →</a>
+        </p>
+    </div>
+</header>
+
+<section>
+    <div class="card">
+        <h2>Куда дальше</h2>
+        <p>Чтобы не плодить десятки одинаковых страниц по каждому району, вся подробная информация собрана на главной:</p>
+        <p>там есть отдельные разделы по тепловизору, ремонту крыши, балконам, отоплению, электрике и воде, а также страницы с районами Москвы и области.</p>
+        <a href="/index.html" class="btn-main">Открыть главную страницу сайта</a>
+    </div>
+
+    <div class="card">
+        <h2>Как связаться с мастером</h2>
+        <p>Если уже точно решили обращаться, можно сразу позвонить или написать в WhatsApp, не ищя свой район в списке.</p>
+        <p>Отвечаю сам, без диспетчеров. Обсудим задачу, по необходимости приеду с тепловизором посмотреть объект.</p>
+        <a href="https://wa.me/79267904248" class="btn-main" target="_blank">Написать в WhatsApp</a>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>📞 +7 (926) 790‑42‑48</h2>
+    <p>Звоните или пишите — отвечает сам мастер, без колл‑центра.</p>
+    <p>
+        <a href="https://wa.me/79267904248" target="_blank">Открыть чат в WhatsApp</a> •
+        <a href="/index.html">← На главную страницу услуг</a>
+    </p>
+    <p style="font-size:0.86rem; color:#6b7280; margin-top:0.5rem;">
+        Работаю ежедневно 08:00–22:00 • Оплата по чеку «Мой налог»
+    </p>
+</section>
+
+<a href="/index.html" class="floating-main-btn">Главная</a>
+<button class="back-to-top" onclick="scrollToTop()" id="backToTop">↑</button>
+
+<script>
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    (function() {
+        window.onscroll = function() {
+            const btn = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = 'none';
+            }
+        };
+    })();
+</script>
+
+</body>
+</html>
