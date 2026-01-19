@@ -195,60 +195,141 @@ body {
         <h3>📸 <strong>НА ЭКРАНЕ ТЕПЛОВИЗОРА:</strong></h3>
 
 /* ТАРИФЫ */
-.price-table-new { max-width: 900px; margin: 0 auto 4rem auto; padding: 0 20px; }
+.price-table-new {
+    max-width: 900px;
+    margin: 0 auto 4rem auto;
+    padding: 0 20px;
+
+    /* раскладка тарифов */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+/* Заголовок тарифов на две колонки */
+.price-table-new > h2 {
+    grid-column: 1 / -1;
+}
+
 .tariff-card {
     background: linear-gradient(135deg, #fff 0%, #f0f9ff 100%);
-    border: 3px solid transparent; border-radius: 24px; margin-bottom: 2.5rem;
-    padding: 2.5rem; box-shadow: 0 12px 48px rgba(59,130,246,0.15);
-    position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 3px solid transparent;
+    border-radius: 24px;
+    margin-bottom: 2.5rem;
+    padding: 2.5rem;
+    box-shadow: 0 12px 48px rgba(59,130,246,0.15);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .tariff-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px;
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
     background: linear-gradient(90deg, #3b82f6, #10b981, #f59e0b);
 }
 .tariff-card.recommended {
-    border-color: #10b981; box-shadow: 0 20px 60px rgba(16,185,129,0.25);
+    border-color: #10b981;
+    box-shadow: 0 20px 60px rgba(16,185,129,0.25);
     transform: scale(1.02);
 }
-.tariff-card.recommended::before { background: linear-gradient(90deg, #10b981, #059669); }
-.tariff-header { text-align: center; margin-bottom: 2rem; }
-.tariff-icon { font-size: 3.5em; margin-bottom: 1rem; }
-.tariff-header h3 {
-    font-size: 2em; font-weight: 800; margin-bottom: 0.5rem; margin-top: 1rem;
+.tariff-card.recommended::before {
+    background: linear-gradient(90deg, #10b981, #059669);
 }
-.tariff-card:nth-child(1) .tariff-header h3 { color: #1e40af !important; }
-.tariff-card.recommended .tariff-header h3 { color: #059669 !important; }
+.tariff-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.tariff-icon {
+    font-size: 3.5em;
+    margin-bottom: 1rem;
+}
+.tariff-header h3 {
+    font-size: 2em;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+.tariff-card:nth-child(1) .tariff-header h3 {
+    color: #1e40af !important;
+}
+.tariff-card.recommended .tariff-header h3 {
+    color: #059669 !important;
+}
 .tariff-price {
-    font-size: 2.8em; font-weight: 800;
+    font-size: 2.8em;
+    font-weight: 800;
     background: linear-gradient(135deg, #ef4444, #f59e0b);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 0.5rem;
 }
 .tariff-specs {
-    display: grid; grid-template-columns: 1fr; gap: 0.8rem;
-    font-size: 1.1em; font-weight: 600; color: #1e40af; margin-bottom: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #1e40af;
+    margin-bottom: 1.5rem;
 }
-.check-group { margin-bottom: 1.5rem; }
+.check-group {
+    margin-bottom: 1.5rem;
+}
 .check-item {
-    display: flex; align-items: flex-start; margin-bottom: 0.8rem;
-    font-weight: 500; color: #1e40af; line-height: 1.4; font-size: 1.1em;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+    color: #1e40af;
+    line-height: 1.4;
+    font-size: 1.1em;
 }
 .check-item span {
-    margin-right: 0.8rem; font-size: 1.4em; color: #10b981;
-    font-weight: 700; min-width: 30px;
+    margin-right: 0.8rem;
+    font-size: 1.4em;
+    color: #10b981;
+    font-weight: 700;
+    min-width: 30px;
 }
 .bonus-item {
     background: linear-gradient(135deg, #ecfdf5, #d1fae5);
-    border: 2px solid #10b981; border-radius: 12px; padding: 1.2rem; margin-top: 1.5rem;
+    border: 2px solid #10b981;
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin-top: 1.5rem;
 }
 .extra-works {
-    background: #f8fafc; border-radius: 20px; padding: 2.5rem; margin: 3rem 0;
+    background: #f8fafc;
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin: 3rem 0;
 }
 .extra-item {
-    display: grid; grid-template-columns: 1fr auto; gap: 1rem;
-    padding: 1rem 0; border-bottom: 1px solid #e2e8f0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e2e8f0;
 }
-.extra-price { font-weight: 700; color: #dc2626; font-size: 1.2em; }
+.extra-price {
+    font-weight: 700;
+    color: #dc2626;
+    font-size: 1.2em;
+}
+
+/* 📱 Тарифы на мобиле: один под другим */
+@media (max-width: 768px) {
+    .price-table-new {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tariff-card {
+        margin-bottom: 0;
+    }
+}
 
 /* CTA + FOOTER */
 .calc { padding: 80px 0; background: #ff6b6b; color: white; text-align: center; }
