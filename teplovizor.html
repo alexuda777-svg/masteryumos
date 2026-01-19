@@ -373,6 +373,10 @@ img { loading: lazy; }
     
    
 
+Вот рабочий вариант, который не трогает десктоп и ужимает только мобилу.
+​
+
+css
 /* ✅ ЗИМА на мобильном — по логике как #teplo */
 @media (max-width: 768px) {
   /* Внешний блок, как у #teplo */
@@ -434,6 +438,14 @@ img { loading: lazy; }
   .winter-electricity div[style*="font-size: 4em; opacity: 0.08"],
   .winter-electricity div[style*="font-size: 5em; opacity: 0.08"] {
     font-size: 2em !important;
+  }
+}
+
+/* 💻 Десктоп — жёстко центрируем как в HTML */
+@media (min-width: 769px) {
+  .winter-electricity {
+    margin: 40px auto 60px auto !important;
+    max-width: 1200px !important;
   }
 }
     /* 🔥 ДОПОЛНИТЕЛЬНЫЕ РАБОТЫ - МЕЛКИЙ ТЕКСТ */
