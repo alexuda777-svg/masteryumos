@@ -1,214 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Главная -->
   <url>
-    <loc>https://master-yu-mos.ru/</loc>
-    <lastmod>2026-01-06</lastmod>
+    <loc>https://master-yu-mos.ru/index.html</loc>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- Услуги -->
+  <url>
+    <loc>https://master-yu-mos.ru/teplovizor.html</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
   <url>
     <loc>https://master-yu-mos.ru/pristroyka.html</loc>
-    <lastmod>2026-01-06</lastmod>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
-    <loc>https://master-yu-mos.ru/teplovizor.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <url>
     <loc>https://master-yu-mos.ru/elektrika.html</loc>
-    <lastmod>2026-01-06</lastmod>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://master-yu-mos.ru/krysha.html</loc>
-    <lastmod>2026-01-06</lastmod>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://master-yu-mos.ru/balkony.html</loc>
-    <lastmod>2026-01-06</lastmod>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://master-yu-mos.ru/otoplenie.html</loc>
-    <lastmod>2026-01-06</lastmod>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://master-yu-mos.ru/vodosnabzhenie.html</loc>
-    <lastmod>2026-01-06</lastmod>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
-  <url>
-    <loc>https://master-yu-mos.ru/podolsk.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://master-yu-mos.ru/vidnoe.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://master-yu-mos.ru/klimovsk.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://master-yu-mos.ru/domodedovo.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://master-yu-mos.ru/danilovskiy.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://master-yu-mos.ru/rayoni.html</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
+  <!-- Районы области -->
   <url>
     <loc>https://master-yu-mos.ru/Rayoni-obl.html</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- Районы/метро Юга Москвы -->
   <url>
-    <loc>https://master-yu-mos.ru/biryulevo-vostok.html</loc>
-    <lastmod>2026-01-06</lastmod>
+    <loc>https://master-yu-mos.ru/Rayoni.html</loc>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://master-yu-mos.ru/biryulevo-zapad.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://master-yu-mos.ru/brateevo.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://master-yu-mos.ru/caritsyno.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://master-yu-mos.ru/chertanovo-central.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://master-yu-mos.ru/chertanovo-sever.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://master-yu-mos.ru/chertanovo-yuzhnoe.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://master-yu-mos.ru/donskoy.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://master-yu-mos.ru/moskvorechye.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://master-yu-mos.ru/nagatino-sadovniki.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://master-yu-mos.ru/nagatinskiy-zaton.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://master-yu-mos.ru/nagornyy.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://master-yu-mos.ru/orekhovo-sever.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://master-yu-mos.ru/orekhovo-yug.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://master-yu-mos.ru/zyablikovo.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
 </urlset>
