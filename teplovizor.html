@@ -388,6 +388,34 @@ body {
     max-height: none !important;
     overflow: visible !important;
   }
+/* 🔧 Детальная проверка — сетка и мобильная адаптация */
+.detailed-check .grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+@media (max-width: 768px) {
+  .detailed-check {
+    padding: 1.5rem;
+  }
+
+  .detailed-check .grid-2col {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .detailed-check h3 {
+    font-size: 1.6em;
+  }
+
+  .detailed-check h4 {
+    font-size: 1.2em;
+  }
+
+  .detailed-check ul {
+    font-size: 1em;
+  }
 }
 /* CTA + FOOTER */
 .calc { padding: 80px 0; background: #ff6b6b; color: white; text-align: center; }
