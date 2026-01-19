@@ -602,6 +602,82 @@ img { loading: lazy; }
     /* на всякий случай */
     float: none !important;
   }
+/* 📱 Подготовка: компактный вид и явные карточки */
+@media (max-width: 768px) {
+  /* одна колонка вместо двух, меньше зазоры */
+  .preparation-guide .prep-grid {
+    display: block !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .preparation-guide {
+    padding: 1.5rem 1rem !important;
+    margin: 2.5rem 0 !important;
+  }
+
+  .preparation-guide h3 {
+    font-size: 1.6em !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* карточки как большие кнопки */
+  .preparation-guide .prep-card {
+    margin-bottom: 0.8rem !important;
+    padding: 1rem 1.2rem !important;
+    border-radius: 14px !important;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08) !important;
+    position: relative;
+  }
+
+  .preparation-guide .prep-title {
+    font-size: 1.2em !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* стрелочка, показывающая, что это раскрывается */
+  .preparation-guide .prep-title::after {
+    content: 'Нажмите';
+    font-size: 0.75em;
+    color: #6b7280;
+    margin-left: 8px;
+  }
+
+  .preparation-guide .prep-card.active .prep-title::after {
+    content: 'Свернуть';
+  }
+
+  /* прячем подробный текст по умолчанию */
+  .preparation-guide .prep-body {
+    display: none;
+    margin-top: 0.5rem;
+  }
+
+  .preparation-guide .prep-card.active .prep-body {
+    display: block;
+  }
+
+  /* уменьшаем текст внутри, чтобы помещалось по высоте */
+  .preparation-guide .prep-body ul {
+    font-size: 0.95em !important;
+    line-height: 1.5 !important;
+  }
+
+  .preparation-guide .prep-body ul ul {
+    font-size: 0.9em !important;
+  }
+
+  /* нижний зелёный блок – компактнее */
+  .preparation-guide > div[style*="background: rgba(16,185,129,0.1)"] {
+    margin-top: 1.5rem !important;
+    padding: 1rem !important;
+  }
+
+  .preparation-guide > div[style*="background: rgba(16,185,129,0.1)"] p {
+    font-size: 1em !important;
+  }
 }
     /* 🔥 ДОПОЛНИТЕЛЬНЫЕ РАБОТЫ - МЕЛКИЙ ТЕКСТ */
 .extra-works.mobile-small {
