@@ -373,23 +373,24 @@ img { loading: lazy; }
     
    
 
-/* ✅ МОБИЛЬНЫЙ ВИД ЗИМНЕГО БЛОКА */
+/* ✅ ЗИМА на мобильном: просто масштаб меньше, структура та же */
 @media (max-width: 768px) {
-  /* Внешняя карточка "Зима" компактнее */
   .winter-electricity {
-    padding: 20px 10px !important;
-    margin: 20px auto 30px auto !important;
+    padding: 20px 8px !important;
+    margin: 16px auto 24px auto !important;
     max-width: 100% !important;
   }
 
   .winter-electricity > div {
-    padding: 25px 12px !important;
+    padding: 24px 10px !important;
     border-radius: 20px !important;
+    transform: scale(0.9);          /* уменьшили весь блок */
+    transform-origin: top center;   /* масштаб от верха */
   }
 
   .winter-electricity h2 {
     font-size: 1.6em !important;
-    margin-bottom: 18px !important;
+    margin-bottom: 16px !important;
   }
 
   .winter-electricity h2 div {
@@ -397,37 +398,15 @@ img { loading: lazy; }
     margin-top: 6px !important;
   }
 
-  /* Сетка карточек – одна колонка, компактно */
+  /* Чуть меньше отступы между карточками, но без смены колонок */
   .winter-electricity div[style*="grid-template-columns: repeat(3"] {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    margin-bottom: 10px !important;
-  }
-
-  .winter-electricity div[style*="background: rgba(255, 255, 255, 0.08)"] {
-    padding: 16px 10px !important;
-    border-radius: 16px !important;
-  }
-
-  .winter-electricity div[style*="font-size: 3.6em"],
-  .winter-electricity div[style*="font-size: 4.2em"] {
-    font-size: 2em !important;
-    margin-bottom: 8px !important;
-  }
-
-  .winter-electricity h3 {
-    font-size: 1.1em !important;
-    margin-bottom: 8px !important;
+    gap: 16px !important;
+    margin-bottom: 12px !important;
   }
 
   .winter-electricity p {
-    font-size: 0.9em !important;
-    line-height: 1.35 !important;
-  }
-
-  .winter-electricity div[style*="font-size: 4em; opacity: 0.08"],
-  .winter-electricity div[style*="font-size: 5em; opacity: 0.08"] {
-    font-size: 2.4em !important;
+    font-size: 0.95em !important;
+    line-height: 1.4 !important;
   }
 }
  /* 🔥 ДОПОЛНИТЕЛЬНЫЕ РАБОТЫ - МЕЛКИЙ ТЕКСТ */
