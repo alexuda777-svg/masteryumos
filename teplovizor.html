@@ -294,23 +294,6 @@ img { loading: lazy; }
 }
 
 /* ✅ Карточки температур для блока #teplo */
-.teplo-cards-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.teplo-cards-row > div {
-  background: rgba(255,255,255,0.15);
-  border-radius: 18px;
-  padding: 18px;
-  text-align: center;
-  backdrop-filter: blur(10px);
-}
-
-/* Мобильный вид: тот же ряд, но всё уменьшено */
 @media (max-width: 768px) {
   #teplo {
     padding: 20px 8px !important;
@@ -323,24 +306,57 @@ img { loading: lazy; }
     margin-bottom: 12px !important;
   }
 
-  .teplo-cards-row {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 6px;
+  /* Две фотографии – рядом, но меньше */
+  #teplo .teplo-photos {
+    gap: 8px !important;
+  }
+  #teplo .teplo-photos > div {
+    flex: 1 1 0 !important;
+    max-width: 50% !important;
+  }
+  #teplo .teplo-photos img {
+    max-height: 140px !important;
+    border-width: 3px !important;
+    border-radius: 12px !important;
+  }
+  #teplo .teplo-photos p {
+    font-size: 0.8em !important;
+    margin-top: 6px !important;
   }
 
-  .teplo-cards-row > div {
+  /* Температуры – три карточки строго по горизонтали, но меньшие */
+  #teplo .teplo-cards {
+    flex-wrap: nowrap !important;      /* не падают вниз */
+    gap: 6px !important;
+    max-width: 100% !important;
+  }
+  #teplo .teplo-cards > div {
+    flex: 1 1 0 !important;
+    max-width: 33.33% !important;
     padding: 6px !important;
-    border-radius: 12px;
+    border-radius: 12px !important;
   }
 
-  .teplo-cards-row h5 {
+  /* Иконки меньше */
+  #teplo .teplo-cards div[style*="font-size: 2.6em"] {
+    font-size: 1.6em !important;
+  }
+
+  /* Заголовок (Автоматы / Розетки / Норма) меньше */
+  #teplo .teplo-cards h5 {
     font-size: 0.75em !important;
-    margin: 4px 0 2px 0;
+    margin: 4px 0 2px 0 !important;
   }
 
-  .teplo-cards-row p {
+  /* Температуры меньше */
+  #teplo .teplo-cards p[style*="font-size: 2em"] {
+    font-size: 1.2em !important;
+  }
+
+  /* Подписи (Замена обязательна...) меньше */
+  #teplo .teplo-cards p[style*="0.95em"] {
     font-size: 0.7em !important;
-    margin-top: 2px;
+    margin-top: 2px !important;
   }
 }
     
@@ -555,14 +571,24 @@ img { loading: lazy; }
         
 
     <!-- 🔥 РЕАЛЬНЫЙ ПРИМЕР ТЕПЛОВИЗОРА -->
-<div id="teplo" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 60px 20px; margin: 60px 0; border-radius: 30px;">
-  <div class="container" style="max-width: 1100px; margin: 0 auto;">
+<div id="teplo"
+     style="
+       background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+       color: white;
+       padding: 40px 20px;
+       margin: 60px auto;
+       border-radius: 30px;
+       max-width: 1100px;
+       box-shadow: 0 20px 50px rgba(37,99,235,0.45);
+     ">
+  <div class="container" style="max-width: 100%; margin: 0 auto; padding: 0;">
     <h3 style="font-size: 2.4em; text-align: center; margin-bottom: 40px; font-weight: 800;">
       📸 <strong>НА ЭКРАНЕ ТЕПЛОВИЗОРА:</strong>
     </h3>
 
     <!-- Фото ДО/ПОСЛЕ -->
-    <div class="teplo-photos" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+    <div class="teplo-photos"
+         style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
       <div style="text-align: center; flex: 1 1 260px; max-width: 360px;">
         <div style="background: #dc2626; color: white; padding: 8px 18px; border-radius: 24px; font-weight: 700; font-size: 1.05em; margin-bottom: 12px; display: inline-block;">
           ❌ ПЕРЕГРЕВ 68°C
@@ -588,35 +614,35 @@ img { loading: lazy; }
       </div>
     </div>
 
- <!-- Температуры -->
-<div class="teplo-cards"
-     style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; max-width: 900px; margin: 0 auto;">
-  <div style="flex: 1 1 220px; max-width: 280px; background: rgba(255,255,255,0.15); padding: 18px; border-radius: 18px; backdrop-filter: blur(10px); text-align: center;">
-    <div style="font-size: 2.6em; color: #ff6b6b;">🔴</div>
-    <h5 style="font-size: 1.3em; margin: 10px 0 6px 0;">Автоматы</h5>
-    <p style="font-size: 2em; font-weight: 900; color: #ff4444; margin: 0;">68°C</p>
-    <p style="font-size: 0.95em; opacity: 0.9; margin-top: 6px;">Замена обязательна</p>
-  </div>
+    <!-- Температуры -->
+    <div class="teplo-cards"
+         style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; max-width: 900px; margin: 0 auto;">
+      <div style="flex: 1 1 220px; max-width: 280px; background: rgba(255,255,255,0.15); padding: 18px; border-radius: 18px; backdrop-filter: blur(10px); text-align: center;">
+        <div style="font-size: 2.6em; color: #ff6b6b;">🔴</div>
+        <h5 style="font-size: 1.3em; margin: 10px 0 6px 0;">Автоматы</h5>
+        <p style="font-size: 2em; font-weight: 900; color: #ff4444; margin: 0;">68°C</p>
+        <p style="font-size: 0.95em; opacity: 0.9; margin-top: 6px;">Замена обязательна</p>
+      </div>
 
-  <div style="flex: 1 1 220px; max-width: 280px; background: rgba(255,255,255,0.15); padding: 18px; border-radius: 18px; backdrop-filter: blur(10px); text-align: center;">
-    <div style="font-size: 2.6em; color: #f59e0b;">🟡</div>
-    <h5 style="font-size: 1.3em; margin: 10px 0 6px 0;">Розетки</h5>
-    <p style="font-size: 2em; font-weight: 900; color: #f59e0b; margin: 0;">45°C</p>
-    <p style="font-size: 0.95em; opacity: 0.9; margin-top: 6px;">Проверить срочно</p>
-  </div>
+      <div style="flex: 1 1 220px; max-width: 280px; background: rgba(255,255,255,0.15); padding: 18px; border-radius: 18px; backdrop-filter: blur(10px); text-align: center;">
+        <div style="font-size: 2.6em; color: #f59e0b;">🟡</div>
+        <h5 style="font-size: 1.3em; margin: 10px 0 6px 0;">Розетки</h5>
+        <p style="font-size: 2em; font-weight: 900; color: #f59e0b; margin: 0;">45°C</p>
+        <p style="font-size: 0.95em; opacity: 0.9; margin-top: 6px;">Проверить срочно</p>
+      </div>
 
-  <div style="flex: 1 1 220px; max-width: 280px; background: rgba(255,255,255,0.15); padding: 18px; border-radius: 18px; backdrop-filter: blur(10px); text-align: center;">
-    <div style="font-size: 2.6em; color: #10b981;">🟢</div>
-    <h5 style="font-size: 1.3em; margin: 10px 0 6px 0;">Норма</h5>
-    <p style="font-size: 2em; font-weight: 900; color: #10b981; margin: 0;">35°C</p>
-    <p style="font-size: 0.95em; opacity: 0.9; margin-top: 6px;">Всё ОК</p>
+      <div style="flex: 1 1 220px; max-width: 280px; background: rgba(255,255,255,0.15); padding: 18px; border-radius: 18px; backdrop-filter: blur(10px); text-align: center;">
+        <div style="font-size: 2.6em; color: #10b981;">🟢</div>
+        <h5 style="font-size: 1.3em; margin: 10px 0 6px 0;">Норма</h5>
+        <p style="font-size: 2em; font-weight: 900; color: #10b981; margin: 0;">35°C</p>
+        <p style="font-size: 0.95em; opacity: 0.9; margin-top: 6px;">Всё ОК</p>
+      </div>
+    </div>
   </div>
 </div>
-<!-- Разделитель -->
-    <div style="height: 1px; background: rgba(255,255,255,0.25); margin-top: 20px;"></div>
-  </div> <!-- конец .container -->
-</div>
 
+<!-- Светлый разделитель между синим блоком и «ЗИМА» -->
+<div style="height: 40px; background: #f8f9fa;"></div>
   <!-- 🔥 ЗИМА = ОПАСНОСТЬ! -->
 <section class="winter-electricity mobile-small" style="padding: 100px 0; background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%); color: white; margin: 80px 0; position: relative; overflow: hidden;">
     <div style="position: absolute; top: 0; left: 0; right: 0; height: 10px; background: linear-gradient(90deg, #ffd93d, #ff6b6b, #10b981); box-shadow: 0 4px 20px rgba(255,217,61,0.4);"></div>
