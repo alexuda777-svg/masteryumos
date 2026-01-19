@@ -196,25 +196,26 @@ body {
 
 /* ТАРИФЫ */
 .price-table-new {
-    max-width: 1100px;
+    max-width: 900px;
     margin: 0 auto 4rem auto;
     padding: 0 20px;
-
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 30px;
-    row-gap: 30px;
 }
 
-/* Заголовок на две колонки */
-.price-table-new > h2 {
-    grid-column: 1 / -1;
+.tariff-row {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.tariff-row .tariff-card {
+    flex: 1 1 0;
 }
 
 .tariff-card {
     background: linear-gradient(135deg, #fff 0%, #f0f9ff 100%);
     border: 3px solid transparent;
     border-radius: 24px;
+    margin-bottom: 2.5rem;
     padding: 2.5rem;
     box-shadow: 0 12px 48px rgba(59,130,246,0.15);
     position: relative;
@@ -257,7 +258,7 @@ body {
     margin-top: 1rem;
 }
 
-.tariff-card:nth-child(2) .tariff-header h3 {
+.tariff-card:nth-child(1) .tariff-header h3 {
     color: #1e40af !important;
 }
 
@@ -316,12 +317,15 @@ body {
 
 /* 📱 Тарифы на мобиле: один под другим */
 @media (max-width: 768px) {
-    .price-table-new {
-        grid-template-columns: 1fr;
-        row-gap: 20px;
+    .tariff-row {
+        flex-direction: column;
+    }
+
+    .tariff-row .tariff-card {
+        flex: 1 1 auto;
+        margin-bottom: 0;
     }
 }
-
 /* CTA + FOOTER */
 .calc { padding: 80px 0; background: #ff6b6b; color: white; text-align: center; }
 .footer { background: #2c3e50; color: white; padding: 40px 0; text-align: center; }
