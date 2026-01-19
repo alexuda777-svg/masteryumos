@@ -93,22 +93,112 @@ body {
     font-weight: 700; font-size: 0.9em; border-radius: 20px; transition: all 0.3s;
 }
 .mobile-nav a:hover { background: rgba(255,217,61,0.3); }
+    /* 🔥 Фиксированные кнопки навигации (Главная + Тарифы) */
+.fixed-nav {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 1000;
+  display: flex;
+  gap: 8px;
+  background: rgba(0,0,0,0.8);
+  padding: 8px 12px;
+  border-radius: 24px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.fixed-nav__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9em;
+  font-family: 'Montserrat', sans-serif;
+  white-space: nowrap;
+  padding: 6px 10px;
+  border-radius: 20px;
+  transition: background 0.2s ease;
+}
+
+.fixed-nav__link:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* 📱 Мобилка: фикс‑кнопки компактнее */
+@media (max-width: 480px) {
+  .fixed-nav {
+    top: 10px;
+    left: 10px;
+    padding: 6px 8px;
+    gap: 6px;
+  }
+  .fixed-nav__link {
+    font-size: 0.8em;
+    padding: 4px 8px;
+  }
+}
+    
 
 /* HERO */
 .hero {
-    background: linear-gradient(135deg, #ff6b6b, #ffd93d, #ff8e8e);
-    color: white; padding: 80px 20px; text-align: center;
+  text-align: center;
 }
-.cities-badge {
-    display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; flex-wrap: wrap;
+
+.hero-main {
+  background: linear-gradient(135deg, #ff6b6b, #ef4444, #dc2626);
+  color: white;
+  padding: 80px 0;
 }
-.badge {
-    background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px;
-    font-weight: 700; font-size: 0.9em;
+
+.hero-main .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-.badge.orange { background: linear-gradient(135deg, #f39c12, #e67e22); }
-.hero h1 { font-size: 3em; margin-bottom: 20px; font-weight: 700; }
-.hero-text { font-size: 1.3em; margin-bottom: 30px; }
+
+/* аккуратный гео-SEO блок */
+.hero-geo {
+  font-size: 0.9em;
+  opacity: 0.9;
+  margin-bottom: 12px;
+  color: #ffe4e4;
+}
+
+/* H1 */
+.hero-title {
+  font-size: 3.2em;
+  margin-bottom: 20px;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* подзаголовок */
+.hero-text {
+  font-size: 1.4em;
+  margin-bottom: 40px;
+  font-weight: 500;
+  opacity: 0.95;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* кнопки в hero */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hero-call {
+  font-size: 1.3em;
+  padding: 16px 40px;
+}
+
+.hero-email,
+.hero-whatsapp {
+  font-size: 1.2em;
+  padding: 16px 36px;
+}
 
 /* КНОПКИ */
 .hero-buttons, .cta-buttons {
@@ -705,6 +795,50 @@ body, html {
   .teplovizor-photo-item img { height: 200px !important; }
   .temp-value { font-size: 2em !important; }
 }
+    @media (max-width: 768px) {
+  .hero-main {
+    padding: 60px 0;
+  }
+
+  .hero-title {
+    font-size: 2em;
+    margin-bottom: 16px;
+  }
+
+  .hero-text {
+    font-size: 1.1em;
+    margin-bottom: 24px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-call,
+  .hero-email,
+  .hero-whatsapp {
+    width: 100%;
+    max-width: 320px;
+    font-size: 1.05em;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-main {
+    padding: 50px 0 60px 0;
+  }
+
+  .hero-title {
+    font-size: 1.7em;
+  }
+
+  .hero-text {
+    font-size: 1em;
+  }
+}
 
 /* seo‑блок */
 .seo-geo {
@@ -756,53 +890,55 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
     
 <body>
-    <!-- 🔥 ФИКСИРОВАННАЯ КНОПКА НАВИГАЦИИ -->
-  <nav style="position: fixed; top: 16px; left: 16px; z-index: 1000; 
-             background: rgba(0,0,0,0.8); padding: 10px 18px; 
-             border-radius: 24px; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
-    <a href="index.html"
-       style="color: #ffffff; text-decoration: none; font-weight: 700; 
-              font-size: 1em; font-family: 'Montserrat', sans-serif; white-space: nowrap;">
+
+  <!-- 🔥 ФИКСИРОВАННЫЕ КНОПКИ НАВИГАЦИИ -->
+  <nav class="fixed-nav">
+    <a href="index.html" class="fixed-nav__link">
       🏠 Главная
+    </a>
+    <a href="#prices" class="fixed-nav__link">
+      💰 Тарифы
     </a>
   </nav>
 
-<main>
+  <main>
 
-    
+    <!-- 🔥 HERO - SEO + ДИЗАЙН -->
+    <header class="hero hero-main">
+      <div class="container">
 
-
-
-<!-- 🔥 HERO - SEO + ДИЗАЙН -->
-<header class="hero" style="background: linear-gradient(135deg, #ff6b6b, #ef4444, #dc2626) !important; color: white; padding: 80px 0; text-align: center;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        
-        <!-- 🔥 ГЕО ДЛЯ SEO - НЕВИДИМО -->
-        <div class="seo-cities" style="position: absolute; left: -9999px; opacity: 0; height: 0; overflow: hidden;">
-    <span>Подольск +30км</span>
-    <span>Видное +25км</span>
-    <span>Климовск +29км</span>
-    <span>Домодедово</span>          ← ✅ ЗДЕСЬ
-    <span>Юг Москвы</span>         ← ✅ ЗДЕСЬ
-    <span>За МКАД +1000₽</span>
-</div>
-        
-        <!-- ✅ SEO H1 БЕЗ ЭМОДЗИ -->
-        <h1 style="font-size: 3.2em; margin-bottom: 20px; font-weight: 900; font-family: 'Montserrat', sans-serif; text-shadow: 0 4px 20px rgba(0,0,0,0.3);">
-    Диагностика тепловизором Подольск Видное Климовск Домодедово Юг Москвы <strong>от 2990₽</strong>
-</h1>
-        
-        <p class="hero-text" style="font-size: 1.4em; margin-bottom: 40px; font-weight: 500; opacity: 0.95; font-family: 'Montserrat', sans-serif;">
-            Проводка • Батареи • Теплый пол • Окна<br>
-            <strong>PDF отчет +790₽</strong>
-        </p>
-        
-        <div class="hero-buttons" style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap;">
-            <a href="tel:+79267904248" class="btn-primary" style="background: white; color: #dc2626 !important; padding: 20px 60px; font-size: 1.5em; font-weight: 800; border-radius: 50px; text-decoration: none; box-shadow: 0 20px 50px rgba(0,0,0,0.3);">📞 +7(926)790-42-48</a>
-            <a href="mailto:lesha.alexandrov2014@yandex.ru" class="btn-secondary" style="background: rgba(255,255,255,0.3); color: white !important; padding: 20px 60px; font-size: 1.5em; font-weight: 800; border-radius: 50px; text-decoration: none; border: 3px solid white; box-shadow: 0 15px 40px rgba(0,0,0,0.2);">✉️ WhatsApp</a>
+        <!-- 🔥 ГЕО ДЛЯ SEO — АККУРАТНО ВИДИМО -->
+        <div class="hero-geo">
+          Подольск • Видное • Климовск • Домодедово • юг Москвы • выезд за МКАД +1000 ₽
         </div>
-    </div>
-</header>
+
+        <!-- ✅ SEO H1 БЕЗ ЭМОДЗИ -->
+        <h1 class="hero-title">
+          Диагностика тепловизором Подольск, Видное, Климовск, Домодедово, юг Москвы
+          <strong>от 2990 ₽</strong>
+        </h1>
+
+        <p class="hero-text">
+          Проводка • Батареи • Тёплый пол • Окна<br>
+          <strong>PDF‑отчёт с фото +790 ₽</strong>
+        </p>
+
+        <div class="hero-buttons">
+          <a href="tel:+79267904248" class="btn-primary hero-call">
+            📞 +7 (926) 790‑42‑48
+          </a>
+          <a href="mailto:lesha.alexandrov2014@yandex.ru" class="btn-secondary hero-email">
+            ✉️ Написать на e‑mail
+          </a>
+          <!-- Если захочешь WhatsApp вместо e‑mail:
+          <a href="https://wa.me/79267904248" class="btn-secondary hero-whatsapp">
+            💬 WhatsApp
+          </a>
+          -->
+        </div>
+
+      </div>
+    </header>
 
    <!-- 🔥 Тепловизор + ФОТО (без гео) -->
 <section class="teplovizor-showcase">
