@@ -373,36 +373,69 @@ img { loading: lazy; }
     
    
 
-* ✅ ЗИМА: простое уменьшение на мобиле, без переломов */
+/* ✅ ЗИМА на мобильном — по логике как #teplo */
 @media (max-width: 768px) {
+  /* Внешний блок, как у #teplo */
   .winter-electricity {
     padding: 20px 8px !important;
-    margin: 16px auto 24px auto !important;
+    margin: 16px 0 !important;
     max-width: 100% !important;
   }
 
+  /* Внутренняя тёмная карточка */
   .winter-electricity > div {
     padding: 24px 10px !important;
     border-radius: 20px !important;
-    transform: scale(0.9);          /* уменьшили всё содержимое */
-    transform-origin: top center;
   }
 
+  /* Заголовок поменьше, как h3 в teplo */
   .winter-electricity h2 {
-    font-size: 1.5em !important;
-    margin-bottom: 14px !important;
+    font-size: 18px !important;
+    margin-bottom: 12px !important;
   }
 
   .winter-electricity h2 div {
-    font-size: 0.65em !important;
+    font-size: 0.6em !important;
     margin-top: 4px !important;
   }
 
-  .winter-electricity p {
-    font-size: 0.9em !important;
-    line-height: 1.4 !important;
+  /* Сетка трёх карточек – остаётся в ряд, но как уменьшенные «температуры» у teplo */
+  .winter-electricity div[style*="display: grid; grid-template-columns: repeat(3"] {
+    gap: 6px !important;
+    margin-bottom: 10px !important;
   }
-} /* 🔥 ДОПОЛНИТЕЛЬНЫЕ РАБОТЫ - МЕЛКИЙ ТЕКСТ */
+
+  /* Каждая карточка зимы — компактнее, как карточки температур */
+  .winter-electricity div[style*="background: rgba(255, 255, 255, 0.08)"] {
+    padding: 12px 8px !important;
+    border-radius: 14px !important;
+  }
+
+  /* Верхние эмодзи (🌡️ 🏠 🪟) поменьше, как иконки в teplo */
+  .winter-electricity div[style*="margin-bottom: 18px; text-align: center;"],
+  .winter-electricity div[style*="margin-bottom: 24px; text-align: center;"] {
+    font-size: 1.8em !important;
+    margin-bottom: 6px !important;
+  }
+
+  /* Заголовки карточек (h3) поменьше, как h5 в teplo */
+  .winter-electricity h3 {
+    font-size: 0.9em !important;
+    margin-bottom: 6px !important;
+  }
+
+  /* Текст внутри карточек — как подписи в teplo */
+  .winter-electricity p {
+    font-size: 0.8em !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Большие бледные иконки в углу (🔥 🏠 ❄️) тоже уменьшаем */
+  .winter-electricity div[style*="font-size: 4em; opacity: 0.08"],
+  .winter-electricity div[style*="font-size: 5em; opacity: 0.08"] {
+    font-size: 2em !important;
+  }
+    /* 🔥 ДОПОЛНИТЕЛЬНЫЕ РАБОТЫ - МЕЛКИЙ ТЕКСТ */
 .extra-works.mobile-small {
     padding: 12px 10px !important;
     margin: 15px 0 !important;
