@@ -4,178 +4,330 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Районы обслуживания Master-Yu-Mos | Подольск, Видное, Климовск, Юг Москвы</title>
-    <meta name="description" content="Частный мастер Алексей: тепловизор, ремонт крыши, утепление балконов, отопление, электрика и водоснабжение. Работаю в Подольске, Видном, Климовске, Домодедово и по Югу Москвы.">
-    <meta name="keywords" content="мастер Подольск, мастер Видное, мастер Климовск, тепловизор юг Москвы, электрик Подольск, ремонт крыши Подольск">
+    <meta name="description" content="Частный мастер Алексей: тепловизор, ремонт крыши, утепление балконов, отопление, электрика и водоснабжение. Работаю в Подольске, Видном, Климовске, Домодедово и по Югу Москвы. Чеки Мой Налог.">
     <meta name="robots" content="index,follow">
 
     <style>
+        :root {
+            --green-main: #4CAF50;
+            --green-light: #8BC34A;
+            --bg-light: #f4f6f9;
+            --text-main: #2b2b2b;
+        }
+        * {
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #fafafa;
-            color: #333;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Montserrat", Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
             line-height: 1.6;
             margin: 0;
             padding: 0;
         }
         header {
-            background: linear-gradient(to right, #4CAF50, #8BC34A);
+            background: radial-gradient(circle at top left, #00d4ff 0, #1e3c72 40%, #111827 100%);
             color: white;
             text-align: center;
-            padding: 2rem 0;
+            padding: 2.6rem 1.2rem 2.2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255,255,255,0.12) 0, transparent 60%),
+                radial-gradient(circle at 80% 10%, rgba(255,255,255,0.08) 0, transparent 55%);
+            opacity: 0.9;
+            pointer-events: none;
+        }
+        .hero-inner {
+            position: relative;
+            max-width: 1100px;
+            margin: 0 auto;
+            z-index: 1;
         }
         header h1 {
-            margin: 0 0 0.5rem 0;
+            margin: 0 0 0.6rem 0;
             font-size: 2rem;
+            font-weight: 800;
         }
         header p {
-            margin: 0;
-            font-size: 1.05rem;
+            margin: 0.1rem 0 1rem 0;
+            font-size: 1.02rem;
+            opacity: 0.96;
+        }
+        .hero-badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 0.7rem;
+        }
+        .hero-badge {
+            background: rgba(15, 23, 42, 0.55);
+            border-radius: 999px;
+            padding: 5px 12px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(248, 250, 252, 0.18);
+        }
+        .hero-note {
+            font-size: 0.9rem;
+            opacity: 0.9;
         }
         section {
             padding: 2rem 1.2rem;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
         }
         h2 {
-            color: #333;
+            color: #111827;
             margin-top: 0;
+            font-size: 1.5rem;
         }
-        .seo-text, .block {
-            background: white;
-            padding: 1.8rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        .card {
+            background: #ffffff;
+            padding: 1.8rem 1.6rem;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
             margin-bottom: 1.8rem;
+        }
+        .card + .card {
+            margin-top: 0.8rem;
+        }
+        .card-accent {
+            border-left: 4px solid var(--green-main);
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+            gap: 1.6rem;
+            align-items: flex-start;
+        }
+        .about-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: #e5f9e7;
+            color: #166534;
+            font-size: 0.78rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+        .about-fact {
+            font-size: 0.93rem;
+            margin: 0.2rem 0;
+        }
+        .about-callout {
+            background: #f0fdf4;
+            border-radius: 12px;
+            padding: 0.8rem 1rem;
+            font-size: 0.9rem;
+            border: 1px solid #bbf7d0;
+            margin-top: 0.6rem;
+        }
+        .about-name {
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-bottom: 0.2rem;
+        }
+        .about-sub {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 0.4rem;
+        }
+        .about-meta {
+            font-size: 0.85rem;
+            color: #4b5563;
+        }
+        .about-meta span {
+            display: inline-block;
+            margin-right: 0.8rem;
+        }
+        .services-list {
+            max-width: 760px;
+            padding-left: 1.1rem;
+            margin: 0.4rem 0 0;
+            font-size: 0.95rem;
+        }
+        .services-list li {
+            margin-bottom: 0.35rem;
         }
         .districts-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 0.9rem;
             margin-top: 1rem;
         }
         .district-card {
-            background: white;
-            padding: 1.2rem 1.4rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            background: #ffffff;
+            padding: 0.9rem 1rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
         }
         .district-name {
-            font-size: 1.1em;
-            font-weight: bold;
-            color: #4CAF50;
-            margin-bottom: 0.4rem;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--green-main);
+            margin-bottom: 0.2rem;
         }
         .district-card p {
             margin: 0.2rem 0;
-            font-size: 0.95em;
+            font-size: 0.9rem;
         }
         .district-card small {
-            color: #777;
-            font-size: 0.85em;
-        }
-        .btn-main {
-            display: inline-block;
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 26px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 1em;
-            font-weight: 600;
-            margin-top: 0.5rem;
-            transition: background 0.3s;
-        }
-        .btn-main:hover {
-            background-color: #45a046;
+            color: #6b7280;
+            font-size: 0.8rem;
         }
         #contact {
             text-align: center;
-            background: #f8f9fa;
+            background: #f3f4f6;
+            border-radius: 16px 16px 0 0;
+            box-shadow: 0 -8px 30px rgba(15, 23, 42, 0.06);
+        }
+        #contact h2 {
+            margin-bottom: 0.3rem;
+        }
+        #contact p {
+            margin: 0.1rem 0;
+            font-size: 0.95rem;
         }
         #contact a {
-            color: #4CAF50;
+            color: var(--green-main);
             text-decoration: none;
+            font-weight: 600;
+        }
+        .btn-main {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--green-main), var(--green-light));
+            color: white;
+            padding: 11px 26px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-size: 0.98rem;
+            font-weight: 600;
+            margin-top: 0.7rem;
+            box-shadow: 0 10px 24px rgba(22, 163, 74, 0.35);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn-main:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 32px rgba(22, 163, 74, 0.45);
         }
         .back-to-top {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #4CAF50;
+            bottom: 18px;
+            right: 18px;
+            background: var(--green-main);
             color: white;
             border: none;
             border-radius: 50%;
-            width: 46px;
-            height: 46px;
+            width: 44px;
+            height: 44px;
             cursor: pointer;
             display: none;
             font-size: 1.3em;
+            box-shadow: 0 10px 24px rgba(22, 163, 74, 0.4);
         }
-        ul.services-list {
-            max-width: 750px;
-            padding-left: 1.2rem;
-        }
-        ul.services-list li {
-            margin-bottom: 0.4rem;
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            section {
+                padding: 1.6rem 1rem;
+            }
+            .card {
+                padding: 1.5rem 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 <header>
-    <h1>Районы обслуживания Master-Yu-Mos</h1>
-    <p>Тепловизор • Ремонт крыши • Утепление балконов • Отопление • Электрика • Водоснабжение</p>
+    <div class="hero-inner">
+        <div class="hero-badge-row">
+            <span class="hero-badge">Подольск +30 км</span>
+            <span class="hero-badge">Видное +25 км</span>
+            <span class="hero-badge">Климовск +29 км</span>
+            <span class="hero-badge">Юг Москвы (ЮАО)</span>
+        </div>
+        <h1>Районы обслуживания частного мастера Алексея</h1>
+        <p>Тепловизор, ремонт крыши, утепление балконов, отопление, электрика и водоснабжение — один мастер, без бригады и диспетчеров.</p>
+        <p class="hero-note">Работаю сам, показываю чеки «Мой налог» и отправляю фото/видео по WhatsApp, чтобы было понятно, за что платите.</p>
+    </div>
 </header>
 
-<section class="seo-text">
-    <h2>Где работаю</h2>
-    <p>
-        Частный мастер Алексей, самозанятый. Работаю в Подольске, Видном, Климовске, Домодедово, а также по Югу Москвы:
-        Бирюлёво, Братеево, Царицыно, Чертаново, Даниловский, Донской, Москворечье-Сабурово, Нагатино-Садовники,
-        Нагатинский затон, Нагорный и соседние районы.
-    </p>
-    <p>
-        Во всех этих районах можно заказать тепловизор, ремонт крыши, утепление балконов, монтаж отопления, электрики и водоснабжения.
-        Выезд обычно в день обращения, оплата по чеку «Мой налог».
-    </p>
-    <p>
-        Полное описание услуг, цены и примеры работ — на главной странице сайта.
-    </p>
-    <a href="/index.html" class="btn-main">← Перейти на главную со всеми услугами</a>
-</section>
+<section>
+    <div class="card card-accent">
+        <h2>Кто приезжает к вам на объект</h2>
+        <div class="about-grid">
+            <div>
+                <span class="about-tag">Обо мне</span>
+                <p class="about-fact">Меня зовут Алексей. Я частный мастер, самозанятый. Живу на юге Московской области и много лет работаю по Подольску, Видному, Климовску, Домодедово и Югу Москвы.</p>
+                <p class="about-fact">На вызов приезжаю сам: без «левых» бригад и посредников. Если что‑то не могу сделать качественно — честно говорю об этом, не беру заказ.</p>
+                <div class="about-callout">
+                    📸 После работ всегда делаю фото/видео для отчёта. По тепловизору — 15+ снимков с пояснениями, по ремонту крыши и балконам — фото «до/после».
+                </div>
+            </div>
+            <div>
+                <div class="about-name">Алексей, частный мастер</div>
+                <div class="about-sub">Тепловизор, крыши, отопление, балконы, электрика, вода</div>
+                <div class="about-meta">
+                    <span>🧾 Статус: самозанятый (чек «Мой налог»)</span><br>
+                    <span>📅 Опыт: с 2014 года</span><br>
+                    <span>📍 Регион: Подольск, Видное, Климовск, Домодедово, ЮАО Москва</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<section class="block">
-    <h2>Основные услуги в районах</h2>
-    <ul class="services-list">
-        <li><strong>Тепловизор:</strong> поиск теплопотерь, перегрева проводки, проблем с батареями и тёплыми полами.</li>
-        <li><strong>Ремонт крыши:</strong> обследование, утепление, ремонт скатов и свесов, поиск протечек.</li>
-        <li><strong>Балконы:</strong> утепление и отделка балконов и лоджий «под ключ».</li>
-        <li><strong>Отопление:</strong> котёл, радиаторы, тёплый пол в домах и пристройках.</li>
-        <li><strong>Электрика:</strong> проводка, щиток, розетки и освещение.</li>
-        <li><strong>Водоснабжение:</strong> насос, гидроаккумулятор, бойлер, разводка по дому.</li>
-        <li><strong>Пристройки и утепление:</strong> каркас с утеплением, вентзазоры, обшивка и отделка.</li>
-    </ul>
-</section>
+    <div class="card">
+        <h2>Какие услуги доступны в районах</h2>
+        <ul class="services-list">
+            <li><strong>Тепловизор:</strong> поиск теплопотерь, скрытых протечек, перегрева проводки, проблем с батареями и тёплыми полами.</li>
+            <li><strong>Ремонт крыши:</strong> обследование, утепление, ремонт скатов и свесов, проверка вентзазоров, карнизов и капельников.</li>
+            <li><strong>Балконы:</strong> утепление и отделка балконов/лоджий «под ключ» — каркас, утеплитель, ПВХ, пол.</li>
+            <li><strong>Отопление:</strong> котёл, радиаторы, разводка, тёплый пол в домах, пристройках и квартирах.</li>
+            <li><strong>Электрика:</strong> замена проводки, щиток, розетки, свет, поиск проблемных мест.</li>
+            <li><strong>Водоснабжение:</strong> насос, гидроаккумулятор, бойлер, разводка воды по дому.</li>
+            <li><strong>Пристройки и утепление:</strong> каркасные пристройки с утеплением, вентзазорами и отделкой.</li>
+        </ul>
+        <p style="font-size:0.9rem; margin-top:0.6rem;">
+            Подробные цены и примеры работ — на главной странице.
+        </p>
+        <a href="/index.html" class="btn-main">← Перейти на главную со всеми услугами</a>
+    </div>
 
-<section id="districts" class="block">
-    <h2>Часть обслуживаемых районов</h2>
-    <p>Список ниже не полный, просто показывает географию выезда. Если вашего района нет в списке — всё равно можно написать или позвонить.</p>
-    <div class="districts-grid" id="districtsGrid">
-        <!-- Заполним районами через JS -->
+    <div class="card">
+        <h2>Где точно работаю</h2>
+        <p>Ниже — основные города и районы, где регулярно бываю. Если вашего района нет в списке, всё равно можно написать или позвонить — часто выезжаю чуть дальше, если это Подольск, Видное, Климовск, Домодедово и Юг Москвы.</p>
+        <div class="districts-grid" id="districtsGrid">
+            <!-- Заполним районами через JS -->
+        </div>
     </div>
 </section>
 
 <section id="contact">
-    <h2>📞 +7 (926) 790-42-48</h2>
-    <p>Работаю ежедневно 08:00–22:00 • Выезд по Подольску, Видному, Климовску, Домодедово и Югу Москвы</p>
+    <h2>📞 +7 (926) 790‑42‑48</h2>
+    <p>Звоните или пишите в WhatsApp — отвечает сам мастер, без колл‑центра.</p>
     <p>
         <a href="https://wa.me/79267904248" target="_blank">Написать в WhatsApp</a> •
         <a href="/index.html">← На главную страницу услуг</a>
+    </p>
+    <p style="font-size:0.86rem; color:#6b7280; margin-top:0.5rem;">
+        Работаю ежедневно 08:00–22:00 • Оплата по чеку «Мой налог»
     </p>
 </section>
 
 <button class="back-to-top" onclick="scrollToTop()" id="backToTop">↑</button>
 
 <script>
-    // Список районов — можно оставить как есть, или сократить под реально нужные
+    // Список основных районов (можешь вставить сюда свой полный массив, если нужно)
     const districts = [
     'Агафоново', 'Акишово', 'Александровка', 'Алтухово', 'Бережки', 'Боборыкино',
     'Большое Брянцево', 'Большое Толбино', 'Борисовка', 'Бородино', 'Братеево',
@@ -231,3 +383,4 @@
 </script>
 </body>
 </html>
+
