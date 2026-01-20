@@ -662,34 +662,107 @@ body {
   .districts-grid { grid-template-columns: 1fr !important; }
 }
 
-/* 📱 Тепловизор: таблица тарифов компактнее */
+/* 🔥 Компактный блок тарифов тепловизора на главной */
+.teplovizor-promo {
+  background: linear-gradient(135deg, #ff6b6b10, #ffd93d10);
+  border: 1px dashed #ff6b6b;
+  border-radius: 18px;
+  padding: 18px 16px 20px;
+  margin-bottom: 40px;
+}
+
+.teplo-header {
+  text-align: center;
+  padding: 10px 12px 16px;
+  background: #fff3cd;
+  border-radius: 14px;
+  margin-bottom: 14px;
+}
+
+.teplo-header h3 {
+  font-size: 1.6em;
+  color: #ff6b6b;
+  margin: 0 0 4px;
+}
+
+.teplo-header p {
+  font-size: 0.95em;
+  color: #374151;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Лента тарифов */
+.teplo-tariffs {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.teplo-tariff {
+  flex: 1 1 260px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 10px 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  font-size: 0.9em;
+}
+
+.teplo-tariff__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.teplo-tariff__name {
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.teplo-tariff__price {
+  font-weight: 800;
+  color: #27ae60;
+  white-space: nowrap;
+}
+
+.teplo-tariff__time {
+  font-size: 0.84em;
+  color: #6b7280;
+  margin: 0 0 4px;
+}
+
+.teplo-tariff__text {
+  font-size: 0.86em;
+  color: #374151;
+  margin: 0 0 4px;
+}
+
+.teplo-tariff__note {
+  font-size: 0.8em;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* Выделение рекомендованного тарифа */
+.teplo-tariff--best {
+  border: 2px solid #2563eb;
+}
+
+/* 📱 Мобилка для блока тепловизора */
 @media (max-width: 768px) {
-  .teplovizor-promo {
-    padding: 15px !important;
-    margin-bottom: 25px !important;
+  .teplo-header h3 {
+    font-size: 1.4em;
   }
 
-  .teplovizor-promo > div[style*="background: #fff3cd"] {
-    padding: 12px !important;
-    margin-bottom: 14px !important;
+  .teplo-tariffs {
+    flex-direction: column;
   }
 
-  .teplovizor-promo h3 {
-    font-size: 1.4em !important;
-    margin-bottom: 6px !important;
-  }
-
-  .teplovizor-promo > div[style*="background: #fff3cd"] p {
-    font-size: 0.95em !important;
-  }
-
-  .teplovizor-promo table {
-    font-size: 0.85em !important;
-  }
-
-  .teplovizor-promo td,
-  .teplovizor-promo th {
-    padding: 10px 8px !important;
+  .teplo-tariff {
+    width: 100%;
   }
 }
 
@@ -781,79 +854,43 @@ body {
                 🔥 <strong>Специальное предложение: Тепловизор от 2990₽</strong>
             </p>
             
-            <div class="prices-container">
-                <!-- ТЕПЛОВИЗОР -->
-<div class="price-section teplovizor-promo" style="background: linear-gradient(135deg, #ff6b6b15, #ffd93d15); border: 2px dashed #ff6b6b; margin-bottom: 40px;">
-  <div style="text-align: center; padding: 20px; background: #fff3cd; border-radius: 15px; margin-bottom: 20px;">
-    <h3 style="font-size: 2em; color: #ff6b6b; margin-bottom: 10px;">
-      🔥 <strong>Диагностика тепловизором</strong>
-    </h3>
-    <p style="font-size: 1.2em; color: #374151; font-weight: 600; margin: 0;">
-      Квартира или дом до 200 м² • Подольск, Видное, Климовск, Домодедово, юг Москвы
-    </p>
+            <div class="price-section teplovizor-promo">
+  <div class="teplo-header">
+    <h3>🔥 <strong>Диагностика тепловизором</strong></h3>
+    <p>Квартира или дом до 200 м² • Подольск, Видное, Климовск, Домодедово, юг Москвы</p>
   </div>
 
-  <table style="width: 100%; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.1);">
-    <tr>
-      <th style="background: linear-gradient(90deg, #ff6b6b, #ff8e8e); color: white; padding: 18px;">Тариф</th>
-      <th style="background: linear-gradient(90deg, #ff6b6b, #ff8e8e); color: white; padding: 18px; text-align: center;">Что входит</th>
-      <th style="background: linear-gradient(90deg, #ff6b6b, #ff8e8e); color: white; padding: 18px; text-align: center;">Цена</th>
-    </tr>
+  <div class="teplo-tariffs">
+    <div class="teplo-tariff">
+      <div class="teplo-tariff__head">
+        <span class="teplo-tariff__name">Быстрый выезд</span>
+        <span class="teplo-tariff__price">3 500 ₽</span>
+      </div>
+      <p class="teplo-tariff__time">до 60 минут у вас на объекте</p>
+      <p class="teplo-tariff__text">Оперативный осмотр тепловизором + устные рекомендации на месте.</p>
+      <p class="teplo-tariff__note">Подходит, когда нужно срочно понять, «где дует» или «куда уходит тепло».</p>
+    </div>
 
-    <!-- БАЗОВЫЙ -->
-    <tr>
-      <td style="padding: 20px; font-size: 1.2em; font-weight: 800; color: #dc2626; vertical-align: top;">
-        🔧 БАЗОВЫЙ<br>
-        <span style="font-size: 0.9em; font-weight: 600; color: #4b5563;">До 40 минут на объекте</span>
-      </td>
-      <td style="padding: 20px; font-size: 0.95em; color: #374151; line-height: 1.5;">
-        Квартира или дом до 200 м². Выборочная проверка проблемных зон:<br>
-        ✅ Главный электрощит<br>
-        ✅ До 15 розеток (проблемные точки)<br>
-        ✅ До 3 распаечных коробок<br>
-        ✅ До 4 радиаторов<br>
-        ✅ До 2 окон<br>
-        ✅ Тёплый пол (ванная, туалет, кухня)<br>
-        🎁 Бонус: контроль заземления прибором
-      </td>
-      <td style="text-align: center; font-size: 1.8em; color: #27ae60; padding: 20px; white-space: nowrap; vertical-align: top;">
-        <strong>2 990 ₽</strong>
-      </td>
-    </tr>
+    <div class="teplo-tariff teplo-tariff--best">
+      <div class="teplo-tariff__head">
+        <span class="teplo-tariff__name">Оптимальный</span>
+        <span class="teplo-tariff__price">5 000 ₽</span>
+      </div>
+      <p class="teplo-tariff__time">до 2 часов работы</p>
+      <p class="teplo-tariff__text">Подробный осмотр квартиры или дома, фото проблемных зон, рекомендации по устранению.</p>
+      <p class="teplo-tariff__note">Чаще всего выбирают собственники квартир и таунхаусов.</p>
+    </div>
 
-    <!-- РАСШИРЁННЫЙ -->
-    <tr>
-      <td style="padding: 20px; font-size: 1.2em; font-weight: 800; color: #059669; vertical-align: top;">
-        🔭 РАСШИРЁННЫЙ<br>
-        <span style="font-size: 0.9em; font-weight: 600; color: #4b5563;">До 90 минут на объекте</span>
-      </td>
-      <td style="padding: 20px; font-size: 0.95em; color: #374151; line-height: 1.5;">
-        Квартира или дом до 200 м². Полная диагностика по квартире/дому:<br>
-        ✅ До 4 электрощитов + до 45 розеток<br>
-        ✅ До 10 распаечных коробок<br>
-        ✅ До 12 радиаторов<br>
-        ✅ До 12 окон + до 2 входных дверей<br>
-        ✅ Тёплый пол (ванная, туалет, кухня)<br>
-        🎁 Бонус: контроль заземления прибором + фотоотчёт в WhatsApp
-      </td>
-      <td style="text-align: center; font-size: 1.8em; color: #27ae60; padding: 20px; white-space: nowrap; vertical-align: top;">
-        <strong>3 990 ₽</strong>
-      </td>
-    </tr>
-
-    <!-- PDF-ОТЧЁТ -->
-    <tr style="background: #fff3cd;">
-      <td style="padding: 20px; font-size: 1.1em; font-weight: 800; color: #b45309; vertical-align: top;">
-        📄 PDF‑отчёт
-      </td>
-      <td style="padding: 20px; font-size: 0.95em; color: #374151; line-height: 1.5;">
-        Термограммы, реальные температуры, комментарии и рекомендации по электрике и отоплению. Отчёт в PDF + фото в мессенджер.
-      </td>
-      <td style="text-align: center; font-size: 1.5em; color: #b45309; padding: 20px; white-space: nowrap; vertical-align: top;">
-        +790 ₽
-      </td>
-    </tr>
-  </table>
+    <div class="teplo-tariff">
+      <div class="teplo-tariff__head">
+        <span class="teplo-tariff__name">С отчётом</span>
+        <span class="teplo-tariff__price">от 7 000 ₽</span>
+      </div>
+      <p class="teplo-tariff__time">2–3 часа + подготовка отчёта</p>
+      <p class="teplo-tariff__text">Осмотр, фотофиксация, структурированный отчёт с описанием дефектов и рекомендаций.</p>
+      <p class="teplo-tariff__note">Полезно для споров с застройщиком, УК или подрядчиком.</p>
+    </div>
+  </div>
 </div>
 
                 <!-- БЫСТРЫЕ РАБОТЫ -->
@@ -1308,6 +1345,7 @@ body {
     </footer>
 </body>
 </html>
+
 
 
 
