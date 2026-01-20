@@ -230,6 +230,59 @@ body {
         margin: 0;
         font-size: 0.98em;
     }
+    /* 👉 ХЛЕБНЫЕ КРОШКИ */
+    .breadcrumbs {
+        font-size: 0.9em;
+        color: #7f8c8d;
+        padding: 10px 20px 0;
+    }
+
+    .breadcrumbs a {
+        color: #2980b9;
+        text-decoration: none;
+    }
+
+    .breadcrumbs a:hover {
+        text-decoration: underline;
+    }
+
+    .breadcrumbs-separator {
+        margin: 0 6px;
+        color: #bdc3c7;
+    }
+
+    /* 👉 ЦЕНЫ ПО РАЙОНАМ */
+    .prices {
+        margin-top: 40px;
+    }
+
+    .prices h2 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .price-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .price-card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 20px 22px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        min-width: 220px;
+        text-align: center;
+    }
+
+    .price-card .price {
+        font-weight: 700;
+        font-size: 1.3em;
+        color: #27ae60;
+        margin: 8px 0 5px;
+    }
 
 /* ===== МОБИЛЬНАЯ ОПТИМИЗАЦИЯ ===== */
 
@@ -332,13 +385,22 @@ body {
 </head>
 <body>
     <!-- ✅ ХЛЕБНЫЕ КРОШКИ -->
-    <nav class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
-        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="index.html"><span itemprop="name">🏠 Главная</span></a>
-            <meta itemprop="position" content="1">
-        </span> 
-        → <strong>Вентилируемая пристройка Подольск + ЮАО</strong>
-    </nav>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки"
+      itemscope itemtype="https://schema.org/BreadcrumbList">
+  <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+    <a itemprop="item" href="https://master-yu-mos.ru/index.html">
+      <span itemprop="name">Главная</span>
+    </a>
+    <meta itemprop="position" content="1">
+  </span>
+  <span class="breadcrumbs-separator">›</span>
+  <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+    <span itemprop="item">
+      <span itemprop="name">Вентилируемая пристройка Подольск + ЮАО</span>
+    </span>
+    <meta itemprop="position" content="2">
+  </span>
+</nav>
     
     <!-- ✅ ГЕРОЙ -->
     <header class="hero">
@@ -361,10 +423,16 @@ body {
             <h1>Вентилируемая пристройка <strong>220 000₽</strong></h1>
             <p class="hero-text"><strong>РАБОТА БЕЗ МАТЕРИАЛА</strong> | Двойные вентзазоры: стены 20+40мм, пол 30мм, крыша 50мм. 5×3м доска 150×150мм. <strong>Выезд бесплатно: Подольск+30км, ЮАО+40км!</strong></p>
             
-            <div class="hero-buttons" style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; flex-direction: column;">
-    <a href="tel:+79267904248" class="btn-primary" style="background: linear-gradient(45deg, #e74c3c, #c0392b); color: white; padding: 18px 35px; font-size: 1.2em; font-weight: 700; border-radius: 50px; text-decoration: none; box-shadow: 0 10px 30px rgba(231,76,60,0.4); display: block; width: 100%; max-width: 320px; margin: 10px auto; text-align: center;">📞 +7 (926) 790-42-48</a>
-    <a href="https://wa.me/79267904248" style="background: #25D366; color: white !important; padding: 18px 35px; font-size: 1.2em; font-weight: 700; border-radius: 50px; text-decoration: none; box-shadow: 0 10px 30px rgba(37,211,102,0.4); display: block; width: 100%; max-width: 320px; margin: 10px auto; text-align: center;">💬 WhatsApp</a>
-    <a href="mailto:lesha.alexandrov2014@yandex.ru" style="background: #ff6b35; color: white !important; padding: 18px 35px; font-size: 1.2em; font-weight: 700; border-radius: 50px; text-decoration: none; box-shadow: 0 10px 30px rgba(255,107,53,0.4); display: block; width: 100%; max-width: 320px; margin: 10px auto; text-align: center;">✉️ lesha.alexandrov2014@yandex.ru</a>
+            <div class="hero-buttons">
+  <a href="tel:+79267904248" class="btn-primary btn-call">
+    📞 +7 (926) 790-42-48
+  </a>
+  <a href="https://wa.me/79267904248" class="btn-primary btn-wa">
+    💬 WhatsApp
+  </a>
+  <a href="mailto:lesha.alexandrov2014@yandex.ru" class="btn-primary btn-mail">
+    ✉️ lesha.alexandrov2014@yandex.ru
+  </a>
 </div>
 
         </div>
