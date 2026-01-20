@@ -79,9 +79,8 @@
         ym(105722511, 'init', {ssr:true, webvisor:true, clickmap:true});
     </script>
     
-    <style>
-       
-        /* ✅ CSS ДЛЯ hero-video (добавить в <style>) */
+<style>
+/* ✅ CSS ДЛЯ hero-video */
 .hero-video { 
   position: relative; 
   height: 90vh; 
@@ -123,6 +122,7 @@
   position: relative; 
   z-index: 3;
 }
+
 .hero-video::before { 
   content: ''; 
   position: absolute; 
@@ -132,509 +132,537 @@
   z-index: 0;
 }
 
-        
-/* Мобильные */
+/* Мобильные для hero-video */
 @media (max-width: 768px) {
   .hero-video { height: 75vh; min-height: 500px; }
   .hero-video video { opacity: 0.4; }
 }
-        
-        /* ✅ ВСЕ СТИЛИ ОПТИМИЗИРОВАНЫ */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; 
-            line-height: 1.6; 
-            color: #1a1a1a !important; 
-            background: #f8f9fa;
-            font-weight: 500;
-            font-size: 16px;
-        }
-        
-        /* оставляем только ссылку внутри карточки */
-        .service-card a { 
-            text-decoration: none; 
-            color: inherit; 
-            display: block; 
-            position: relative;
-            z-index: 10;
-        }
-        
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        
-        .banner { 
-            background: linear-gradient(90deg, #ff416c, #ff4b2b, #ffa726); 
-            color: white; 
-            padding: 20px; 
-            text-align: center; 
-            margin: -10px -10px 30px -10px; 
-            border-radius: 0 0 15px 15px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
-            position: relative; 
-            font-weight: 700;
-        }
-        .banner h2 { font-size: 2em; margin-bottom: 10px; font-weight: 700; }
-        .banner .price { font-size: 1.5em; font-weight: 700; color: #ffd93d; }
-        
-        .hero { 
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #00d4ff 100%); 
-            color: white; 
-            padding: 80px 20px; 
-            text-align: center; 
-            position: relative; 
-            overflow: hidden; 
-        }
-        .hero::before { 
-            content: ''; 
-            position: absolute; 
-            top: 0; left: 0; right: 0; bottom: 0; 
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23ffffff" opacity="0.3"/><circle cx="80" cy="30" r="1.5" fill="%23ffffff" opacity="0.4"/><circle cx="40" cy="80" r="1" fill="%23ffffff" opacity="0.2"/></svg>') repeat; 
-            animation: snowfall 20s linear infinite; 
-        }
-        @keyframes snowfall { 0% { transform: translateY(0px); } 100% { transform: translateY(100px); } }
-        .hero h1 { font-size: 3.5em; margin-bottom: 20px; font-weight: 700; }
-        .hero .keyword { 
-            background: linear-gradient(120deg, #ff6b6b, #ffd93d, #6bcf7f); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-            background-clip: text; 
-        }
-        .hero-text { font-size: 1.4em; margin: 30px 0; font-weight: 500; }
-        .price-big { font-size: 2.5em; color: #ffd93d; font-weight: 700; }
-        
-        .btn { 
-            display: inline-block; 
-            padding: 18px 40px; 
-            font-size: 1.3em; 
-            font-weight: 700; 
-            text-decoration: none; 
-            border-radius: 50px; 
-            transition: all 0.3s ease; 
-            margin: 0 10px;
-            font-family: 'Montserrat', sans-serif !important;
-        }
-        .btn-primary { 
-            background: linear-gradient(45deg, #ff6b6b, #ffd93d); 
-            color: white !important; 
-            box-shadow: 0 10px 30px rgba(255,107,107,0.4); 
-        }
-        .btn-primary:hover { 
-            transform: translateY(-3px); 
-            box-shadow: 0 15px 40px rgba(255,107,107,0.6); 
-            color: white !important;
-        }
-        .btn-secondary { 
-            background: white; 
-            color: #1e3c72 !important; 
-            border: 3px solid white; 
-        }
-        
-        .badges { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
-        .badge { 
-            background: rgba(255,255,255,0.2); 
-            padding: 10px 20px; 
-            border-radius: 25px; 
-            font-weight: 700; 
-            backdrop-filter: blur(10px); 
-            font-family: 'Montserrat', sans-serif !important;
-        }
-        
-        .services { padding: 80px 0; }
-        .services h2 { text-align: center; font-size: 2.5em; margin-bottom: 20px; font-weight: 700; }
-        .services-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
-            gap: 30px; 
-            margin-top: 50px; 
-        }
-        .service-icon { 
-            width: 120px; 
-            height: 140px; 
-            margin: 0 auto 20px; 
-            display: block; 
-        }
 
-        /* 3D‑карточка — основной стиль */
-        .service-card { 
-            background: linear-gradient(145deg, #ffffff, #f0f0f0); 
-            padding: 40px 30px; 
-            border-radius: 25px; 
-            box-shadow: 
-                0 20px 40px rgba(0,0,0,0.1),
-                0 10px 20px rgba(0,0,0,0.06),
-                inset 0 1px 0 rgba(255,255,255,0.8);
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
-            cursor: pointer;
-            max-width: 350px !important;
-            width: 100%;
-            height: 100%;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            transform-style: preserve-3d;
-            border: 1px solid rgba(255,255,255,0.2);
-            backdrop-filter: blur(10px);
-        }
+/* ✅ БАЗА */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; 
+  line-height: 1.6; 
+  color: #1a1a1a !important; 
+  background: #f8f9fa;
+  font-weight: 500;
+  font-size: 16px;
+}
 
-        /* вместо mask используем градиентную рамку через border-image */
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            border-radius: 25px;
-            padding: 0;
-            border: 2px solid transparent;
-            border-image: linear-gradient(45deg, #ff6b6b, #ffd93d, #4ecdc4, #45b7d1) 1;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        .service-card:hover {
-            transform: translateY(-15px) rotateX(5deg) rotateY(5deg) !important; 
-            box-shadow: 
-                0 35px 70px rgba(0,0,0,0.2),
-                0 20px 40px rgba(0,0,0,0.15),
-                inset 0 1px 0 rgba(255,255,255,1);
-            border-color: rgba(255,255,255,0.4);
-        }
+/* Баннер */
+.banner { 
+  background: linear-gradient(90deg, #ff416c, #ff4b2b, #ffa726); 
+  color: white; 
+  padding: 20px; 
+  text-align: center; 
+  margin: -10px -10px 30px -10px; 
+  border-radius: 0 0 15px 15px; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
+  position: relative; 
+  font-weight: 700;
+}
+.banner h2 { font-size: 2em; margin-bottom: 10px; font-weight: 700; }
+.banner .price { font-size: 1.5em; font-weight: 700; color: #ffd93d; }
 
-        .service-card:hover::before {
-            opacity: 1;
-        }
+/* Hero (фон/анимация, текст внутри задаётся через hero-video) */
+.hero { 
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #00d4ff 100%); 
+  color: white; 
+  padding: 80px 20px; 
+  text-align: center; 
+  position: relative; 
+  overflow: hidden; 
+}
+.hero::before { 
+  content: ''; 
+  position: absolute; 
+  top: 0; left: 0; right: 0; bottom: 0; 
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23ffffff" opacity="0.3"/><circle cx="80" cy="30" r="1.5" fill="%23ffffff" opacity="0.4"/><circle cx="40" cy="80" r="1" fill="%23ffffff" opacity="0.2"/></svg>') repeat; 
+  animation: snowfall 20s linear infinite; 
+}
+@keyframes snowfall { 0% { transform: translateY(0px); } 100% { transform: translateY(100px); } }
+.hero h1 { font-size: 3.5em; margin-bottom: 20px; font-weight: 700; }
+.hero .keyword { 
+  background: linear-gradient(120deg, #ff6b6b, #ffd93d, #6bcf7f); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  background-clip: text; 
+}
+.hero-text { font-size: 1.4em; margin: 30px 0; font-weight: 500; }
+.price-big { font-size: 2.5em; color: #ffd93d; font-weight: 700; }
 
-        .service-card:hover .service-icon {
-            transform: scale(1.1) rotate(5deg);
-            filter: drop-shadow(0 10px 20px rgba(52,152,219,0.4));
-        }
+/* Кнопки */
+.btn { 
+  display: inline-block; 
+  padding: 18px 40px; 
+  font-size: 1.3em; 
+  font-weight: 700; 
+  text-decoration: none; 
+  border-radius: 50px; 
+  transition: all 0.3s ease; 
+  margin: 0 10px;
+  font-family: 'Montserrat', sans-serif !important;
+}
+.btn-primary { 
+  background: linear-gradient(45deg, #ff6b6b, #ffd93d); 
+  color: white !important; 
+  box-shadow: 0 10px 30px rgba(255,107,107,0.4); 
+}
+.btn-primary:hover { 
+  transform: translateY(-3px); 
+  box-shadow: 0 15px 40px rgba(255,107,107,0.6); 
+  color: white !important;
+}
+.btn-secondary { 
+  background: white; 
+  color: #1e3c72 !important; 
+  border: 3px solid white; 
+}
 
-        .service-icon { 
-            width: 120px; 
-            height: 140px; 
-            margin: 0 auto 20px; 
-            display: block;
-            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
-        }
+/* Бейджи */
+.badges { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
+.badge { 
+  background: rgba(255,255,255,0.2); 
+  padding: 10px 20px; 
+  border-radius: 25px; 
+  font-weight: 700; 
+  backdrop-filter: blur(10px); 
+  font-family: 'Montserrat', sans-serif !important;
+}
 
-        .service-card .price { 
-            color: #27ae60 !important; 
-            font-size: 1.6em; 
-            font-weight: 700; 
-        }
-        .teplovizor-card { 
-            border: 4px solid #ff6b6b; 
-            box-shadow: 0 20px 50px rgba(255,107,107,0.3); 
-        }
-        
-        .prices { padding: 80px 0; background: #f8f9fa; }
-        .prices table { 
-            width: 100%; 
-            max-width: 700px; 
-            margin: 40px auto; 
-            background: white; 
-            border-radius: 20px; 
-            overflow: hidden; 
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1); 
-        }
-        .prices th { 
-            background: linear-gradient(90deg, #11998e, #38ef7d); 
-            color: white !important; 
-            padding: 20px; 
-            font-size: 1.3em; 
-            font-weight: 700;
-        }
-        .prices td { 
-            padding: 20px; 
-            font-size: 1.2em; 
-            border-bottom: 1px solid #eee;
-            color: #1a1a1a !important;
-        }
-        .price-highlight { 
-            color: #27ae60 !important; 
-            font-size: 1.6em; 
-            font-weight: 700; 
-        }
-        
-        .regions { 
-            padding: 60px 0; 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-            color: white; 
-            text-align: center; 
-        }
-        .regions-links-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            gap: 20px; 
-            margin-top: 30px; 
-        }
-        .regions-links-grid a { 
-            display: block; 
-            padding: 15px; 
-            background: rgba(255,255,255,0.1); 
-            border-radius: 10px; 
-            color: white !important; 
-            text-decoration: none; 
-            font-weight: 700; 
-        }
-        
-        .guarantee { padding: 80px 0; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
-        .guarantee-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 30px; 
-            margin-top: 50px; 
-        }
-        .guarantee-item { 
-            background: white; 
-            padding: 40px; 
-            border-radius: 20px; 
-            text-align: center; 
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1); 
-        }
-        .guarantee-item .icon { font-size: 4em; margin-bottom: 20px; }
-        .guarantee-item h3 { 
-            font-size: 1.8em; 
-            margin-bottom: 15px; 
-            color: #ff6b6b !important; 
-        }
-        
-        .footer { 
-            background: #2c3e50; 
-            color: white !important; 
-            padding: 40px 0; 
-            text-align: center; 
-        }
+/* ✅ УСЛУГИ: компактный блок + сетка */
+.services { padding: 50px 0; }
+.services h2 { text-align: center; font-size: 2.5em; margin-bottom: 20px; font-weight: 700; }
 
-        /* СТИЛИ ДЛЯ КОНТЕНТ-ХАБА */
-        .districts-hub { padding: 80px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
-        .districts-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 25px; 
-            margin-bottom: 30px; 
-        }
-        .district-card { 
-            background: white; 
-            padding: 30px 20px; 
-            border-radius: 20px; 
-            text-align: center; 
-            text-decoration: none; 
-            color: inherit; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-            transition: all 0.3s; 
-        }
-        .district-card:hover { 
-            transform: translateY(-8px); 
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15); 
-            color: #e74c3c !important; 
-        }
-        .district-card .emoji { font-size: 3em; display: block; margin-bottom: 15px; }
-        .district-card h3 { font-size: 1.6em; margin-bottom: 10px; color: #2c3e50; }
-        .district-card p { color: #e74c3c; font-weight: 700; font-size: 1.2em; }
+/* Сетка: 3 колонки десктоп, 2 — планшет, 1 — мобила */
+.services-grid { 
+  display: grid; 
+  grid-template-columns: repeat(3, minmax(0, 1fr)); 
+  gap: 24px; 
+  margin-top: 40px; 
+  align-items: stretch;
+}
 
-        /* 🔥 НОВЫЕ СТИЛИ ДЛЯ ГАЛЕРЕИ, ВИДЕО И БЛОГА */
-        .section-title {
-            text-align: center;
-            font-size: 2.4em;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.2em;
-            color: #666;
-            margin-bottom: 40px;
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-        }
-        .gallery-item {
-            background: white;
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-        }
-        .gallery-thumb {
-            width: 100%;
-            height: 190px;
-            object-fit: cover;
-            display: block;
-        }
-        .gallery-body {
-            padding: 15px 18px 18px;
-        }
-        .gallery-body h3 {
-            font-size: 1.2em;
-            margin-bottom: 5px;
-        }
-        .gallery-body p {
-            font-size: 0.95em;
-            color: #555;
-        }
-        .tag {
-            display: inline-block;
-            margin-top: 8px;
-            padding: 4px 10px;
-            font-size: 0.8em;
-            border-radius: 999px;
-            background: #f1f3f5;
-            color: #555;
-        }
+/* Иконка услуги */
+.service-icon { 
+  width: 90px; 
+  height: 100px; 
+  margin: 0 auto 12px; 
+  display: block; 
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+}
 
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-        }
-        .video-item {
-            background: white;
-            border-radius: 18px;
-            padding: 18px;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-        }
-        .video-item h3 {
-            font-size: 1.25em;
-            margin-bottom: 10px;
-        }
-        .video-item p {
-            font-size: 0.95em;
-            color: #555;
-            margin-bottom: 12px;
-        }
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 12px;
-        }
-        .video-wrapper iframe {
-            position: absolute;
-            top:0;
-            left:0;
-            width:100%;
-            height:100%;
-            border:0;
-        }
+/* Ссылка внутри карточки */
+.service-card a { 
+  text-decoration: none; 
+  color: inherit; 
+  display: block; 
+  position: relative;
+  z-index: 10;
+  height: 100%;
+}
 
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-        .blog-card {
-            background: white;
-            border-radius: 18px;
-            padding: 20px;
-            box-shadow: 0 10px 28px rgba(0,0,0,0.07);
-        }
-        .blog-card h3 {
-            font-size: 1.25em;
-            margin-bottom: 8px;
-        }
-        .blog-card p {
-            font-size: 0.95em;
-            color: #555;
-            margin-bottom: 10px;
-        }
-        .blog-meta {
-            font-size: 0.85em;
-            color: #999;
-            margin-bottom: 5px;
-        }
-        .blog-link {
-            display: inline-block;
-            margin-top: 5px;
-            font-size: 0.95em;
-            color: #ff6b6b;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .blog-link:hover {
-            text-decoration: underline;
-        }
+/* 3D‑карточка — облегчённый, более низкий вариант */
+.service-card { 
+  background: linear-gradient(145deg, #ffffff, #f0f0f0); 
+  padding: 24px 18px; 
+  border-radius: 20px; 
+  box-shadow: 
+    0 12px 30px rgba(0,0,0,0.1),
+    0 6px 16px rgba(0,0,0,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+}
 
-        /* ✅ МОБИЛЬНАЯ ОПТИМИЗАЦИЯ (заменить существующие @media) */
+/* Градиентная рамка */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  border-image: linear-gradient(45deg, #ff6b6b, #ffd93d, #4ecdc4, #45b7d1) 1;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Ховер */
+.service-card:hover {
+  transform: translateY(-10px); 
+  box-shadow: 
+    0 28px 50px rgba(0,0,0,0.18),
+    0 14px 30px rgba(0,0,0,0.12),
+    inset 0 1px 0 rgba(255,255,255,1);
+  border-color: rgba(255,255,255,0.4);
+}
+.service-card:hover::before { opacity: 1; }
+.service-card:hover .service-icon {
+  transform: scale(1.08) rotate(3deg);
+  filter: drop-shadow(0 10px 20px rgba(52,152,219,0.4));
+}
+
+.service-card h3 {
+  font-size: 1.25em;
+  margin-bottom: 6px;
+}
+
+.service-card p {
+  font-size: 0.98em;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.service-card .price { 
+  color: #27ae60 !important; 
+  font-size: 1.2em; 
+  font-weight: 700; 
+  margin-bottom: 4px;
+}
+
+.teplovizor-card { 
+  border: 3px solid #ff6b6b; 
+  box-shadow: 0 20px 40px rgba(255,107,107,0.25); 
+}
+
+/* Цены (таблица) */
+.prices { padding: 80px 0; background: #f8f9fa; }
+.prices table { 
+  width: 100%; 
+  max-width: 700px; 
+  margin: 40px auto; 
+  background: white; 
+  border-radius: 20px; 
+  overflow: hidden; 
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1); 
+}
+.prices th { 
+  background: linear-gradient(90deg, #11998e, #38ef7d); 
+  color: white !important; 
+  padding: 20px; 
+  font-size: 1.3em; 
+  font-weight: 700;
+}
+.prices td { 
+  padding: 20px; 
+  font-size: 1.2em; 
+  border-bottom: 1px solid #eee;
+  color: #1a1a1a !important;
+}
+.price-highlight { 
+  color: #27ae60 !important; 
+  font-size: 1.6em; 
+  font-weight: 700; 
+}
+
+/* Регионы */
+.regions { 
+  padding: 60px 0; 
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+  color: white; 
+  text-align: center; 
+}
+.regions-links-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px; 
+  margin-top: 30px; 
+}
+.regions-links-grid a { 
+  display: block; 
+  padding: 15px; 
+  background: rgba(255,255,255,0.1); 
+  border-radius: 10px; 
+  color: white !important; 
+  text-decoration: none; 
+  font-weight: 700; 
+}
+
+/* Гарантии */
+.guarantee { padding: 80px 0; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+.guarantee-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 30px; 
+  margin-top: 50px; 
+}
+.guarantee-item { 
+  background: white; 
+  padding: 40px; 
+  border-radius: 20px; 
+  text-align: center; 
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1); 
+}
+.guarantee-item .icon { font-size: 4em; margin-bottom: 20px; }
+.guarantee-item h3 { 
+  font-size: 1.8em; 
+  margin-bottom: 15px; 
+  color: #ff6b6b !important; 
+}
+
+/* Footer */
+.footer { 
+  background: #2c3e50; 
+  color: white !important; 
+  padding: 40px 0; 
+  text-align: center; 
+}
+
+/* Контент-хаб */
+.districts-hub { padding: 80px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
+.districts-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 25px; 
+  margin-bottom: 30px; 
+}
+.district-card { 
+  background: white; 
+  padding: 30px 20px; 
+  border-radius: 20px; 
+  text-align: center; 
+  text-decoration: none; 
+  color: inherit; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+  transition: all 0.3s; 
+}
+.district-card:hover { 
+  transform: translateY(-8px); 
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15); 
+  color: #e74c3c !important; 
+}
+.district-card .emoji { font-size: 3em; display: block; margin-bottom: 15px; }
+.district-card h3 { font-size: 1.6em; margin-bottom: 10px; color: #2c3e50; }
+.district-card p { color: #e74c3c; font-weight: 700; font-size: 1.2em; }
+
+/* Галерея, видео, блог */
+.section-title {
+  text-align: center;
+  font-size: 2.4em;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+.gallery-item {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+.gallery-thumb {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+.gallery-body {
+  padding: 15px 18px 18px;
+}
+.gallery-body h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+.gallery-body p {
+  font-size: 0.95em;
+  color: #555;
+}
+.tag {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 10px;
+  font-size: 0.8em;
+  border-radius: 999px;
+  background: #f1f3f5;
+  color: #555;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+.video-item {
+  background: white;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+.video-item h3 {
+  font-size: 1.25em;
+  margin-bottom: 10px;
+}
+.video-item p {
+  font-size: 0.95em;
+  color: #555;
+  margin-bottom: 12px;
+}
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+.blog-card {
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.07);
+}
+.blog-card h3 {
+  font-size: 1.25em;
+  margin-bottom: 8px;
+}
+.blog-card p {
+  font-size: 0.95em;
+  color: #555;
+  margin-bottom: 10px;
+}
+.blog-meta {
+  font-size: 0.85em;
+  color: #999;
+  margin-bottom: 5px;
+}
+.blog-link {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 0.95em;
+  color: #ff6b6b;
+  text-decoration: none;
+  font-weight: 600;
+}
+.blog-link:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Адаптация: сетка услуг и остальное */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
-    /* Hero секция */
-    .hero-video { height: 70vh; min-height: 450px; }
-    .hero-video video { opacity: 0.35; }
-    .hero-video h1 { font-size: 2.2em; line-height: 1.1; }
-    .hero-text { font-size: 1.1em; }
-    .price-big { font-size: 1.8em; }
-    .badges { gap: 10px; }
-    .badge { padding: 8px 15px; font-size: 0.9em; }
-    
-    /* КНОПКИ компактнее */
-    .btn { 
-        display: block; 
-        margin: 8px 0; 
-        padding: 14px 25px; 
-        font-size: 1.1em; 
-        width: 100%; 
-        max-width: 320px;
-    }
-    
-    /* ✅ ЗНАЧКИ МЕНЬШЕ (было 120x140 → стало 90x110) */
-    .service-icon { 
-        width: 90px !important; 
-        height: 110px !important; 
-        margin-bottom: 15px;
-    }
-    
-    /* Карточки услуг - 1 колонка + компактнее */
-    .services-grid { 
-        grid-template-columns: 1fr !important; 
-        gap: 20px; 
-        max-width: 380px; 
-        margin: 0 auto;
-    }
-    .service-card { 
-        padding: 25px 20px !important; 
-        max-width: 380px;
-        margin: 0 auto;
-    }
-    .service-card h3 { font-size: 1.4em; }
-    .service-card p { font-size: 1em; }
-    .service-card .price { font-size: 1.4em; }
-    
-    /* Таблицы компактные */
-    .prices table { font-size: 0.95em; }
-    .prices td, .prices th { padding: 12px 8px !important; }
-    
-    /* Районы - 2 колонки max */
-    .districts-grid, .regions-links-grid { 
-        grid-template-columns: repeat(2, 1fr) !important; 
-        gap: 12px;
-    }
-    .district-card, .regions-links-grid a { 
-        padding: 12px !important; 
-        font-size: 1em;
-    }
-    
-    /* Гарантии 1 колонка */
-    .guarantee-grid { grid-template-columns: 1fr !important; }
-    .guarantee-item { padding: 25px 20px; }
-    
-    /* Баннер */
-    .banner { padding: 15px; margin: -5px -5px 20px; }
-    .banner h2 { font-size: 1.6em; }
-    
-    /* Горизонтальная прокрутка 0 */
-    * { max-width: 100%; overflow-x: hidden; }
+  /* Hero секция */
+  .hero-video { height: 70vh; min-height: 450px; }
+  .hero-video video { opacity: 0.35; }
+  .hero-video h1 { font-size: 2.2em; line-height: 1.1; }
+  .hero-text { font-size: 1.1em; }
+  .price-big { font-size: 1.8em; }
+  .badges { gap: 10px; }
+  .badge { padding: 8px 15px; font-size: 0.9em; }
+  
+  /* Кнопки компактнее */
+  .btn { 
+    display: block; 
+    margin: 8px 0; 
+    padding: 14px 25px; 
+    font-size: 1.1em; 
+    width: 100%; 
+    max-width: 320px;
+  }
+  
+  /* Значки меньше */
+  .service-icon { 
+    width: 90px !important; 
+    height: 110px !important; 
+    margin-bottom: 15px;
+  }
+  
+  /* Карточки услуг - 1 колонка */
+  .services-grid { 
+    grid-template-columns: 1fr !important; 
+    gap: 20px; 
+    max-width: 380px; 
+    margin: 0 auto;
+  }
+  .service-card { 
+    padding: 25px 20px !important; 
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .service-card h3 { font-size: 1.4em; }
+  .service-card p { font-size: 1em; }
+  .service-card .price { font-size: 1.4em; }
+  
+  /* Таблицы компактные */
+  .prices table { font-size: 0.95em; }
+  .prices td, .prices th { padding: 12px 8px !important; }
+  
+  /* Районы - 2 колонки max */
+  .districts-grid, .regions-links-grid { 
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 12px;
+  }
+  .district-card, .regions-links-grid a { 
+    padding: 12px !important; 
+    font-size: 1em;
+  }
+  
+  /* Гарантии 1 колонка */
+  .guarantee-grid { grid-template-columns: 1fr !important; }
+  .guarantee-item { padding: 25px 20px; }
+  
+  /* Баннер */
+  .banner { padding: 15px; margin: -5px -5px 20px; }
+  .banner h2 { font-size: 1.6em; }
+  
+  /* Горизонтальная прокрутка 0 */
+  * { max-width: 100%; overflow-x: hidden; }
 }
 
-/* ✅ СВЕРХМАЛЕНЬКИЕ ЭКРАНЫ (<360px) */
-@media (max-width: 360px) {
-    .service-icon { width: 75px !important; height: 95px !important; }
-    .hero-video h1 { font-size: 1.9em; }
-    .btn { padding: 12px 20px; font-size: 1em; }
-    .districts-grid { grid-template-columns: 1fr !important; }
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
 }
-/* 📱 Тепловизор: таблица тарифов компактнее на мобильном */
+
+/* Сверхмаленькие экраны */
+@media (max-width: 360px) {
+  .service-icon { width: 75px !important; height: 95px !important; }
+  .hero-video h1 { font-size: 1.9em; }
+  .btn { padding: 12px 20px; font-size: 1em; }
+  .districts-grid { grid-template-columns: 1fr !important; }
+}
+
+/* 📱 Тепловизор: таблица тарифов компактнее */
 @media (max-width: 768px) {
   .teplovizor-promo {
     padding: 15px !important;
@@ -663,34 +691,9 @@
   .teplovizor-promo th {
     padding: 10px 8px !important;
   }
-
-  .teplovizor-promo td[style*="font-size: 1.2em"] {
-    font-size: 1em !important;
-  }
-
-  .teplovizor-promo td[style*="font-size: 1.8em"] {
-    font-size: 1.3em !important;
-  }
-
-  .teplovizor-promo td[style*="font-size: 1.5em"] {
-    font-size: 1.15em !important;
-  }
-
-  .teplovizor-promo td[style*="font-size: 1.1em"] {
-    font-size: 0.9em !important;
-  }
-
-  .teplovizor-promo td[style*="font-size: 0.95em"] {
-    font-size: 0.85em !important;
-    line-height: 1.3 !important;
-  }
-
-  .teplovizor-promo td[style*="font-size: 0.9em"] {
-    font-size: 0.8em !important;
-  }
 }
 
-/* 📱 Быстрые работы: меньше шрифты и паддинги */
+/* 📱 Быстрые работы */
 @media (max-width: 768px) {
   .quick-works {
     padding: 15px !important;
@@ -711,26 +714,15 @@
   .quick-works > div[style*="display: grid"] > div {
     text-align: center;
   }
-
-  .quick-works > div[style*="display: grid"] div[style*="font-size: 2em"] {
-    font-size: 1.4em !important;
-  }
-
-  .quick-works > div[style*="display: grid"] div[style*="font-size: 1.6em"] {
-    font-size: 1.15em !important;
-  }
-
-  .quick-works > div[style*="display: grid"] div[style*="font-size: 1em"] {
-    font-size: 0.8em !important;
-  }
 }
-        @media (max-width: 480px) {
+
+@media (max-width: 480px) {
   .prices p[style*="Полный спектр услуг"] {
     font-size: 0.95em !important;
     padding: 0 4px !important;
   }
 }
-    </style>
+</style>
 </head>
 <body>
     <!-- БАННЕР -->
@@ -1316,6 +1308,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
