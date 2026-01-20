@@ -283,8 +283,145 @@ body {
         color: #27ae60;
         margin: 8px 0 5px;
     }
+    .hero {
+    padding: 60px 0 40px;
+}
 
-/* ===== МОБИЛЬНАЯ ОПТИМИЗАЦИЯ ===== */
+.hero-text {
+    max-width: 800px;
+    margin: 0 auto 25px;
+}
+
+/* Контейнер для кнопок */
+.hero-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Прозрачные кнопки-обводки */
+.btn-outline {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 999px;
+    border: 1px solid #bdc3c7;
+    background: transparent;
+    color: #2c3e50;
+    font-size: 0.95em;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-outline:hover {
+    background: #ecf0f1;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+/* Главная кнопка (телефон) чуть плотнее */
+.btn-main {
+    border-width: 2px;
+    border-color: #2c3e50;
+}
+
+.hero {
+    padding: 60px 0 40px;
+}
+
+.hero h1 {
+    font-size: 2.2em;
+    text-align: center;
+    margin: 10px 0 15px;
+    color: #2c3e50;
+}
+
+.hero-text {
+    max-width: 800px;
+    margin: 0 auto 25px;
+    text-align: center;
+}
+
+/* Бейджи гео и мастера */
+.cities-badge,
+.master-badge {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.75em;
+    background: #ecf0f1;
+    color: #2c3e50;
+}
+
+.badge.blue   { background: #ecf5ff; }
+.badge.green  { background: #e9f7ef; }
+.badge.orange { background: #fff5e6; }
+
+/* Кнопки в шапке */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 999px;
+    border: 1px solid #bdc3c7;
+    background: transparent;
+    color: #2c3e50;
+    font-size: 0.95em;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-outline:hover {
+    background: #ecf0f1;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.btn-main {
+    border-width: 2px;
+    border-color: #2c3e50;
+}
+
+/* Мобилка */
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 10px 30px;
+    }
+
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-outline {
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+}
 
 @media (max-width: 768px) {
 
@@ -403,40 +540,40 @@ body {
 </nav>
     
     <!-- ✅ ГЕРОЙ -->
-    <header class="hero">
-        <div class="container">
-            <div class="cities-badge">
-                <span class="badge blue">🏘️ Подольск +30км</span>
-                <span class="badge blue">🏘️ Видное +25км</span>
-                <span class="badge blue">🏘️ Климовск +29км</span>
-                <span class="badge green">🌇 Бирюлёво Вост. Зап.</span>
-                <span class="badge green">🌇 Царицыно Чертаново</span>
-                <span class="badge orange">🌇 Братеево Орехово</span>
-            </div>
-            
-            <div class="master-badge">
-                <span class="badge blue">👨‍🔧 Самозанятый Алексей</span>
-                <span class="badge green">✅ Официальные чеки</span>
-                <span class="badge orange">💰 Работа 220 000₽</span>
-            </div>
-            
-            <h1>Вентилируемая пристройка <strong>220 000₽</strong></h1>
-            <p class="hero-text"><strong>РАБОТА БЕЗ МАТЕРИАЛА</strong> | Двойные вентзазоры: стены 20+40мм, пол 30мм, крыша 50мм. 5×3м доска 150×150мм. <strong>Выезд бесплатно: Подольск+30км, ЮАО+40км!</strong></p>
-            
-            <div class="hero-buttons">
-  <a href="tel:+79267904248" class="btn-primary btn-call">
-    📞 +7 (926) 790-42-48
-  </a>
-  <a href="https://wa.me/79267904248" class="btn-primary btn-wa">
-    💬 WhatsApp
-  </a>
-  <a href="mailto:lesha.alexandrov2014@yandex.ru" class="btn-primary btn-mail">
-    ✉️ lesha.alexandrov2014@yandex.ru
-  </a>
-</div>
-
-        </div>
-    </header>
+<header class="hero">
+  <div class="container">
+    <div class="cities-badge">
+      <span class="badge blue">Подольск и рядом</span>
+      <span class="badge blue">Юг Москвы</span>
+      <span class="badge green">Бирюлёво, Царицыно</span>
+      <span class="badge orange">Чертаново, Братеево</span>
+    </div>
+    
+    <div class="master-badge">
+      <span class="badge blue">👨‍🔧 Частный мастер Алексей</span>
+      <span class="badge green">✅ Официальные чеки</span>
+      <span class="badge orange">💰 Работа от 220 000₽</span>
+    </div>
+    
+    <h1>Тёплая вентилируемая пристройка к дому</h1>
+    <p class="hero-text">
+      <strong>Работа без материала.</strong> Двойные вентзазоры: стены 20+40&nbsp;мм, пол 30&nbsp;мм, крыша 50&nbsp;мм. 
+      Пристройка 5×3&nbsp;м на доске 150×150&nbsp;мм. Выезд по югу Москвы и ближайшему Подмосковью.
+    </p>
+    
+    <div class="hero-buttons">
+      <a href="tel:+79267904248" class="btn-outline btn-main">
+        📞 +7 (926) 790-42-48
+      </a>
+      <a href="https://wa.me/79267904248" class="btn-outline">
+        💬 Написать в WhatsApp
+      </a>
+      <a href="mailto:lesha.alexandrov2014@yandex.ru" class="btn-outline">
+        ✉️ Написать на почту
+      </a>
+    </div>
+  </div>
+</header>
 
     <!-- ✅ ЦЕНЫ ПО РАЙОНАМ -->
     <section class="prices container">
