@@ -1,291 +1,566 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- ✅ ФАВИКОНЫ (все размеры + резервные) -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <!-- ✅ РЕЗЕРВНЫЙ SVG FAIVCON (404 исчезнут) -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" type="image/svg+xml">
-    
-    <!-- ✅ SEO ГЕОТАРГЕТИНГ -->
-    <title>Монтаж электрики Подольск ЮАО | Проводка щиток от 3000₽ Бирюлёво Царицыно</title>
-    <meta name="description" content="Монтаж электрики под ключ Подольск+30км, Видное, Климовск, ЮАО Москва: Бирюлёво, Царицыно, Чертаново. Проводка ВВГнг + щиток ABB + розетки Legrand от 3000₽. Выезд бесплатно">
-    <meta name="keywords" content="монтаж электрики Подольск,электрика под ключ Видное,проводка Климовск,электрика Бирюлёво,монтаж электрики Царицыно">
-    
-    <!-- ✅ OPEN GRAPH -->
-    <meta property="og:title" content="Монтаж электрики Подольск + ЮАО | Проводка + щиток от 3000₽">
-    <meta property="og:description" content="Проводка ВВГнг + щиток ABB + розетки Legrand. Выезд бесплатно Подольск+30км">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://master-yu-mos.ru/elektrika.html">
-    <meta property="og:image" content="https://master-yu-mos.ru/elektrika-preview.jpg">
-    
-    <!-- ✅ Schema.org -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Мастер Алексей - Монтаж электрики Подольск",
-      "telephone": "+79267904248",
-      "email": "lesha.alexandrov2014@yandex.ru",
-      "areaServed": ["Подольск", "Видное", "Климовск", "Бирюлёво", "Царицыно", "Чертаново", "Братеево"],
-      "offers": [
-        {"@type": "Offer", "name": "Электрика 100м² Подольск", "price": "3000", "priceCurrency": "RUB"},
-        {"@type": "Offer", "name": "Электрика ЮАО Москва", "price": "6500", "priceCurrency": "RUB"}
-      ],
-      "openingHours": "Mo-Su 08:00-22:00"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Фавиконы -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"
+        type="image/svg+xml">
+
+  <!-- SEO -->
+  <title>Бытовой электрик Подольск ЮАО | Розетки, выключатели, щиток, люстры, диагностика проводки</title>
+  <meta name="description"
+        content="Бытовой электрик в Подольске, Видном, Климовске и ЮАО Москвы: замена розеток и выключателей, подключение люстр, сборка небольшого щитка, прокладка кабеля в гофре и кабель‑канале без штробления стен. Диагностика проводки тепловизором при необходимости.">
+  <meta name="keywords"
+        content="электрик Подольск, электрик мастер на час Подольск, замена розеток Видное, подключение люстры Климовск, сборка щитка Бирюлёво, диагностика проводки тепловизором Подольск">
+
+  <!-- Open Graph -->
+  <meta property="og:title"
+        content="Бытовой электрик Подольск + ЮАО | Розетки, выключатели, щиток, люстры">
+  <meta property="og:description"
+        content="Мелкий бытовой ремонт электрики без штробления стен: розетки, выключатели, люстры, небольшой щиток. Диагностика проводки тепловизором.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://master-yu-mos.ru/elektrika.html">
+  <meta property="og:image" content="https://master-yu-mos.ru/elektrika-preview.jpg">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Мастер Алексей - Бытовой электрик Подольск",
+    "telephone": "+79267904248",
+    "email": "lesha.alexandrov2014@yandex.ru",
+    "areaServed": [
+      "Подольск", "Видное", "Климовск",
+      "Бирюлёво", "Царицыно", "Чертаново", "Братеево"
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Замена розетки или выключателя",
+        "price": "350",
+        "priceCurrency": "RUB"
+      },
+      {
+        "@type": "Offer",
+        "name": "Подключение люстры",
+        "price": "800",
+        "priceCurrency": "RUB"
+      },
+      {
+        "@type": "Offer",
+        "name": "Сборка небольшого щитка",
+        "price": "2000",
+        "priceCurrency": "RUB"
+      },
+      {
+        "@type": "Offer",
+        "name": "Диагностика проводки тепловизором",
+        "price": "2990",
+        "priceCurrency": "RUB"
+      }
+    ],
+    "openingHours": "Mo-Su 08:00-22:00"
+  }
+  </script>
+
+  <!-- Яндекс -->
+  <meta name="yandex-verification" content="1798a4f45d5372e0">
+
+  <!-- Шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Метрика -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) { return; }
+      }
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105722511', 'ym');
+    ym(105722511, 'init', {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
+  </script>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/105722511" style="position:absolute; left:-9999px;" alt="">
+    </div>
+  </noscript>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #f8f9fa;
+      font-weight: 500;
+      font-size: 16px;
     }
-    </script>
-    
-    <!-- ✅ ЯНДЕКС -->
-    <meta name="yandex-verification" content="1798a4f45d5372e0">
-    
-    <!-- ✅ ШРИФТЫ -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- ✅ МЕТРИКА -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105722511', 'ym');
-        ym(105722511, 'init', {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/105722511" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Montserrat', sans-serif; 
-            line-height: 1.6; 
-            color: #1a1a1a; 
-            background: #f8f9fa;
-            font-weight: 500;
-            font-size: 16px;
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        
-        /* БРЕДКРАМБС */
-        .breadcrumbs { 
-            background: #f1f3f4; 
-            padding: 15px 20px; 
-            font-size: 14px; 
-            color: #666;
-        }
-        .breadcrumbs a { color: #2196f3; text-decoration: none; }
-        
-        /* ГЕРОЙ */
-        .hero { 
-            background: linear-gradient(135deg, #f39c12, #e67e22, #d35400); 
-            color: white; 
-            padding: 80px 20px; 
-            text-align: center;
-        }
-        .hero h1 { font-size: 3em; margin-bottom: 20px; font-weight: 700; }
-        .hero-text { font-size: 1.3em; margin: 30px 0; font-weight: 500; }
-        
-        .cities-badge, .master-badge { 
-            display: flex; 
-            justify-content: center; 
-            gap: 15px; 
-            margin: 20px 0; 
-            flex-wrap: wrap;
-        }
-        .badge { 
-            background: rgba(255,255,255,0.2); 
-            padding: 10px 20px; 
-            border-radius: 25px; 
-            font-weight: 700; 
-            backdrop-filter: blur(10px);
-        }
-        .badge.blue { background: rgba(33,150,243,0.3); }
-        .badge.green { background: rgba(76,175,80,0.3); }
-        .badge.orange { background: rgba(255,152,0,0.3); }
-        
-        .btn-primary, .btn-secondary { 
-            display: inline-block; 
-            padding: 18px 40px; 
-            font-size: 1.2em; 
-            font-weight: 700; 
-            text-decoration: none; 
-            border-radius: 50px; 
-            margin: 10px; 
-            transition: all 0.3s;
-        }
-        .btn-primary { 
-            background: linear-gradient(45deg, #ff6b6b, #ffd93d); 
-            color: white !important; 
-            box-shadow: 0 10px 30px rgba(255,107,107,0.4);
-        }
-        .btn-secondary { 
-            background: white; 
-            color: #d35400 !important; 
-            border: 3px solid white;
-        }
-        
-        /* СЕКЦИИ */
-        .prices, .services, .calc { padding: 80px 0; }
-        h2 { text-align: center; font-size: 2.5em; margin-bottom: 40px; color: #2c3e50; }
-        
-        .price-grid, .service-detail, .calc-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 30px; 
-        }
-        .price-card, .feature, .calc-item { 
-            background: white; 
-            padding: 40px; 
-            border-radius: 20px; 
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1); 
-            text-align: center;
-        }
-        .price { font-size: 2.5em; color: #27ae60; font-weight: 700; margin: 20px 0; }
-        
-        .footer { 
-            background: #2c3e50; 
-            color: white; 
-            padding: 40px 0; 
-            text-align: center;
-        }
-        .footer a { color: #ffd93d; }
-        
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2em; }
-            .btn-primary, .btn-secondary { display: block; margin: 10px auto; }
-        }
-    </style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Хлебные крошки */
+    .breadcrumbs {
+      background: #f1f3f4;
+      padding: 15px 20px;
+      font-size: 14px;
+      color: #666;
+    }
+    .breadcrumbs a {
+      color: #2196f3;
+      text-decoration: none;
+    }
+
+    /* Фикс‑навигация (как на тепловизоре) */
+    .fixed-nav {
+      position: fixed;
+      top: 16px;
+      left: 16px;
+      z-index: 1000;
+      display: flex;
+      gap: 8px;
+      background: rgba(0,0,0,0.8);
+      padding: 8px 12px;
+      border-radius: 24px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+    .fixed-nav__link {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9em;
+      white-space: nowrap;
+      padding: 6px 10px;
+      border-radius: 20px;
+      transition: background 0.2s ease;
+    }
+    .fixed-nav__link:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    /* Герой */
+    .hero {
+      background: linear-gradient(135deg, #f39c12, #e67e22, #d35400);
+      color: white;
+      padding: 80px 20px 70px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='20' cy='20' r='2' fill='%23ffffff' opacity='0.3'/%3E%3Ccircle cx='80' cy='30' r='1.5' fill='%23ffffff' opacity='0.4'/%3E%3Ccircle cx='40' cy='80' r='1' fill='%23ffffff' opacity='0.2'/%3E%3C/svg%3E")
+                  repeat;
+      opacity: 0.25;
+      pointer-events: none;
+    }
+    .hero > .container { position: relative; z-index: 2; }
+
+    .cities-badge, .master-badge {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 10px 0 15px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      background: rgba(255,255,255,0.2);
+      padding: 8px 18px;
+      border-radius: 25px;
+      font-weight: 700;
+      backdrop-filter: blur(10px);
+      font-size: 0.9em;
+    }
+    .badge.blue { background: rgba(33,150,243,0.3); }
+    .badge.green { background: rgba(76,175,80,0.3); }
+    .badge.orange { background: rgba(255,152,0,0.3); }
+
+    .hero h1 {
+      font-size: 2.7em;
+      margin: 20px 0 10px;
+      font-weight: 800;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .hero-text {
+      font-size: 1.25em;
+      margin: 10px 0 30px;
+      font-weight: 500;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .btn-primary, .btn-secondary {
+      display: inline-block;
+      padding: 14px 32px;
+      font-size: 1.1em;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 50px;
+      margin: 0 5px;
+      transition: all 0.3s;
+    }
+    .btn-primary {
+      background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+      color: white !important;
+      box-shadow: 0 10px 30px rgba(255,107,107,0.4);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(255,107,107,0.6);
+    }
+    .btn-secondary {
+      background: white;
+      color: #d35400 !important;
+      border: 3px solid white;
+    }
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+    }
+
+    /* Общие секции */
+    section { padding: 70px 0; }
+    h2 {
+      text-align: center;
+      font-size: 2.3em;
+      margin-bottom: 30px;
+      color: #2c3e50;
+      font-weight: 700;
+    }
+
+    /* Сетка цен/услуг */
+    .price-grid, .services-grid, .calc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: white;
+      padding: 26px 24px;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      text-align: left;
+    }
+    .card h3 {
+      font-size: 1.25em;
+      margin-bottom: 8px;
+    }
+    .card .price {
+      font-size: 1.8em;
+      color: #27ae60;
+      font-weight: 700;
+      margin: 6px 0 10px;
+    }
+    .card p {
+      font-size: 0.98em;
+      color: #4b5563;
+    }
+
+    /* Блок "Типовые работы" */
+    .works-list ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 10px;
+    }
+    .works-list li {
+      margin-bottom: 6px;
+      font-size: 0.98em;
+    }
+
+    /* Блок про тепловизор */
+    .feature-box {
+      background: #e8f5e8;
+      padding: 24px 22px;
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+      margin-top: 30px;
+    }
+    .feature-box h3 {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+      color: #166534;
+    }
+    .feature-box p {
+      font-size: 0.98em;
+      color: #374151;
+      margin-bottom: 8px;
+    }
+
+    /* Пример выезда/калькуляция */
+    .calc-item h4 {
+      font-size: 1.15em;
+      margin-bottom: 10px;
+    }
+    .calc-item ul {
+      list-style: none;
+      padding-left: 0;
+      font-size: 0.95em;
+      color: #374151;
+    }
+    .calc-item li {
+      margin-bottom: 4px;
+    }
+
+    /* Футер */
+    .footer {
+      background: #2c3e50;
+      color: white;
+      padding: 35px 0;
+      text-align: center;
+    }
+    .footer a { color: #ffd93d; text-decoration: none; }
+
+    /* Мобилка */
+    @media (max-width: 768px) {
+      .fixed-nav {
+        top: 10px;
+        left: 10px;
+        padding: 6px 8px;
+        gap: 6px;
+      }
+      .fixed-nav__link {
+        font-size: 0.8em;
+        padding: 4px 8px;
+      }
+      .hero { padding: 70px 16px 60px; }
+      .hero h1 { font-size: 2.1em; }
+      .hero-text { font-size: 1.05em; }
+      .btn-primary, .btn-secondary {
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        margin: 4px auto;
+        text-align: center;
+      }
+      section { padding: 55px 0; }
+    }
+  </style>
 </head>
 <body>
-    <!-- ✅ ХЛЕБНЫЕ КРОШКИ -->
-    <nav class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
-        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="/"><span itemprop="name">🏠 Главная</span></a>
-            <meta itemprop="position" content="1">
-        </span> 
-        → <strong>Монтаж электрики Подольск + ЮАО</strong>
-    </nav>
-    
-    <!-- ✅ ГЕРОЙ -->
-    <header class="hero">
-        <div class="container">
-            <div class="cities-badge">
-                <span class="badge blue">🏘️ Подольск +30км</span>
-                <span class="badge blue">🏘️ Видное +25км</span>
-                <span class="badge blue">🏘️ Климовск +29км</span>
-                <span class="badge green">🌇 Бирюлёво Восто./Зап.</span>
-                <span class="badge green">🌇 Царицыно Чертаново</span>
-            </div>
-            
-            <div class="master-badge">
-                <span class="badge blue">👨‍🔧 Самозанятый Алексей</span>
-                <span class="badge green">✅ Чеки МойНалог</span>
-                <span class="badge orange">💰 Индивидуальный расчет</span>
-            </div>
-            
-            <h1>⚡ Монтаж электрики под ключ <strong>от 3 000₽</strong></h1>
-            <p class="hero-text">Проводка ВВГнг 3×2.5 + щиток ABB 16А + розетки Legrand. <strong>Выезд бесплатно: Подольск • Видное • Климовск • Бирюлёво • Царицыно • Чертаново • вся ЮАО!</strong></p>
-            
-            <div class="hero-buttons">
-                <a href="tel:+79267904248" class="btn-primary">📞 +7(926)790-42-48</a>
-                <a href="mailto:lesha.alexandrov2014@yandex.ru" class="btn-secondary">✉️ Написать</a>
-                <a href="https://wa.me/79267904248" class="btn-secondary">💬 WhatsApp</a>
-            </div>
-        </div>
-    </header>
 
-    <!-- ✅ ЦЕНЫ -->
-    <section class="prices container">
-        <h2>💰 Цены на монтаж электрики по районам</h2>
-        <div class="price-grid">
-            <div class="price-card">
-                <h3>🏘️ Подольск +30км</h3>
-                <div class="price">3 000₽</div>
-                <p>Щиток + 10 розеток + 5 светил</p>
-            </div>
-            <div class="price-card">
-                <h3>🌇 ЮАО Москва</h3>
-                <div class="price">3 500₽</div>
-                <p>Бирюлёво • Царицыно • Чертаново</p>
-            </div>
-            <div class="price-card">
-                <h3>🌇 Братеево + Орехово</h3>
-                <div class="price">4 500₽</div>
-                <p>Полная проводка 100м²</p>
-            </div>
-        </div>
-    </section>
+  <!-- Фикс‑меню -->
+  <nav class="fixed-nav">
+    <a href="/" class="fixed-nav__link">Главная</a>
+    <a href="#works" class="fixed-nav__link">Работы</a>
+    <a href="#prices" class="fixed-nav__link">Цены</a>
+    <a href="#teplo" class="fixed-nav__link">Тепловизор</a>
+  </nav>
 
-    <!-- ✅ КОМПЛЕКТАЦИЯ -->
-    <section class="services container">
-        <h2>✅ Комплектация электрики под ключ</h2>
-        <div class="service-detail">
-            <div class="feature">
-                <h3>🔌 Проводка ВВГнг</h3>
-                <p>3×2.5 силовая<br>3×1.5 освещение<br>Кабель-канал ПВХ</p>
-            </div>
-            <div class="feature">
-                <h3>⚡ Щиток ABB</h3>
-                <p>16А УЗО + автоматы<br>Schneider Electric<br>Динамо 24 модуля</p>
-            </div>
-            <div class="feature">
-                <h3>🔌 Розетки Legrand</h3>
-                <p>10 шт премиум<br>5 выключателей<br>LED светильники</p>
-            </div>
-            <div class="feature">
-                <h3>⏱️ Сроки + Гарантия</h3>
-                <p>100м² = 2-3 дня<br>Пусконаладка включена<br><strong>Гарантия 3 года</strong></p>
-            </div>
-        </div>
+  <!-- Хлебные крошки -->
+  <nav class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="/"><span itemprop="name">🏠 Главная</span></a>
+      <meta itemprop="position" content="1">
+    </span>
+    → <strong>Бытовой электрик Подольск + ЮАО</strong>
+  </nav>
 
-        <!-- ✅ БОНУС ТЕПЛОВИЗОР -->
-        <div class="feature" style="background:#e8f5e8;padding:20px;border-radius:10px;margin-top:30px">
-            <h3>🔍 Бонус: Диагностика тепловизором</h3>
-            <p><strong>Проверка перегрева проводки + плохих контактов</strong><br>
-            ✅ Включена в каждый заказ электрики<br>
-            ✅ Тепловизор Uni-T UTi260B (2990₽ отдельно)<br>
-            <a href="teplovizor.html" style="color:#d32f2f;font-weight:bold">🔥 Заказать тепловизор отдельно</a></p>
-        </div>
-    </section>
+  <!-- Герой -->
+  <header class="hero">
+    <div class="container">
+      <div class="cities-badge">
+        <span class="badge blue">🏘️ Подольск +30км</span>
+        <span class="badge blue">🏘️ Видное +25км</span>
+        <span class="badge blue">🏘️ Климовск +29км</span>
+        <span class="badge green">🌇 Бирюлёво Восто./Зап.</span>
+        <span class="badge green">🌇 Царицыно Чертаново</span>
+      </div>
 
-    <!-- ✅ РАСЧЕТ -->
-    <section class="calc container">
-        <h2>🧮 Пример расчета электрики 100м²</h2>
-        <div class="calc-grid">
-            <div class="calc-item">
-                <h4>✅ Квартира 50м² Подольск</h4>
-                <ul>
-                    <li><strong>Проводка:</strong> 150м ВВГнг</li>
-                    <li><strong>Щиток:</strong> 16А ABB</li>
-                    <li><strong>Розетки:</strong> 8 шт Legrand</li>
-                    <li><strong>⏱️ Срок:</strong> 1-2 дня</li>
-                    <li style="color: #27ae60; font-size: 28px; font-weight: 700;">💰 3 000₽</li>
-                </ul>
-                <p style="font-size: 0.9em;"><em><strong>Без материала! Только работа</strong></em></p>
-            </div>
-            <div class="calc-item">
-                <h4>✅ Дом 100м² ЮАО</h4>
-                <ul>
-                    <li><strong>Проводка:</strong> 300м ВВГнг</li>
-                    <li><strong>Щиток:</strong> 25А Schneider</li>
-                    <li><strong>Розетки:</strong> 15 шт Legrand</li>
-                    <li><strong>⏱️ Срок:</strong> 3 дня</li>
-                    <li style="color: #27ae60; font-size: 28px; font-weight: 700;">💰 6 500₽</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+      <div class="master-badge">
+        <span class="badge blue">👨‍🔧 Самозанятый мастер Алексей</span>
+        <span class="badge green">✅ Официальные чеки МойНалог</span>
+        <span class="badge orange">💡 Бытовой электрик — мелкие работы</span>
+      </div>
 
-    <!-- ✅ ФУТЕР -->
-    <footer class="footer">
-        <div class="container">
-            <p><strong>Частный мастер Алексей</strong> | 📞 <a href="tel:+79267904248">+7(926)790-42-48</a> | WhatsApp<br>
-            Подольск • Видное • Климовск • <strong>ЮАО: Бирюлёво • Царицыно • Чертаново</strong> | <a href="/">← Все услуги</a></p>
-            <p style="font-size: 0.9em; opacity: 0.8;">© 2026 Самозанятый. Официальные чеки МойНалог. Выезд 08:00-22:00</p>
+      <h1>⚡ Бытовой электрик: розетки, выключатели, щиток, люстры</h1>
+      <p class="hero-text">
+        Заменю розетку или выключатель, подключу люстру и светильники, соберу небольшой щиток,
+        проложу кабель в гофре или кабель‑канале <strong>без штробления стен</strong>.
+        Работаю по Подольску, Видному, Климовску и районам ЮАО Москвы.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="tel:+79267904248" class="btn-primary">📞 +7 (926) 790‑42‑48</a>
+        <a href="mailto:lesha.alexandrov2014@yandex.ru" class="btn-secondary">✉️ Написать на e‑mail</a>
+        <a href="https://wa.me/79267904248" class="btn-secondary">💬 WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Типовые работы -->
+  <section id="works">
+    <div class="container">
+      <h2>🔧 Какие работы выполняю</h2>
+      <div class="price-grid works-list">
+        <div class="card">
+          <h3>🔌 Розетки и выключатели</h3>
+          <ul>
+            <li>Замена розетки или выключателя</li>
+            <li>Добавление новой точки в кабель‑канале или гофре</li>
+            <li>Устранение подгораний и плохих контактов</li>
+          </ul>
         </div>
-    </footer>
+        <div class="card">
+          <h3>💡 Свет и люстры</h3>
+          <ul>
+            <li>Сборка и подключение люстры</li>
+            <li>Установка бра, спотов, накладных светильников</li>
+            <li>Перенос точки света без штробления (кабель‑канал / гофра)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>⚙️ Щиток и автоматы</h3>
+          <ul>
+            <li>Замена автомата, УЗО, диффавтомата</li>
+            <li>Сборка маленького щитка на 4–8 модулей</li>
+            <li>Протяжка и ревизия контактных соединений</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>📦 Прокладка кабеля</h3>
+          <ul>
+            <li>Открытая прокладка в кабель‑канале</li>
+            <li>Прокладка по гофре (под потолком, по стенам)</li>
+            <li>Без грязной штроборезки и пыли по всей квартире</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Цены -->
+  <section id="prices">
+    <div class="container">
+      <h2>💰 Примерные цены на бытовые работы</h2>
+      <div class="price-grid">
+        <div class="card">
+          <h3>🔌 Розетки и выключатели</h3>
+          <div class="price">от 350 ₽</div>
+          <p>
+            Замена одной розетки или выключателя.<br>
+            Новая точка в кабель‑канале или гофре — от 700 ₽.
+          </p>
+        </div>
+        <div class="card">
+          <h3>💡 Люстры и светильники</h3>
+          <div class="price">от 800 ₽</div>
+          <p>
+            Сборка и подключение люстры — от 800 ₽.<br>
+            Установка бра, спота, накладного светильника — от 600 ₽.
+          </p>
+        </div>
+        <div class="card">
+          <h3>⚙️ Щиток и автоматы</h3>
+          <div class="price">от 500 ₽</div>
+          <p>
+            Замена автомата или УЗО — от 500 ₽.<br>
+            Сборка небольшого щитка (4–8 модулей) — от 2 000 ₽.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Блок про тепловизор для проводки -->
+  <section id="teplo">
+    <div class="container">
+      <h2>🔍 Диагностика проводки тепловизором</h2>
+      <div class="feature-box">
+        <h3>Когда нужен тепловизор</h3>
+        <p>
+          Если есть запах гари, выбивает автомат, греются розетки или старый щиток — можно сделать
+          <strong>диагностику проводки тепловизором в Подольске, Видном, Климовске и ЮАО</strong>.
+        </p>
+        <p>
+          Тепловизор показывает перегретые автоматы, розетки, распаечные коробки и слабые соединения
+          под нагрузкой. Такое <strong>тепловизионное обследование проводки</strong> помогает увидеть
+          места потенциального пожара ещё до аварии.
+        </p>
+        <p>
+          Чаще всего диагностику проводки тепловизором совмещаю с мелким ремонтом электрики:
+          сразу меняю автоматы, розетки или протягиваю контакты.
+        </p>
+        <p>
+          Отдельный выезд с тепловизором от <strong>2 990 ₽</strong>.<br>
+          <a href="teplovizor.html" style="color:#d32f2f;font-weight:bold">
+            👉 Подробнее о тепловизоре и тарифах
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Примеры выездов -->
+  <section>
+    <div class="container">
+      <h2>🧮 Примеры выездов и стоимости</h2>
+      <div class="calc-grid">
+        <div class="card calc-item">
+          <h4>✅ Квартира в Подольске: «горит розетка + люстра»</h4>
+          <ul>
+            <li>Замена розетки — 350–500 ₽</li>
+            <li>Сборка и подключение люстры — от 800 ₽</li>
+            <li>Протяжка контактов в щитке — от 500 ₽</li>
+            <li>По желанию — быстрый контроль тепловизором автомата и розеток</li>
+            <li style="margin-top:6px;font-weight:700;color:#27ae60;">Итого обычно 1–2 часа работы</li>
+          </ul>
+        </div>
+        <div class="card calc-item">
+          <h4>✅ Гараж / мастерская: «добавить пару розеток и свет»</h4>
+          <ul>
+            <li>2–3 новые розетки в кабель‑канале — от 700 ₽ за точку</li>
+            <li>Подключение одного–двух светильников — от 600 ₽ за точку</li>
+            <li>При подозрениях на перегрев — проверка проводки тепловизором</li>
+            <li style="margin-top:6px;font-weight:700;color:#27ae60;">Цена и время по факту, после осмотра</li>
+          </ul>
+        </div>
+      </div>
+      <p style="text-align:center;font-size:0.95em;color:#6b7280;margin-top:18px;">
+        Точные цены зависят от состояния проводки, высоты потолков и количества точек. Всегда можно
+        скинуть фото щитка и розеток в WhatsApp для предварительной оценки.
+      </p>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <strong>Частный мастер Алексей</strong> |
+        📞 <a href="tel:+79267904248">+7 (926) 790‑42‑48</a> |
+        <a href="https://wa.me/79267904248">WhatsApp</a><br>
+        Подольск • Видное • Климовск •
+        <strong>ЮАО: Бирюлёво • Царицыно • Чертаново</strong> |
+        <a href="/">← Все услуги</a>
+      </p>
+      <p style="font-size:0.9em;opacity:0.8;margin-top:8px;">
+        © 2026 Самозанятый. Официальные чеки МойНалог. Выезд 08:00–22:00
+      </p>
+    </div>
+  </footer>
+
 </body>
 </html>
 
