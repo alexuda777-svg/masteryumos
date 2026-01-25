@@ -80,12 +80,6 @@
     </script>
     
 <style>
-Сделаем так, чтобы герой стал компактнее и всегда показывал RuStore‑кнопку, заголовок, текст и две нижние кнопки, а видео было просто фоном и не мешало.
-​
-
-1. Жёстко ограничим высоту героя и включим внутренний скролл
-Так все элементы точно поместятся и не будут обрезаться:
-
 css
 /* ========== ГЕРОЙ — ДЕСКТОП ========== */
 .hero-video {
@@ -158,34 +152,25 @@ z-index: 0;
 
 /* ========== ГЕРОЙ — МОБИЛКА ========== */
 @media (max-width: 768px) {
-.hero-video {
-min-height: 500px;
-padding: 20px 0;
-}
+  /* Hero секция — НЕ задаём жёсткий height */
+  .hero-video { 
+    /* убираем height:70vh; оставляем только минимальную высоту */
+    min-height: 450px; 
+  }
+  .hero-video video { opacity: 0.35; }
+  .hero-video h1 { font-size: 2.2em; line-height: 1.1; }
+  .hero-text { font-size: 1.1em; }
+  .price-big { font-size: 1.8em; }
 
-.hero-video h1 {
-font-size: 1.6em !important;
-margin: 12px 0 !important;
-line-height: 1.25;
-}
-
-.hero-text {
-font-size: 0.95em !important;
-margin: 10px 0 !important;
-}
-
-.hero-app-link {
-margin-bottom: 10px !important;
-}
-
-.hero-video .btn {
-display: block;
-margin: 6px auto !important;
-max-width: 260px;
-padding: 10px 14px;
-font-size: 0.95em;
-}
-}
+  /* Кнопки компактнее по всей странице */
+  .btn { 
+    display: block; 
+    margin: 8px 0; 
+    padding: 14px 25px; 
+    font-size: 1.1em; 
+    width: 100%; 
+    max-width: 320px;
+  }
 /* ✅ БАЗА */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { 
@@ -1401,6 +1386,7 @@ body {
     </footer>
 </body>
 </html>
+
 
 
 
