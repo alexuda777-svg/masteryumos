@@ -828,6 +828,23 @@ body {
     font-size: 0.95em !important;
     padding: 0 4px !important;
   }
+/* Мигающая / двигающаяся стрелка у RuStore */
+.rustore-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rustore-arrow {
+  display: inline-block;
+  animation: rustore-arrow-move 1.2s infinite ease-in-out;
+}
+
+@keyframes rustore-arrow-move {
+  0%   { transform: translateX(0);   opacity: 0.6; }
+  50%  { transform: translateX(4px); opacity: 1;   }
+  100% { transform: translateX(0);   opacity: 0.6; }
+}
 }
 </style>
 </head>
@@ -856,13 +873,13 @@ body {
      rel="noopener noreferrer"
      style="display:flex; align-items:center; justify-content:center; gap:14px; text-decoration:none;">
 
-    <!-- Текст слева -->
-    <span style="font-size:1.05em; font-weight:700; color:#ffffff; display:flex; align-items:center; gap:6px;">
-      <span style="font-size:1.2em;">➜</span>
+    <!-- Текст слева с анимированной стрелкой -->
+    <span class="rustore-hint" style="font-size:1.05em; font-weight:700; color:#ffffff;">
       <span>Моё приложение здесь</span>
+      <span class="rustore-arrow" style="font-size:1.2em;">➜</span>
     </span>
 
-    <!-- Официальная PNG‑кнопка RuStore -->
+    <!-- PNG‑кнопка RuStore -->
     <img src="images/rustore-button.png"
          alt="Скачать в RuStore"
          style="height:40px; width:auto; display:block;">
@@ -1406,6 +1423,7 @@ body {
     </footer>
 </body>
 </html>
+
 
 
 
