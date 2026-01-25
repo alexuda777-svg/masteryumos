@@ -399,6 +399,13 @@
   .mobile-app-bar {
     display: none;
   }
+/* 🧹 Убираем хлебные крошки и бейджи-городов/чеков на мобилке */
+@media (max-width: 768px) {
+  .breadcrumbs,
+  .cities-badge,
+  .master-badge {
+    display: none;
+  }
 }
 
   </style>
