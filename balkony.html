@@ -324,8 +324,8 @@
   /* ===== Мобилка: адаптация + компактный hero ===== */
 @media (max-width: 768px) {
   .hero {
-    min-height: 15vh;          /* было 100vh, теперь ниже */
-    padding: 15px 16px 15px;   /* можно ещё уменьшить, если нужно */
+    min-height: 55vh;          /* герой занимает ~пол‑экрана, уже, но не 15% */
+    padding: 40px 16px 40px;   /* умеренный воздух сверху/снизу */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -336,11 +336,13 @@
   }
 
   .hero h1 {
-    font-size: 2.05em;
+    font-size: 2.0em;
+    margin: 8px 0 4px;         /* уменьшили расстояние вокруг заголовка */
   }
 
   .hero-text {
-    font-size: 1.02em;
+    font-size: 1.0em;
+    margin: 4px auto 8px;      /* плотнее абзацы друг к другу */
   }
 
   .btn-primary,
@@ -353,7 +355,7 @@
   }
 
   section {
-    padding: 55px 0;
+    padding: 45px 0;
   }
 }
 
