@@ -321,11 +321,33 @@
     text-decoration: none;
   }
 
-  /* ===== Мобилка: адаптация + компактный hero ===== */
+/* ===== Мобилка: адаптация + компактный hero ===== */
 @media (max-width: 768px) {
+  .fixed-nav {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    right: 8px;              /* добавили, чтобы вписать в экран */
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;         /* разрешаем перенос кнопок */
+    justify-content: center; /* центрируем */
+    gap: 4px;
+    padding: 4px 6px;
+    border-radius: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .fixed-nav__link {
+    font-size: 0.75em;
+    padding: 3px 6px;
+    white-space: nowrap;
+  }
+
   .hero {
     min-height: 55vh;
-    padding: 40px 16px 40px;
+    padding: 70px 16px 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -336,8 +358,8 @@
   }
 
   .hero h1 {
-    font-size: 1.6em;   /* было 2.0em — сделал заметно меньше */
-    margin: 6px 0 4px;  /* чуть поджал отступы сверху/снизу */
+    font-size: 1.6em;
+    margin: 6px 0 4px;
   }
 
   .hero-text {
@@ -357,8 +379,11 @@
   section {
     padding: 45px 0;
   }
-}
 
+  body {
+    overflow-x: hidden;      /* на всякий случай убираем горизонтальный скролл */
+  }
+}
   /* 📱 Фиксированная нижняя панель с кнопкой RuStore (всегда видна на мобилке) */
   @media (max-width: 768px) {
     .mobile-app-bar {
