@@ -834,19 +834,16 @@ body {
   gap: 6px;
 }
 
-/* Форсим анимацию стрелки */
-.rustore-arrow {
-  display: inline-block;
-  animation-name: rustore-arrow-move !important;
-  animation-duration: 1.2s !important;
-  animation-iteration-count: infinite !important;
-  animation-timing-function: ease-in-out !important;
+.rustore-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
-@keyframes rustore-arrow-move {
-  0%   { transform: translateX(0);   opacity: 0.6; }
-  50%  { transform: translateX(5px); opacity: 1;   }
-  100% { transform: translateX(0);   opacity: 0.6; }
+.rustore-arrow {
+  display: inline-block;
+  font-weight: 900;
+  color: #ffd93d; /* жёлтая, как твой акцент */
 }
 </style>
 </head>
@@ -875,13 +872,11 @@ body {
      rel="noopener noreferrer"
      style="display:flex; align-items:center; justify-content:center; gap:18px; text-decoration:none;">
 
-    <!-- Текст слева с анимированной стрелкой -->
     <span class="rustore-hint" style="font-size:1.1em; font-weight:700; color:#ffffff;">
-  <span>Моё приложение здесь</span>
-  <span class="rustore-arrow" style="font-size:1.4em;">➜</span>
-</span>
+      <span>Моё приложение здесь</span>
+      <span class="rustore-arrow" style="font-size:1.4em;">➜</span>
+    </span>
 
-    <!-- PNG‑кнопка RuStore (увеличенная) -->
     <img src="images/rustore-button.png"
          alt="Скачать в RuStore"
          style="height:50px; width:auto; display:block;">
@@ -1425,6 +1420,7 @@ body {
     </footer>
 </body>
 </html>
+
 
 
 
