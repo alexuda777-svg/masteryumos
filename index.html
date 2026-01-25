@@ -80,34 +80,42 @@
     </script>
     
 <style>
-/* ГЕРОЙ — ДЕСКТОП */
+/* ========== ГЕРОЙ — ДЕСКТОП ========== */
 .hero-video { 
-  position: relative; 
+  position: relative;
   min-height: 600px;
   padding: 40px 0;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
-/* видео как было */
+/* Видео-фон */
 .hero-video video {
   position: absolute;
-  top: 50%; left: 50%;
-  min-width: 100%; min-height: 100%;
-  width: auto; height: auto;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  z-index: 1; 
-  opacity: 0.45;   /* видео снова видно хорошо */
+  z-index: 1;
+  opacity: 0.45; /* видео хорошо видно */
 }
 
-/* Оверлей как в исходнике */
+/* Градиент поверх видео */
 .hero-overlay {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(135deg, 
-    rgba(44,62,80,0.85) 0%, 
-    rgba(52,73,94,0.75) 50%, 
-    rgba(0,212,255,0.65) 100%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(44, 62, 80, 0.85) 0%,
+    rgba(52, 73, 94, 0.75) 50%,
+    rgba(0, 212, 255, 0.65) 100%
+  );
   z-index: 2;
   display: flex;
   align-items: center;
@@ -118,24 +126,32 @@
 
 /* Контент поверх видео и снега */
 .hero-video .container,
-.badges, .hero-text, .hero-buttons, 
-.hero-video h1, .btn, .hero-app-link {
-  position: relative; 
+.badges,
+.hero-text,
+.hero-buttons,
+.hero-video h1,
+.btn,
+.hero-app-link {
+  position: relative;
   z-index: 3;
 }
 
-/* снег как был */
+/* Снег перед видео, но под градиентом и контентом */
 .hero-video::before { 
-  content: ''; 
-  position: absolute; 
-  top: 0; left: 0; right: 0; bottom: 0; 
-  background: url('data:image/svg+xml,<svg...') repeat; 
-  animation: snowfall 20s linear infinite; 
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg...') repeat;
+  animation: snowfall 20s linear infinite;
   z-index: 0;
 }
+
+/* ========== ГЕРОЙ — МОБИЛКА ========== */
 @media (max-width: 768px) {
-  .hero-video { 
-    /* БЕЗ height! */
+  .hero-video {
     min-height: 500px;
     padding: 20px 0;
   }
@@ -156,11 +172,11 @@
   }
 
   .hero-video .btn {
+    display: block;
     margin: 6px auto !important;
     max-width: 260px;
     padding: 10px 14px;
     font-size: 0.95em;
-    display: block;
   }
 }
 /* ✅ БАЗА */
@@ -1389,6 +1405,7 @@ body {
     </footer>
 </body>
 </html>
+
 
 
 
