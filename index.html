@@ -87,113 +87,104 @@
 Так все элементы точно поместятся и не будут обрезаться:
 
 css
-/* ГЕРОЙ — общие настройки */
-.hero-video { 
-  position: relative;
-  height: 100vh;          /* ровно один экран */
-  max-height: 800px;      /* на больших мониторах не разъезжается */
-  overflow: hidden;
+/* ========== ГЕРОЙ — ДЕСКТОП ========== */
+.hero-video {
+position: relative;
+min-height: 600px;
+padding: 40px 0;
+overflow: hidden;
 }
 
-/* Видео-фон как фон */
+/* Видео-фон */
 .hero-video video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  z-index: 1;
-  opacity: 0.45;
+position: absolute;
+top: 50%;
+left: 50%;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+transform: translate(-50%, -50%);
+object-fit: cover;
+z-index: 1;
+opacity: 0.45; /* видео хорошо видно */
 }
 
-/* Градиент + прокручиваемый контент */
+/* Градиент поверх видео */
 .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(44, 62, 80, 0.85) 0%,
-    rgba(52, 73, 94, 0.75) 50%,
-    rgba(0, 212, 255, 0.65) 100%
-  );
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  color: #ffffff;
-
-  /* ВАЖНО: внутренний скролл, если контента больше чем экран */
-  overflow-y: auto;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: linear-gradient(
+135deg,
+rgba(44, 62, 80, 0.85) 0%,
+rgba(52, 73, 94, 0.75) 50%,
+rgba(0, 212, 255, 0.65) 100%
+);
+z-index: 2;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: #ffffff;
 }
 
-/* Контент в один столбец по центру */
-.hero-overlay .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 20px;
-}
-
-/* Всё поверх видео и снега */
+/* Контент поверх видео и снега */
 .hero-video .container,
+.badges,
 .hero-text,
+.hero-buttons,
 .hero-video h1,
 .btn,
 .hero-app-link {
-  position: relative;
-  z-index: 3;
+position: relative;
+z-index: 3;
 }
 
-/* Снег под градиентом */
-.hero-video::before { 
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url('data:image/svg+xml,<svg...') repeat;
-  animation: snowfall 20s linear infinite;
-  z-index: 0;
+/* Снег перед видео, но под градиентом и контентом */
+.hero-video::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: url('data:image/svg+xml,<svg...') repeat;
+animation: snowfall 20s linear infinite;
+z-index: 0;
 }
 
-/* Мобилка — чуть компактнее шрифты и отступы */
+/* ========== ГЕРОЙ — МОБИЛКА ========== */
 @media (max-width: 768px) {
-  .hero-video {
-    height: 100vh;
-    max-height: none;
-  }
+.hero-video {
+min-height: 500px;
+padding: 20px 0;
+}
 
-  .hero-overlay .container {
-    padding: 20px 16px;
-  }
+.hero-video h1 {
+font-size: 1.6em !important;
+margin: 12px 0 !important;
+line-height: 1.25;
+}
 
-  .hero-video h1 {
-    font-size: 1.6em !important;
-    margin: 10px 0 !important;
-    line-height: 1.25;
-  }
+.hero-text {
+font-size: 0.95em !important;
+margin: 10px 0 !important;
+}
 
-  .hero-text {
-    font-size: 0.95em !important;
-    margin: 8px 0 !important;
-  }
+.hero-app-link {
+margin-bottom: 10px !important;
+}
 
-  .hero-app-link {
-    margin-bottom: 10px !important;
-  }
-
-  .hero-video .btn {
-    display: block;
-    margin: 6px auto !important;
-    max-width: 260px;
-    padding: 10px 14px;
-    font-size: 0.95em;
-  }
+.hero-video .btn {
+display: block;
+margin: 6px auto !important;
+max-width: 260px;
+padding: 10px 14px;
+font-size: 0.95em;
+}
 }
 /* ✅ БАЗА */
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -1414,6 +1405,7 @@ body {
     </footer>
 </body>
 </html>
+
 
 
 
