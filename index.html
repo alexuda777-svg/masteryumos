@@ -83,13 +83,13 @@
 /* ✅ CSS ДЛЯ hero-video */
 .hero-video { 
   position: relative; 
-  height: 90vh; 
+  /* height: 90vh;  убираем фиксированную высоту */
   min-height: 600px;
+  padding: 40px 0;          /* добавляем отступ сверху/снизу */
   overflow: hidden; 
   display: flex; 
   align-items: center;
 }
-
 .hero-video video {
   position: absolute;
   top: 50%; left: 50%;
@@ -134,7 +134,11 @@
 
 /* Мобильные для hero-video */
 @media (max-width: 768px) {
-  .hero-video { height: 75vh; min-height: 500px; }
+  .hero-video { 
+    height: 75vh;        /* на мобиле возвращаем «экранную» высоту */
+    min-height: 500px;
+    padding: 20px 0;     /* можно чуть меньше отступы */
+  }
   .hero-video video { opacity: 0.4; }
 }
 
@@ -1364,6 +1368,7 @@ body {
     </footer>
 </body>
 </html>
+
 
 
 
