@@ -80,29 +80,28 @@
     </script>
     
 <style>
-/* ========== ГЕРОЙ — ДЕСКТОП ========== */
 .hero-video {
   position: relative;
-  height: 90vh;      /* ВЫСОТА: 90% окна по вертикали */
-  min-height: 600px; /* минимум 600px */
+  min-height: 800px;   /* было 600px — делаем блок выше */
+  padding: 60px 0;     /* было 40px — больше отступов сверху/снизу */
   overflow: hidden;
-  display: flex;
-  align-items: center;
+  /* БЕЗ display:flex и height здесь, чтобы не ломать содержимое */
 }
 /* Видео-фон */
 .hero-video video {
-position: absolute;
-top: 50%;
-left: 50%;
-min-width: 100%;
-min-height: 100%;
-width: auto;
-height: auto;
-transform: translate(-50%, -50%);
-object-fit: cover;
-z-index: 1;
-opacity: 0.45; /* видео хорошо видно */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.45;
 }
+
 
 /* Градиент поверх видео */
 .hero-overlay {
@@ -1388,6 +1387,7 @@ body {
     </footer>
 </body>
 </html>
+
 
 
 
