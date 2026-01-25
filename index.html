@@ -828,21 +828,24 @@ body {
     font-size: 0.95em !important;
     padding: 0 4px !important;
   }
-/* Мигающая / двигающаяся стрелка у RuStore */
 .rustore-hint {
   display: inline-flex;
   align-items: center;
   gap: 6px;
 }
 
+/* Форсим анимацию стрелки */
 .rustore-arrow {
   display: inline-block;
-  animation: rustore-arrow-move 1.2s infinite ease-in-out;
+  animation-name: rustore-arrow-move !important;
+  animation-duration: 1.2s !important;
+  animation-iteration-count: infinite !important;
+  animation-timing-function: ease-in-out !important;
 }
 
 @keyframes rustore-arrow-move {
   0%   { transform: translateX(0);   opacity: 0.6; }
-  50%  { transform: translateX(4px); opacity: 1;   }
+  50%  { transform: translateX(5px); opacity: 1;   }
   100% { transform: translateX(0);   opacity: 0.6; }
 }
 </style>
@@ -874,9 +877,9 @@ body {
 
     <!-- Текст слева с анимированной стрелкой -->
     <span class="rustore-hint" style="font-size:1.1em; font-weight:700; color:#ffffff;">
-      <span>Моё приложение здесь</span>
-      <span class="rustore-arrow" style="font-size:1.4em;">➜</span>
-    </span>
+  <span>Моё приложение здесь</span>
+  <span class="rustore-arrow" style="font-size:1.4em;">➜</span>
+</span>
 
     <!-- PNG‑кнопка RuStore (увеличенная) -->
     <img src="images/rustore-button.png"
@@ -1422,6 +1425,7 @@ body {
     </footer>
 </body>
 </html>
+
 
 
 
