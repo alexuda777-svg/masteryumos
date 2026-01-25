@@ -83,13 +83,12 @@
 /* ГЕРОЙ — ДЕСКТОП */
 .hero-video { 
   position: relative; 
-  /* без фиксированной высоты */
   min-height: 600px;
   padding: 40px 0;
   overflow: hidden; 
 }
 
-/* Видео-фон */
+/* видео как было */
 .hero-video video {
   position: absolute;
   top: 50%; left: 50%;
@@ -98,24 +97,23 @@
   transform: translate(-50%, -50%);
   object-fit: cover;
   z-index: 1; 
-  opacity: 0.45;
+  opacity: 0.45;   /* видео снова видно хорошо */
 }
 
-/* Оверлей */
+/* Оверлей как в исходнике */
 .hero-overlay {
-  position: relative;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(44,62,80,0.85) 0%, 
+    rgba(52,73,94,0.75) 50%, 
+    rgba(0,212,255,0.65) 100%);
   z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #ffffff;
-  background: linear-gradient(
-    135deg,
-    rgba(20, 28, 38, 0.92) 0%,
-    rgba(25, 45, 68, 0.9) 50%,
-    rgba(0, 140, 200, 0.85) 100%
-  );
 }
 
 /* Контент поверх видео и снега */
@@ -126,7 +124,7 @@
   z-index: 3;
 }
 
-/* Снег */
+/* снег как был */
 .hero-video::before { 
   content: ''; 
   position: absolute; 
@@ -135,37 +133,26 @@
   animation: snowfall 20s linear infinite; 
   z-index: 0;
 }
-
 @media (max-width: 768px) {
   .hero-video { 
-    /* БЕЗ height, пусть растягивается */
+    /* БЕЗ height! */
     min-height: 500px;
     padding: 20px 0;
-    display: block;          /* достаточно блока, не надо выравнивать по центру */
-  }
-
-  .hero-overlay {
-    display: block;
-    padding: 10px 0;
-  }
-
-  .hero-video .container {
-    max-width: 100%;
-  }
-
-  .hero-app-link {
-    margin-bottom: 10px !important;
   }
 
   .hero-video h1 {
-    font-size: 1.5em !important;
-    margin: 10px 0 !important;
+    font-size: 1.6em !important;
+    margin: 12px 0 !important;
     line-height: 1.25;
   }
 
   .hero-text {
     font-size: 0.95em !important;
-    margin: 8px 0 !important;
+    margin: 10px 0 !important;
+  }
+
+  .hero-app-link {
+    margin-bottom: 10px !important;
   }
 
   .hero-video .btn {
@@ -1402,6 +1389,7 @@ body {
     </footer>
 </body>
 </html>
+
 
 
 
