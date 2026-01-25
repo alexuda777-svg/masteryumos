@@ -868,6 +868,50 @@ body, html {
   color: #555;
   margin: 20px 0 0;
 }
+    /* 📱 Фиксированная нижняя панель с кнопкой RuStore (всегда видна на мобилке) */
+@media (max-width: 768px) {
+  .mobile-app-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background: rgba(15, 23, 42, 0.96);
+    padding: 8px 14px;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.3);
+  }
+
+  .mobile-app-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .mobile-app-text {
+    font-size: 0.95em;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .mobile-app-img {
+    height: 32px;
+    width: auto;
+    display: block;
+  }
+
+  body {
+    padding-bottom: 56px;
+  }
+}
+
+/* 🖥️ На десктопе панель скрыта */
+@media (min-width: 769px) {
+  .mobile-app-bar {
+    display: none;
+  }
+}
 </style>
 
     <script>
@@ -1703,3 +1747,19 @@ document.addEventListener('DOMContentLoaded', function () {
         </p>
     </div>
 </footer>
+
+      <div class="mobile-app-bar">
+  <a href="https://www.rustore.ru/catalog/app/ru.codelibs.app"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="mobile-app-link">
+    <span class="mobile-app-text">Моё приложение в RuStore</span>
+    <img src="images/rustore-button.png"
+         alt="Скачать в RuStore"
+         class="mobile-app-img">
+  </a>
+</div>
+
+      
+      </body>
+</html>
