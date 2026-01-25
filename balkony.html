@@ -321,27 +321,11 @@
     text-decoration: none;
   }
 
-  /* ===== Мобилка: адаптация + полноэкранный hero ===== */
+  /* ===== Мобилка: адаптация + компактный hero ===== */
 @media (max-width: 768px) {
-  .fixed-nav {
-    top: 10px;
-    left: 10px;
-    padding: 6px 8px;
-    gap: 6px;
-  }
-  .fixed-nav__link {
-    font-size: 0.8em;
-    padding: 4px 8px;
-  }
-
-  .breadcrumbs {
-    margin-top: 48px;
-    padding: 10px 14px;
-  }
-
   .hero {
-    min-height: 100vh;         /* занимаем весь экран */
-    padding: 80px 16px 80px;   /* сверху под меню, снизу под RuStore */
+    min-height: 75vh;          /* было 100vh, теперь ниже */
+    padding: 70px 16px 70px;   /* можно ещё уменьшить, если нужно */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -352,11 +336,11 @@
   }
 
   .hero h1 {
-    font-size: 2.1em;
+    font-size: 2.05em;
   }
 
   .hero-text {
-    font-size: 1.05em;
+    font-size: 1.02em;
   }
 
   .btn-primary,
