@@ -103,13 +103,19 @@
 
 /* Оверлей */
 .hero-overlay {
-  position: relative;          /* ВАЖНО: делаем relative, не absolute */
+  position: relative;
   z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 28, 38, 0.92) 0%,
+    rgba(25, 45, 68, 0.9) 50%,
+    rgba(0, 140, 200, 0.85) 100%
+  );
 }
 
 /* Контент поверх видео и снега */
@@ -130,19 +136,17 @@
   z-index: 0;
 }
 
-/* Мобильные для hero-video */
 @media (max-width: 768px) {
   .hero-video { 
-    height: 100vh;     /* один экран */
+    /* БЕЗ height, пусть растягивается */
     min-height: 500px;
-    padding: 15px 0;
-    display: flex;
-    align-items: center;
+    padding: 20px 0;
+    display: block;          /* достаточно блока, не надо выравнивать по центру */
   }
 
   .hero-overlay {
-    display: flex;
-    align-items: center;
+    display: block;
+    padding: 10px 0;
   }
 
   .hero-video .container {
@@ -150,24 +154,24 @@
   }
 
   .hero-app-link {
-    margin-bottom: 8px !important;
+    margin-bottom: 10px !important;
   }
 
   .hero-video h1 {
-    font-size: 1.6em !important;
+    font-size: 1.5em !important;
     margin: 10px 0 !important;
-    line-height: 1.2;
+    line-height: 1.25;
   }
 
   .hero-text {
     font-size: 0.95em !important;
-    margin: 10px 0 !important;
+    margin: 8px 0 !important;
   }
 
   .hero-video .btn {
     margin: 6px auto !important;
     max-width: 260px;
-    padding: 10px 16px;
+    padding: 10px 14px;
     font-size: 0.95em;
     display: block;
   }
@@ -1398,6 +1402,7 @@ body {
     </footer>
 </body>
 </html>
+
 
 
 
