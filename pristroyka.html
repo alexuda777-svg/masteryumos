@@ -365,6 +365,23 @@
     <!-- ✅ ГЕРОЙ -->
     <header class="hero">
       <div class="container">
+
+        <!-- КНОПКА RUSTORE КАК НА ГЛАВНОЙ -->
+        <div class="hero-app-link" style="margin-bottom: 10px;">
+          <a href="https://www.rustore.ru/catalog/app/ru.codelibs.app"
+             target="_blank"
+             rel="noopener noreferrer"
+             style="display:flex; align-items:center; justify-content:center; gap:18px; text-decoration:none;">
+            <span class="rustore-hint" style="font-size:1.1em; font-weight:700; color:#1f2933;">
+              <span>Моё приложение здесь</span>
+              <span class="rustore-arrow" style="font-size:1.4em;">➜</span>
+            </span>
+            <img src="images/rustore-button.png"
+                 alt="Скачать в RuStore"
+                 style="height:50px; width:auto; display:block;">
+          </a>
+        </div>
+
         <div class="cities-badge">
           <span class="badge blue">Подольск и рядом</span>
           <span class="badge blue">Юг Москвы</span>
@@ -491,7 +508,7 @@
       </ul>
     </section>
 
-    <!-- ✅ ЗАПИСЬ НА СЕЗОН (форма с mailto) -->
+    <!-- ✅ ЗАПИСЬ НА СЕЗОН (форма mailto) -->
     <section class="container" style="margin:40px auto;" id="season-form">
       <h2 style="text-align:center; color:#2c3e50;">
         Запись на сезон 2026
@@ -508,6 +525,8 @@
         <input id="lead-phone" type="tel" placeholder="Телефон"
                style="padding:10px 12px; border-radius:8px; border:1px solid #d1d5db;">
         <input id="lead-place" type="text" placeholder="Где дом/дача (Подольск, СНТ и т.п.)"
+               style="padding:10px 12px; border-radius:8px; border:1px solid #d1d5db;">
+        <input id="lead-note" type="text" placeholder="Кратко: пристройка, веранда, размер (необязательно)"
                style="padding:10px 12px; border-radius:8px; border:1px solid #d1d5db;">
 
         <button type="button"
@@ -843,21 +862,22 @@
         const name  = document.getElementById('lead-name').value || '';
         const phone = document.getElementById('lead-phone').value || '';
         const place = document.getElementById('lead-place').value || '';
+        const note  = document.getElementById('lead-note').value || '';
 
         const subject = encodeURIComponent('Заявка на каркасную пристройку / веранду');
         const body = encodeURIComponent(
           'Имя: ' + name + '\n' +
           'Телефон: ' + phone + '\n' +
-          'Дом/дача: ' + place + '\n\n' +
+          'Дом/дача: ' + place + '\n' +
+          'Что нужно: ' + note + '\n\n' +
           'Источник: страница пристроек master-yu-mos.ru'
         );
 
-        window.location.href = 'mailto:lesha.alexandrov2014@yandex.ru?subject=' + subject + '&body=' + body;
+        window.location.href =
+          'mailto:lesha.alexandrov2014@yandex.ru?subject=' + subject + '&body=' + body;
       }
     </script>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
