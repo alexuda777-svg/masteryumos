@@ -491,7 +491,7 @@
       </ul>
     </section>
 
-    <!-- ✅ ЗАПИСЬ НА СЕЗОН -->
+    <!-- ✅ ЗАПИСЬ НА СЕЗОН (форма с mailto) -->
     <section class="container" style="margin:40px auto;" id="season-form">
       <h2 style="text-align:center; color:#2c3e50;">
         Запись на сезон 2026
@@ -501,21 +501,25 @@
         в Подольске, Щербинке, Домодедово, Климовске и Видном.
         Весной удобнее согласовать проект и смету, летом очередь выше.
       </p>
-      <form action="#" method="post" style="max-width:420px; margin:0 auto; display:flex; flex-direction:column; gap:10px;">
-        <input type="text" name="name" placeholder="Ваше имя" required
+
+      <div style="max-width:420px; margin:0 auto; display:flex; flex-direction:column; gap:10px;">
+        <input id="lead-name" type="text" placeholder="Ваше имя"
                style="padding:10px 12px; border-radius:8px; border:1px solid #d1d5db;">
-        <input type="tel" name="phone" placeholder="Телефон" required
+        <input id="lead-phone" type="tel" placeholder="Телефон"
                style="padding:10px 12px; border-radius:8px; border:1px solid #d1d5db;">
-        <input type="text" name="place" placeholder="Где дом/дача (Подольск, СНТ и т.п.)"
+        <input id="lead-place" type="text" placeholder="Где дом/дача (Подольск, СНТ и т.п.)"
                style="padding:10px 12px; border-radius:8px; border:1px solid #d1d5db;">
-        <button type="submit"
-                style="padding:12px 16px; border:none; border-radius:999px; background:#2c3e50; color:#fff; font-weight:600; cursor:pointer;">
+
+        <button type="button"
+                style="padding:12px 16px; border:none; border-radius:999px; background:#2c3e50; color:#fff; font-weight:600; cursor:pointer;"
+                onclick="sendMailLead()">
           Оставить заявку на сезон
         </button>
+
         <p style="font-size:0.85em; color:#6b7280; margin:4px 0 0;">
-          Перезвоню, уточню участок и сроки, сделаю предварительный расчёт по работе.
+          Откроется письмо на почте — проверьте данные и нажмите «Отправить».
         </p>
-      </form>
+      </div>
     </section>
 
     <!-- ✅ ДВОЙНАЯ ВЕНТИЛЯЦИЯ -->
@@ -834,11 +838,26 @@
           bar.style.display = 'none';
         }
       }
+
+      function sendMailLead() {
+        const name  = document.getElementById('lead-name').value || '';
+        const phone = document.getElementById('lead-phone').value || '';
+        const place = document.getElementById('lead-place').value || '';
+
+        const subject = encodeURIComponent('Заявка на каркасную пристройку / веранду');
+        const body = encodeURIComponent(
+          'Имя: ' + name + '\n' +
+          'Телефон: ' + phone + '\n' +
+          'Дом/дача: ' + place + '\n\n' +
+          'Источник: страница пристроек master-yu-mos.ru'
+        );
+
+        window.location.href = 'mailto:lesha.alexandrov2014@yandex.ru?subject=' + subject + '&body=' + body;
+      }
     </script>
 
     <script src="script.js"></script>
 </body>
 </html>
-
 
 
