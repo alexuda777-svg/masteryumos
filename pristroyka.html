@@ -529,11 +529,14 @@
         <input id="lead-note" type="text" placeholder="Кратко: пристройка, веранда, размер (необязательно)"
                style="padding:10px 12px; border-radius:8px; border:1px solid #d1d5db;">
 
-        <button type="button"
-                style="padding:12px 16px; border:none; border-radius:999px; background:#2c3e50; color:#fff; font-weight:600; cursor:pointer;"
-                onclick="sendMailLead()">
-          Оставить заявку на сезон
-        </button>
+       <button
+  id="season-submit"
+  type="button"
+  style="padding:12px 16px; border:none; border-radius:999px; background:#2c3e50; color:#fff; font-weight:600; cursor:pointer;"
+  onclick="ym(105722511, 'reachGoal', 'zayavka'); sendMailLead();"
+>
+  Оставить заявку на сезон
+</button>
 
         <p style="font-size:0.85em; color:#6b7280; margin:4px 0 0;">
           Откроется письмо на почте — проверьте данные и нажмите «Отправить».
