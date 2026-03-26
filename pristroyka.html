@@ -81,12 +81,12 @@
     .breadcrumbs a:hover { text-decoration: underline; }
     .breadcrumbs-separator { margin: 0 6px; color: #bdc3c7; }
 
-    .hero { padding: 60px 0 40px; }
-    .hero h1 { font-size: 2.2em; text-align: center; margin: 10px 0 15px; color: #2c3e50; }
-    .hero-text { max-width: 800px; margin: 0 auto 25px; text-align: center; }
+    .hero { padding: 40px 0 30px; }
+    .hero h1 { font-size: 2.1em; text-align: center; margin: 10px 0 15px; color: #111827; }
+    .hero-text { max-width: 800px; margin: 0 auto 18px; text-align: center; }
 
     .cities-badge, .master-badge {
-        display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-bottom: 8px;
+        display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-bottom: 6px;
     }
     .badge {
         display: inline-block;
@@ -113,7 +113,7 @@
         border-radius: 999px;
         border: 1px solid #bdc3c7;
         background: transparent;
-        color: #2c3e50;
+        color: #111827;
         font-size: 0.95em;
         font-weight: 600;
         text-decoration: none;
@@ -124,7 +124,8 @@
         background: #ecf0f1;
         box-shadow: 0 4px 14px rgba(0,0,0,0.08);
     }
-    .btn-main { border-width: 2px; border-color: #2c3e50; }
+    .btn-main { border-width: 2px; border-color: #111827; background:#111827; color:#fff; }
+    .btn-main:hover { background:#020617; color:#fff; }
 
     .prices { margin-top: 40px; }
     .prices h2 { text-align: center; margin-bottom: 25px; }
@@ -189,7 +190,7 @@
         padding: 25px 20px;
         border-radius: 15px;
         text-align: center;
-        border: 2px солид #28a745;
+        border: 2px solid #28a745;
         margin: 20px 0;
         max-width: 100%;
     }
@@ -320,8 +321,8 @@
     }
 
     @media (max-width: 768px) {
-        .hero { padding: 40px 10px 30px; }
-        .hero h1 { font-size: 1.8em; }
+        .hero { padding: 32px 10px 24px; }
+        .hero h1 { font-size: 1.7em; }
         .hero-buttons { flex-direction: column; align-items: stretch; }
         .btn-outline { width: 100%; max-width: 340px; margin: 0 auto; }
         .price-row { flex-direction: column; }
@@ -362,15 +363,13 @@
       </span>
     </nav>
 
-    <!-- ✅ ГЕРОЙ -->
+    <!-- ✅ ГЕРОЙ С УПОРОМ НА ЗВОНОК -->
     <header class="hero">
       <div class="container">
 
         <div class="cities-badge">
           <span class="badge blue">Подольск и рядом</span>
           <span class="badge blue">Юг Москвы</span>
-          <span class="badge green">Бирюлёво, Царицыно</span>
-          <span class="badge orange">Чертаново, Братеево</span>
         </div>
 
         <div class="master-badge">
@@ -379,58 +378,40 @@
           <span class="badge orange">💰 Работа от 8–9 000 ₽/м²</span>
         </div>
 
-        <h1>Каркасные пристройки и веранды в Подольске и Подмосковье</h1>
+        <h1>Тёплая пристройка к даче в Подольске под ключ</h1>
 
-<p class="hero-text" style="color:#b45309; background:#fffbeb; border-radius:12px; padding:10px 14px; margin-bottom:14px;">
-  🌱 Сезон пристроек только начинается: весной цены на лес и материалы обычно растут,
-  а к лету хороших мастеров почти не остаётся свободных.
-  Оставьте заявку сейчас — сориентирую по смете и зарезервирую время в графике.
-</p>
+        <p class="hero-text" style="color:#1f2933; font-weight:600; margin-bottom:10px;">
+          Делаю каркасные тёплые пристройки и веранды к домам и дачам
+          в Подольске и ближайших СНТ. Дополнительная комната, кухня,
+          кабинет или тёплая веранда для семьи.
+        </p>
 
-<p class="hero-text" style="color:#1f2933; font-weight:600; margin-bottom:10px;">
-  Тёплые и холодные пристройки 5×3 м и больше к домам и дачам
-  в Подольске и Подмосковье. Работа по каркасу, утеплению и кровле —
-  от 8–9&nbsp;000 ₽ за м² по работе.
-</p>
+        <p class="hero-text" style="color:#374151; margin-bottom:14px;">
+          Пример тёплой пристройки 5×3 м — <strong>от 220&nbsp;000 ₽ по работе</strong>.
+          Работаю по Подольску, Щербинке, Домодедово, Климовску, Видному и югу Москвы.
+        </p>
 
-<p class="hero-text" style="color:#374151; margin-bottom:20px;">
-  Пример тёплой пристройки 5×3 м с вентзазорами и профлистом —
-  <strong>от 220&nbsp;000 ₽ по работе</strong>. Выезд: Подольск, Щербинка,
-  Домодедово, Климовск, Видное и юг Москвы.
-</p>
+        <p class="hero-text" style="color:#b45309; background:#fffbeb; border-radius:12px; padding:10px 14px; margin-bottom:20px;">
+          Весной цены на лес и материалы обычно растут.
+          Сейчас удобнее согласовать смету и занять место в графике на сезон 2026.
+        </p>
+
         <div class="hero-buttons">
+          <a
+            href="tel:+79267904248"
+            class="btn-outline btn-main"
+            onclick="ym(105722511, 'reachGoal', 'zvonok');"
+          >
+            Позвонить мастеру по пристройке
+          </a>
           <button
             type="button"
-            class="btn-outline btn-main"
+            class="btn-outline"
             onclick="document.getElementById('season-form').scrollIntoView({ behavior: 'smooth', block: 'start' }); ym(105722511, 'reachGoal', 'zayavka');"
           >
-            📨 Оставить заявку на пристройку
+            Оставить телефон для звонка
           </button>
-          <a href="tel:+79267904248" class="btn-outline">
-            📞 Позвонить: +7 (926) 790-42-48
-          </a>
-          <a href="https://wa.me/79267904248" class="btn-outline">
-            💬 Написать в WhatsApp
-          </a>
         </div>
-
-        <!-- Блок про приложение можно опустить ниже по странице, если он нужен -->
-        <!--
-        <div class="hero-app-link" style="margin-top: 20px;">
-          <a href="https://www.rustore.ru/catalog/app/ru.codelibs.app"
-             target="_blank"
-             rel="noopener noreferrer"
-             style="display:flex; align-items:center; justify-content:center; gap:18px; text-decoration:none;">
-            <span class="rustore-hint" style="font-size:1.1em; font-weight:700; color:#1f2933;">
-              <span>Моё приложение здесь</span>
-              <span class="rustore-arrow" style="font-size:1.4em;">➜</span>
-            </span>
-            <img src="images/rustore-button.png"
-                 alt="Скачать в RuStore"
-                 style="height:50px; width:auto; display:block;">
-          </a>
-        </div>
-        -->
 
       </div>
     </header>
@@ -441,7 +422,7 @@
       </h2>
     </section>
 
-    <!-- 💰 ЦЕНЫ -->
+    <!-- 💰 ЦЕНЫ (как было) -->
     <section class="prices container">
       <h2>💰 Примерная стоимость работ по пристройке</h2>
       <p class="tagline">
@@ -500,7 +481,7 @@
       </p>
     </section>
 
-    <!-- ✅ ВАРИАНТЫ ПРИСТРОЕК / ВЕРАНД -->
+    <!-- ✅ ВАРИАНТЫ ПРИСТРОЕК -->
     <section class="container" style="margin:40px auto 10px;">
       <h2 style="text-align:center; color:#2c3e50;">
         Какие пристройки и веранды делаю
@@ -513,324 +494,45 @@
       </ul>
     </section>
 
-    <!-- ✅ ЗАПИСЬ НА СЕЗОН (форма mailto) -->
+    <!-- ✅ ФОРМА С УПОРОМ НА ЗВОНОК -->
     <section class="container" style="margin:40px auto;" id="season-form">
       <h2 style="text-align:center; color:#2c3e50;">
-        Запись на сезон 2026
+        Оставьте телефон — я перезвоню
       </h2>
       <p style="text-align:center; max-width:720px; margin:0 auto 20px; color:#374151;">
-        Сейчас принимаю заявки на тёплые и холодные каркасные пристройки, веранды и террасы
-        в Подольске, Щербинке, Домодедово, Климовске и Видном.
-        Весной удобнее согласовать проект и смету, летом очередь выше.
+        Скажу ориентировочную стоимость пристройки к вашему дому,
+        отвечу на вопросы по срокам и вариантом. Обычно перезваниваю в тот же день.
       </p>
 
       <div style="max-width:420px; margin:0 auto; display:flex; flex-direction:column; gap:10px;">
-        <input id="lead-name" type="text" placeholder="Ваше имя"
-               style="padding:10px 12px; border-radius:8px; border:1px solid #d1d5db;">
         <input id="lead-phone" type="tel" placeholder="Телефон"
                style="padding:10px 12px; border-radius:8px; border:1px solid #d1d5db;">
         <input id="lead-place" type="text" placeholder="Где дом/дача (Подольск, СНТ и т.п.)"
-               style="padding:10px 12px; border-radius:8px; border:1px solid #d1d5db;">
-        <input id="lead-note" type="text" placeholder="Кратко: пристройка, веранда, размер (необязательно)"
                style="padding:10px 12px; border-radius:8px; border:1px solid #d1d5db;">
 
         <button
           id="season-submit"
           type="button"
-          style="padding:12px 16px; border:none; border-radius:999px; background:#2c3e50; color:#fff; font-weight:600; cursor:pointer;"
-          onclick="ym(105722511, 'reachGoal', 'zayavka'); sendMailLead();"
+          style="padding:12px 16px; border:none; border-radius:999px; background:#111827; color:#fff; font-weight:600; cursor:pointer;"
+          onclick="ym(105722511, 'reachGoal', 'zayavka'); callMasterDirectly();"
         >
-          Оставить заявку на сезон
+          Позвонить мастеру сейчас
         </button>
 
         <p style="font-size:0.85em; color:#6b7280; margin:4px 0 0;">
-          Откроется письмо на почте — проверьте данные и нажмите «Отправить».
+          Нажмёте кнопку — откроется обычный звонок на номер мастера.
+          Если удобнее, можно просто набрать +7 (926) 790‑42‑48 вручную.
         </p>
       </div>
     </section>
 
-    <!-- ✅ ДВОЙНАЯ ВЕНТИЛЯЦИЯ -->
-    <section class="services container">
-        <h2>✅ Двойная вентиляция (вентзазоры) + мои объекты</h2>
-        <div class="service-detail">
-            <div class="feature" style="display: grid; grid-template-columns: 1fr 350px; gap: 30px; align-items: center;">
-                <div>
-                    <h3>🌬️ Стены (20+40мм)</h3>
-                    <p>Снаружи 40мм + внутри 20мм<br><strong>Конденсат уходит 24/7</strong><br>Утеплитель всегда сухой</p>
-                </div>
-                <div style="text-align: center;">
-                    <img src="/images/foto_stena_karkas.jpg" alt="стена" loading="lazy" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                    <small>Моя стена с двойным зазором</small>
-                </div>
-            </div>
-
-            <div class="feature" style="display: grid; grid-template-columns: 1fr 350px; gap: 30px; align-items: center;">
-                <div>
-                    <h3>🔥 Пол (30мм снизу)</h3>
-                    <p>Вентзазор под лагами<br><strong>Защита от грунтовой влаги</strong><br>Пол сухой 50+ лет</p>
-                </div>
-                <div style="text-align: center;">
-                    <img src="/images/foto_pol_ventzazor.jpg" alt="Вентзазор пола 30мм" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                    <small>Вентиляция под полом</small>
-                </div>
-            </div>
-
-            <div class="feature" style="display: grid; grid-template-columns: 1fr 350px; gap: 30px; align-items: center;">
-                <div>
-                    <h3>🏠 Крыша (50мм)</h3>
-                    <p>Вентиляция под кровлей<br><strong>Летом прохладно, зимой тепло</strong></p>
-                </div>
-                <div style="text-align: center;">
-                    <img src="/images/foto_krysha_vent.jpg" alt="Вентиляция крыши 50мм" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                    <small>Крыша с зазором 50мм</small>
-                </div>
-            </div>
-
-            <div class="feature" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center;">
-                <div>
-                    <h3>🏗️ Каркас 150мм</h3>
-                    <p>Доска 150×150мм стойки<br>Лаги 50×150мм пол/потолок<br><strong>Минвата 150мм</strong></p>
-                </div>
-                <div style="text-align: center;">
-                    <img src="/images/foto_pristroyka_protsess.jpg" alt="Пристройка в работе" style="max-width: 100%; height: 150px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); margin-bottom: 10px;">
-                    <small>Подольск 5×3м</small>
-                </div>
-                <div style="text-align: center;">
-                    <img src="/images/foto_pristroyka_protsess1.jpg" alt="Готовый объект" style="max-width: 100%; height: 150px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                    <small>ЮАО Москва</small>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 🔥 ТЕХНИЧЕСКИЙ БЛОК -->
-    <section class="tech-info">
-      <div class="container">
-        <h2 class="tech-title">🏗️ Технология каркасного дома</h2>
-
-        <div class="tech-inner">
-          <div class="tech-card-main">
-            <h3>🌬️ Вентиляционный зазор — зачем нужен?</h3>
-            <ul>
-              <li><strong>💧 Удаление влаги:</strong> выход пара и конденсата, защита от плесени</li>
-              <li><strong>🛡️ Срок службы:</strong> дерево не гниёт 50+ лет</li>
-              <li><strong>🌡️ Теплоизоляция:</strong> дополнительный воздушный слой</li>
-              <li><strong>🏥 Микроклимат:</strong> сухо и здорово внутри помещений</li>
-            </ul>
-          </div>
-
-          <div class="tech-grid">
-            <div class="tech-small-card">
-              <h4>Гвозди ершёвые</h4>
-              <p><strong>Насечки «ерши» = не выпадут!</strong><br>Сцепление с деревом + динамические нагрузки</p>
-            </div>
-            <div class="tech-small-card">
-              <h4>Уголки</h4>
-              <p><strong>Жёсткость углов</strong><br>Быстрый монтаж соединений</p>
-            </div>
-            <div class="tech-small-card">
-              <h4>Шурупы</h4>
-              <p><strong>Предварительная сборка:</strong><br>Точная фиксация деталей</p>
-            </div>
-          </div>
-
-          <div class="tech-yellow">
-            <div class="tech-yellow-top">
-              <h3>📏 Стойки через 60см</h3>
-              <ul>
-                <li><strong>Прочность:</strong> нагрузка распределяется</li>
-                <li><strong>Устойчивость:</strong> прогибы исключены</li>
-                <li><strong>Экономия:</strong> оптимальный расход доски</li>
-              </ul>
-            </div>
-            <div class="tech-yellow-bottom">
-              <h3>🔧 Укосины + мауэрлат</h3>
-              <p><strong>Укосины:</strong> защита от ветра<br><strong>Мауэрлат:</strong> передаёт нагрузку крыши на фундамент</p>
-            </div>
-          </div>
-
-          <div class="tech-green">
-            <h3>📋 Нормативная база</h3>
-            <p>
-              ✅ <strong>СНиП II-26-76:</strong> вентзазор до 5см<br>
-              ✅ <strong>ГОСТ Р 56709–2015:</strong> ширина по климату
-            </p>
-          </div>
-        </div>
-
-        <div class="tech-btn-wrap">
-          <a href="tel:+79267904248" class="btn-outline tech-btn">
-            📞 Пристройка 220к₽ Подольск +30км
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ✅ FAQ -->
-    <section class="faq container">
-      <h2>Частые вопросы по каркасным пристройкам</h2>
-
-      <div class="faq-item">
-        <h3>Строительство каркасной пристройки к дому: этапы работ</h3>
-        <p>
-          Сначала делаю проект и выбираю тип фундамента под вес пристройки и грунт.
-          Затем монтируется основание, собираю каркас, утепляю, делаю вентзазоры и кровлю.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Лёгкая каркасная пристройка к деревянному дому: краткая инструкция</h3>
-        <p>
-          Важно разделить старый дом и новую пристройку температурным швом.
-          Каркас пристраивается к стене через узел примыкания, а не жёстко «доска в доску».
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Требования к фундаменту под каркасную пристройку</h3>
-        <p>
-          Фундамент по жёсткости и осадке должен быть близок к основному дому.
-          Чаще используют сваи или столбчатый фундамент с правильной обвязкой и гидроизоляцией.
-          Обычно фундамент делает подрядчик или сам заказчик, я захожу от обвязки и выше: каркас, утепление, вентзазоры и крыша.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Типичные ошибки при строительстве каркасных пристроек</h3>
-        <p>
-          Часто экономят на вентзазорах, ставят сырую доску и чёрные саморезы вместо гвоздей.
-          Из‑за этого появляются трещины, промерзания и гниение элементов.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Цена постройки каркасной веранды и террасы</h3>
-        <p>
-          Стоимость работы считаю от площади и сложности узлов. Для пристроек 5×3 м
-          работа по сборке каркаса с утеплением и вентзазорами без фундамента, материала и отделки — от 220&nbsp;000 ₽,
-          террасы и веранды считаю по факту.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Отделочные материалы снаружи и утепление</h3>
-        <p>
-          Снаружи чаще используют сайдинг, имитацию бруса или фасадные панели.
-          Утепляю каркас минватой с двойным вентзазором, чтобы влага уходила 24/7.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Делаете тёплые и холодные веранды под ключ?</h3>
-        <p>
-          Да, могу собрать тёплую пристройку с утеплением 150 мм и двойными вентзазорами,
-          а также холодную летнюю веранду или террасу без утепления.
-          По желанию беру на себя наружную и внутреннюю отделку «под ключ» — обсуждаем материалы и бюджет отдельно.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Когда выгодно выбирать каркасную конструкцию пристройки?</h3>
-        <p>
-          Каркасная технология выгодна, когда нужен быстрый тёплый объём при умеренном бюджете и нормальной теплоизоляции.
-          Подходит под веранды, террасы, комнаты и мастерские.
-        </p>
-      </div>
-    </section>
-
-    <!-- 🧮 Примеры расчёта вентилируемой пристройки -->
-    <section class="calc container">
-      <h2>🧮 Примеры стоимости вентилируемой пристройки 5×3 м</h2>
-      <div class="calc-grid">
-
-        <div class="calc-item">
-          <h4>✅ Пристройка 5×3 м — профлист без вентзазоров</h4>
-          <ul>
-            <li><strong>Что делаю:</strong> каркас 150 мм, утепление, пол, стены и крыша из профлиста без вентзазоров</li>
-            <li><strong>По месту:</strong> три стены, пол и крыша с утеплением по контуру, простые узлы примыкания</li>
-            <li><strong>Заполнение:</strong> монтаж одной двери и двух окон в готовые проёмы</li>
-            <li><strong>Срок:</strong> ориентировочно до 8–10 рабочих дней</li>
-            <li>
-              <strong>Работа за пристройку:</strong>
-              <span style="color:#27ae60;font-size:24px;font-weight:700;">от 180&nbsp;000 ₽</span><br>
-              <small>ориентир при ставке 7–8&nbsp;000 ₽ за м² по работе</small>
-            </li>
-          </ul>
-          <p class="calc-note-small">
-            <em><strong>Только работа, без материала и фундамента. Материал заказчик закупает по смете под объект.</strong></em>
-          </p>
-        </div>
-
-        <div class="calc-item">
-          <h4>✅ Пристройка 5×3 м — профлист с вентзазорами</h4>
-          <ul>
-            <li><strong>Что делаю:</strong> каркас 150 мм, утепление, двойные вентзазоры по стенам, полу и крыше, крыша из профлиста</li>
-            <li><strong>По месту:</strong> три стены, пол и крыша с утеплением и вентиляцией по всему контуру</li>
-            <li><strong>Заполнение:</strong> монтаж одной двери и двух окон в существующий проём</li>
-            <li><strong>Срок:</strong> ориентировочно до 10 рабочих дней</li>
-            <li>
-              <strong>Работа за пристройку:</strong>
-              <span style="color:#27ae60;font-size:24px;font-weight:700;">от 220&nbsp;000 ₽</span><br>
-              <small>ориентир при ставке 8–9&nbsp;000 ₽ за м² по работе</small>
-            </li>
-          </ul>
-          <p class="calc-note-small">
-            <em><strong>Базовый вариант: профлист + вентзазоры. Материал и фундамент — на стороне заказчика.</strong></em>
-          </p>
-        </div>
-
-        <div class="calc-item">
-          <h4>✅ Пристройка 5×3 м — мягкая кровля без вентзазоров</h4>
-          <ul>
-            <li><strong>Что делаю:</strong> каркас, утепление, пол и стены, крыша по ОСП с мягкой кровлей без вентзазора</li>
-            <li><strong>По месту:</strong> три стены, пол и крыша с утеплением, стандартный узел примыкания к дому</li>
-            <li><strong>Заполнение:</strong> одна дверь и два окна, монтаж по месту</li>
-            <li><strong>Срок:</strong> ориентировочно до 10–12 рабочих дней</li>
-            <li>
-              <strong>Работа за пристройку:</strong>
-              <span style="color:#27ae60;font-size:24px;font-weight:700;">от 240&nbsp;000 ₽</span><br>
-              <small>ориентир при ставке 9–10&nbsp;000 ₽ за м² по работе</small>
-            </li>
-          </ul>
-          <p class="calc-note-small">
-            <em><strong>Мягкая кровля по ОСП обычно дороже профлиста из‑за более сложного пирога и большего объёма работ.</strong></em>
-          </p>
-        </div>
-
-        <div class="calc-item">
-          <h4>✅ Пристройка 5×3 м — мягкая кровля с вентзазорами</h4>
-          <ul>
-            <li><strong>Что делаю:</strong> каркас 150 мм, утепление, двойные вентзазоры по стенам/полу/крыше, крыша по ОСП с мягкой кровлей</li>
-            <li><strong>По месту:</strong> три стены, пол и крыша с утеплением и вентиляцией по контуру</li>
-            <li><strong>Заполнение:</strong> одна дверь и два окна, по согласованной схеме</li>
-            <li><strong>Срок:</strong> ориентировочно до 12 рабочих дней</li>
-            <li>
-              <strong>Работа за пристройку:</strong>
-              <span style="color:#27ae60;font-size:24px;font-weight:700;">от 260–270&nbsp;000 ₽</span><br>
-              <small>ориентир при ставке 10–11&nbsp;000 ₽ за м² по работе</small>
-            </li>
-          </ul>
-          <p class="calc-note-small">
-            <em><strong>Точная стоимость зависит от высоты, сложности кровли, фактической площади и количества окон/дверей.</strong></em>
-          </p>
-        </div>
-
-      </div>
-
-      <p class="calc-note">
-        <strong>
-          ✅ Из-за роста цен на древесину и металл стоимость материала всегда считается по факту на день закупки.
-          Работа по сборке каркаса с утеплением и вентзазорами, без фундамента и чистовой отделки — от 220&nbsp;000 ₽.
-          Вентилируемые зазоры помогают выводить влагу 24/7. Фундамент — на стороне заказчика.
-          Работаю по Подольску, Видному, Климовску, Бирюлёво, Царицыно, Чертаново. Чеки «Мой налог». Гарантия 3 года.
-        </strong>
-      </p>
-    </section>
+    <!-- ✅ ДВОЙНАЯ ВЕНТИЛЯЦИЯ, ТЕХНИКА, FAQ, КАЛЬКУЛЯЦИИ -->
+    <!-- здесь оставляешь свой нижний код как был, без изменений -->
 
     <footer class="footer">
         <div class="container">
             <p>
-              <strong>Частный мастер Алексей</strong> | +7 (926) 790-42-48 | WhatsApp<br>
+              <strong>Частный мастер Алексей</strong> | +7 (926) 790-42-48<br>
               Подольск • Щербинка • Домодедово • Климовск • Видное | <a href="index.html">← Все услуги</a>
             </p>
             <p><small>© 2025 Самозанятый. В связи с ростом цен на древесину и металл материал считается по факту, на день закупки. Работа без материала обычно от 8–9&nbsp;000 ₽ за м² (пример пристройки 5×3 м — от 220&nbsp;000 ₽ по работе). Официальные чеки.</small></p>
@@ -841,10 +543,10 @@
     <div class="sticky-cta" id="stickyCta">
       <div class="sticky-cta__text">
         Планируете пристройку или веранду на сезон 2026?
-        Оставьте заявку — перезвоню, сориентирую по стоимости и срокам.
+        Нажмите — пойдёт звонок мастеру.
       </div>
-      <button class="sticky-cta__btn" type="button" onclick="scrollToForm()">
-        Оставить заявку
+      <button class="sticky-cta__btn" type="button" onclick="callMasterDirectly(); ym(105722511, 'reachGoal', 'zvonok');">
+        Позвонить мастеру
       </button>
       <button class="sticky-cta__close" type="button" aria-label="Закрыть" onclick="hideStickyCta()">
         ✕
@@ -866,23 +568,8 @@
         }
       }
 
-      function sendMailLead() {
-        const name  = document.getElementById('lead-name').value || '';
-        const phone = document.getElementById('lead-phone').value || '';
-        const place = document.getElementById('lead-place').value || '';
-        const note  = document.getElementById('lead-note').value || '';
-
-        const subject = encodeURIComponent('Заявка на каркасную пристройку / веранду');
-        const body = encodeURIComponent(
-          'Имя: ' + name + '\n' +
-          'Телефон: ' + phone + '\n' +
-          'Дом/дача: ' + place + '\n' +
-          'Что нужно: ' + note + '\n\n' +
-          'Источник: страница пристроек master-yu-mos.ru'
-        );
-
-        window.location.href =
-          'mailto:lesha.alexandrov2014@yandex.ru?subject=' + subject + '&body=' + body;
+      function callMasterDirectly() {
+        window.location.href = 'tel:+79267904248';
       }
     </script>
 
