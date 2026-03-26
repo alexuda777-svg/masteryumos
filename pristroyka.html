@@ -64,7 +64,6 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Condensed:wght@300;700&display=swap" rel="stylesheet">
 
-    <!-- ✅ ВНУТРЕННИЙ CSS -->
     <style>
     * { box-sizing: border-box; }
     body {
@@ -84,21 +83,6 @@
     .hero { padding: 40px 0 30px; }
     .hero h1 { font-size: 2.1em; text-align: center; margin: 10px 0 15px; color: #111827; }
     .hero-text { max-width: 800px; margin: 0 auto 18px; text-align: center; }
-
-    .cities-badge, .master-badge {
-        display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-bottom: 6px;
-    }
-    .badge {
-        display: inline-block;
-        padding: 4px 10px;
-        border-radius: 999px;
-        font-size: 0.75em;
-        background: #ecf0f1;
-        color: #2c3e50;
-    }
-    .badge.blue   { background: #ecf5ff; }
-    .badge.green  { background: #e9f7ef; }
-    .badge.orange { background: #fff5e6; }
 
     .hero-buttons {
         display: flex;
@@ -206,9 +190,6 @@
         line-height: 1.4;
     }
 
-    .tech-btn-wrap { text-align: center; margin-top: 40px; }
-    .tech-btn { font-size: 1.2em; padding: 18px 40px; }
-
     .faq {
         margin: 40px auto 60px;
     }
@@ -282,7 +263,6 @@
         margin: 4px 0 0;
     }
 
-    /* Липкая плашка */
     .sticky-cta {
         position: fixed;
         left: 0;
@@ -345,7 +325,6 @@
     </style>
 </head>
 <body>
-    <!-- ✅ ХЛЕБНЫЕ КРОШКИ -->
     <nav class="breadcrumbs" aria-label="Хлебные крошки"
           itemscope itemtype="https://schema.org/BreadcrumbList">
       <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -363,37 +342,28 @@
       </span>
     </nav>
 
-    <!-- ✅ ГЕРОЙ С УПОРОМ НА ЗВОНОК -->
+    <!-- 🔷 НОВЫЙ ПЕРВЫЙ ЭКРАН -->
     <header class="hero">
       <div class="container">
 
-        <div class="cities-badge">
-          <span class="badge blue">Подольск и рядом</span>
-          <span class="badge blue">Юг Москвы</span>
-        </div>
-
-        <div class="master-badge">
-          <span class="badge blue">👨‍🔧 Частный мастер Алексей</span>
-          <span class="badge green">✅ Самозанятый, официальные чеки</span>
-          <span class="badge orange">💰 Работа от 8–9 000 ₽/м²</span>
-        </div>
-
-        <h1>Тёплая пристройка к даче в Подольске под ключ</h1>
+        <h1>Тёплая пристройка к даче в Подольске и ближайших СНТ под ключ</h1>
 
         <p class="hero-text" style="color:#1f2933; font-weight:600; margin-bottom:10px;">
-          Делаю каркасные тёплые пристройки и веранды к домам и дачам
-          в Подольске и ближайших СНТ. Дополнительная комната, кухня,
-          кабинет или тёплая веранда для семьи.
+          Я, Алексей, делаю каркасные тёплые пристройки и веранды к домам и дачам
+          в Подольске и ближайших СНТ. Можно добавить комнату, кухню, кабинет
+          или тёплую веранду для семьи.
         </p>
 
         <p class="hero-text" style="color:#374151; margin-bottom:14px;">
           Пример тёплой пристройки 5×3 м — <strong>от 220&nbsp;000 ₽ по работе</strong>.
-          Работаю по Подольску, Щербинке, Домодедово, Климовску, Видному и югу Москвы.
+          Работаю без материала, официально, с чеками. Выезжаю в Подольск, Щербинку,
+          Домодедово, Климовск, Видное и на юг Москвы.
         </p>
 
         <p class="hero-text" style="color:#b45309; background:#fffbeb; border-radius:12px; padding:10px 14px; margin-bottom:20px;">
-          Весной цены на лес и материалы обычно растут.
-          Сейчас удобнее согласовать смету и занять место в графике на сезон 2026.
+          Позвоните мне — я смогу подъехать сегодня или завтра, посмотреть ваш дом
+          и бесплатно подсказать, можно ли сделать пристройку так, как вы планируете,
+          и во сколько это примерно обойдётся.
         </p>
 
         <div class="hero-buttons">
@@ -402,7 +372,7 @@
             class="btn-outline btn-main"
             onclick="ym(105722511, 'reachGoal', 'zvonok');"
           >
-            Позвонить мастеру по пристройке
+            Позвонить Алексею, обсудить пристройку
           </a>
           <button
             type="button"
@@ -422,86 +392,17 @@
       </h2>
     </section>
 
-    <!-- 💰 ЦЕНЫ (как было) -->
-    <section class="prices container">
-      <h2>💰 Примерная стоимость работ по пристройке</h2>
-      <p class="tagline">
-        Ориентировочные цены за работу без материала. Точно считаю после замера и схемы, по фактической площади и узлам.
-      </p>
-      <div class="price-row">
-        <div class="price-item">
-          <div class="price-item__head">
-            <span class="price-item__title">🏘️ Пристройка ~15 м² (5×3 м)</span>
-            <span class="price-item__value">от 220 000 ₽</span>
-          </div>
-          <p class="price-item__text">
-            Каркас, утепление, вентзазоры, пол, стены и крыша из профлиста.
-            2 окна и 1 дверь. Средняя ставка по работе ≈ 8–9&nbsp;000 ₽ за м².
-          </p>
-        </div>
+    <!-- 💰 ЦЕНЫ, ТЕХНОЛОГИЯ, FAQ, КАЛЬКУЛЯТОР – оставляешь как у себя (можно просто скопировать из старой версии) -->
 
-        <div class="price-item">
-          <div class="price-item__head">
-            <span class="price-item__title">🌇 Пристройка ~20–24 м² (6×4 м)</span>
-            <span class="price-item__value">от 320–360 000 ₽</span>
-          </div>
-          <p class="price-item__text">
-            Более крупная пристройка, больше узлов, двускатная крыша, больше окон.
-            Цена зависит от схемы, высоты и сложности кровли.
-          </p>
-        </div>
-
-        <div class="price-item">
-          <div class="price-item__head">
-            <span class="price-item__title">📍 Выезд</span>
-            <span class="price-item__value">Подольск + ЮАО</span>
-          </div>
-          <p class="price-item__text">
-            Подольск, Щербинка, Домодедово, Климовск, Видное и ближайшие посёлки по договорённости.
-          </p>
-        </div>
-      </div>
-
-      <p class="tagline">
-        Тёплые каркасные пристройки с утеплением 150 мм и двойными вентзазорами считаю из расчёта 8–9&nbsp;000 ₽ за м² по работе.
-        Холодные летние веранды и террасы без утепления или с облегчённым утеплением обычно дешевле —
-        цену считаю по схеме и размерам.
-      </p>
-    </section>
-
-    <section class="seo-text container">
-      <p>
-        Вентилируемая каркасная пристройка — это тёплый объём с продуманными зазорами по стенам, полу и крыше,
-        которые помогают выводить влагу и уменьшают риск конденсата и гниения конструкции.
-      </p>
-      <p>
-        По работе ориентир: <strong>8–9&nbsp;000 ₽ за м²</strong> для варианта с профлистом и вентзазорами.
-        Для мягкой кровли по ОСП работа обычно дороже примерно на 2&nbsp;000 ₽ за м² из‑за более сложного пирога и большего объёма операций,
-        точную цену считаю после схемы.
-      </p>
-    </section>
-
-    <!-- ✅ ВАРИАНТЫ ПРИСТРОЕК -->
-    <section class="container" style="margin:40px auto 10px;">
-      <h2 style="text-align:center; color:#2c3e50;">
-        Какие пристройки и веранды делаю
-      </h2>
-      <ul style="max-width:780px; margin:0 auto; padding-left:18px; color:#374151;">
-        <li>Тёплые каркасные пристройки с утеплением 150 мм и двойными вентзазорами (комнаты, мастерские, хозблоки).</li>
-        <li>Холодные летние веранды и террасы без утепления или с облегчённым утеплением.</li>
-        <li>Варианты <strong>«под ключ»</strong> с наружной и внутренней отделкой по согласованию.</li>
-        <li>Пристройки 5×3 м и больше для дач и частных домов.</li>
-      </ul>
-    </section>
-
-    <!-- ✅ ФОРМА С УПОРОМ НА ЗВОНОК -->
+    <!-- 🔷 ФОРМА ПОД ЗВОНОК -->
     <section class="container" style="margin:40px auto;" id="season-form">
       <h2 style="text-align:center; color:#2c3e50;">
-        Оставьте телефон — я перезвоню
+        Оставьте телефон — я перезвоню и подъеду
       </h2>
       <p style="text-align:center; max-width:720px; margin:0 auto 20px; color:#374151;">
-        Скажу ориентировочную стоимость пристройки к вашему дому,
-        отвечу на вопросы по срокам и вариантом. Обычно перезваниваю в тот же день.
+        Я сам перезвоню, уточню, что вы хотите сделать, и договоримся о времени выезда.
+        Обычно могу подъехать сегодня или завтра, чтобы на месте оценить пристройку
+        и назвать ориентировочную стоимость.
       </p>
 
       <div style="max-width:420px; margin:0 auto; display:flex; flex-direction:column; gap:10px;">
@@ -514,39 +415,28 @@
           id="season-submit"
           type="button"
           style="padding:12px 16px; border:none; border-radius:999px; background:#111827; color:#fff; font-weight:600; cursor:pointer;"
-          onclick="ym(105722511, 'reachGoal', 'zayavka'); callMasterDirectly();"
+          onclick="ym(105722511, 'reachGoal', 'zayavka'); callMeNow();"
         >
-          Позвонить мастеру сейчас
+          Жду звонка от Алексея
         </button>
 
         <p style="font-size:0.85em; color:#6b7280; margin:4px 0 0;">
-          Нажмёте кнопку — откроется обычный звонок на номер мастера.
-          Если удобнее, можно просто набрать +7 (926) 790‑42‑48 вручную.
+          Нажмёте кнопку — откроется звонок на мой номер. Если удобнее,
+          можете сразу набрать +7 (926) 790‑42‑48.
         </p>
       </div>
     </section>
 
-    <!-- ✅ ДВОЙНАЯ ВЕНТИЛЯЦИЯ, ТЕХНИКА, FAQ, КАЛЬКУЛЯЦИИ -->
-    <!-- здесь оставляешь свой нижний код как был, без изменений -->
+    <!-- 🔷 НИЖНИЕ БЛОКИ – скопируй сюда свои секции:
+         ✅ ДВОЙНАЯ ВЕНТИЛЯЦИЯ, ТЕХБЛОК, FAQ, КАЛЬКУЛЯТОР, FOOTER
+         из прежней версии страницы без изменений по разметке. -->
 
-    <footer class="footer">
-        <div class="container">
-            <p>
-              <strong>Частный мастер Алексей</strong> | +7 (926) 790-42-48<br>
-              Подольск • Щербинка • Домодедово • Климовск • Видное | <a href="index.html">← Все услуги</a>
-            </p>
-            <p><small>© 2025 Самозанятый. В связи с ростом цен на древесину и металл материал считается по факту, на день закупки. Работа без материала обычно от 8–9&nbsp;000 ₽ за м² (пример пристройки 5×3 м — от 220&nbsp;000 ₽ по работе). Официальные чеки.</small></p>
-        </div>
-    </footer>
-
-    <!-- Липкая плашка заявки -->
     <div class="sticky-cta" id="stickyCta">
       <div class="sticky-cta__text">
-        Планируете пристройку или веранду на сезон 2026?
-        Нажмите — пойдёт звонок мастеру.
+        Планируете пристройку или веранду? Нажмите — пойдёт звонок мне.
       </div>
-      <button class="sticky-cta__btn" type="button" onclick="callMasterDirectly(); ym(105722511, 'reachGoal', 'zvonok');">
-        Позвонить мастеру
+      <button class="sticky-cta__btn" type="button" onclick="callMeNow(); ym(105722511, 'reachGoal', 'zvonok');">
+        Позвонить Алексею
       </button>
       <button class="sticky-cta__close" type="button" aria-label="Закрыть" onclick="hideStickyCta()">
         ✕
@@ -554,21 +444,12 @@
     </div>
 
     <script>
-      function scrollToForm() {
-        const el = document.getElementById('season-form');
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }
-
       function hideStickyCta() {
         const bar = document.getElementById('stickyCta');
-        if (bar) {
-          bar.style.display = 'none';
-        }
+        if (bar) bar.style.display = 'none';
       }
 
-      function callMasterDirectly() {
+      function callMeNow() {
         window.location.href = 'tel:+79267904248';
       }
     </script>
