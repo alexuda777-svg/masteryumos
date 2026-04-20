@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2026-04-20 03:41">
+  <shop>
+    <name>Частный мастер Алексей</name>
+    <company>Алексей Александров</company>
+    <url>https://master-yu-mos.ru/</url>
+    <email>lesha.alexandrov2014@yandex.ru</email>
+
+    <!-- СЕТ: к какому URL будут привязаны предложения -->
+    <sets>
+      <set id="pristroyka-podolsk">
+        <name>Пристройки и веранды в Подольске</name>
+        <url>https://master-yu-mos.ru/pristroyka.html</url>
+      </set>
+    </sets>
+
+    <offers>
+
+      <offer id="pristroyka-teplaya-podolsk" available="true">
+        <name>Тёплая каркасная пристройка к дому в Подольске под ключ</name>
+        <url>https://master-yu-mos.ru/pristroyka.html</url>
+        <category>Исполнители</category>
+        <!-- принадлежность оффера к сету -->
+        <sets>pristroyka-podolsk</sets>
+
+        <description><![CDATA[
+Тёплые каркасные пристройки к дому и даче в Подольске и ближайших СНТ. Делаю каркас, утепление, крышу, отделку. Электрику, отопление и водоснабжение делаю сам. Если по объекту нужен фундамент, его можно организовать отдельно через подрядчика. Пример пристройки 5×3 м — от 220 000 ₽ по работе без материала.
+        ]]></description>
+
+        <price from="true">220000</price>
+        <currencyId>RUR</currencyId>
+        <picture>https://master-yu-mos.ru/images/foto_pristroyka_protsess.jpg</picture>
+
+        <param name="Город">Подольск</param>
+        <param name="Регион">Московская область</param>
+        <param name="Тип услуги">Каркасная пристройка под ключ</param>
+        <param name="Исполнитель">Частный мастер</param>
+        <param name="Материал">Без материала</param>
+        <param name="Телефон">+7 (926) 790-42-48</param>
+      </offer>
+
+      <offer id="veranda-karkasnaya" available="true">
+        <name>Каркасная веранда к дому или даче</name>
+        <url>https://master-yu-mos.ru/pristroyka.html</url>
+        <category>Исполнители</category>
+        <sets>pristroyka-podolsk</sets>
+
+        <description><![CDATA[
+Каркасные веранды и закрытые пристройки к дому и даче. Можно сделать сезонный вариант или тёплую веранду с утеплением под более комфортное использование. Работаю по Подольску, Климовску, Домодедово, Видному и ближайшим СНТ.
+        ]]></description>
+
+        <currencyId>RUR</currencyId>
+        <picture>https://master-yu-mos.ru/images/foto_stena_karkas.jpg</picture>
+
+        <param name="Город">Подольск</param>
+        <param name="Регион">Московская область</param>
+        <param name="Тип услуги">Каркасная веранда</param>
+        <param name="Исполнитель">Частный мастер</param>
+        <param name="Телефон">+7 (926) 790-42-48</param>
+      </offer>
+
+      <offer id="rasshirenie-doma" available="true">
+        <name>Расширение дома каркасной пристройкой</name>
+        <url>https://master-yu-mos.ru/pristroyka.html</url>
+        <category>Исполнители</category>
+        <sets>pristroyka-podolsk</sets>
+
+        <description><![CDATA[
+Если нужно добавить к дому комнату, кухню, кабинет, мастерскую или тёплую пристройку для семьи, могу предложить каркасное расширение дома. Внутреннюю инженерку — электрику, отопление и водоснабжение — делаю сам. По фундаменту решение зависит от задачи и состояния объекта.
+        ]]></description>
+
+        <currencyId>RUR</currencyId>
+        <picture>https://master-yu-mos.ru/images/foto_pol_ventzazor.jpg</picture>
+
+        <param name="Город">Подольск</param>
+        <param name="Регион">Московская область</param>
+        <param name="Тип услуги">Расширение дома</param>
+        <param name="Исполнитель">Частный мастер</param>
+        <param name="Телефон">+7 (926) 790-42-48</param>
+      </offer>
+
+      <offer id="inzhenerka-v-pristroyke" available="true">
+        <name>Электрика, отопление и водоснабжение в пристройке</name>
+        <url>https://master-yu-mos.ru/pristroyka.html</url>
+        <category>Исполнители</category>
+        <sets>pristroyka-podolsk</sets>
+
+        <description><![CDATA[
+Внутреннюю инженерку в пристройке делаю сам: электрику, отопление и водоснабжение. Это удобно, когда нужно не просто построить каркас, а получить пристройку, которой можно пользоваться без поиска отдельных специалистов на каждый этап.
+        ]]></description>
+
+        <currencyId>RUR</currencyId>
+        <picture>https://master-yu-mos.ru/images/foto_krysha_vent.jpg</picture>
+
+        <param name="Город">Подольск</param>
+        <param name="Регион">Московская область</param>
+        <param name="Тип услуги">Инженерные работы</param>
+        <param name="Исполнитель">Частный мастер</param>
+        <param name="Телефон">+7 (926) 790-42-48</param>
+      </offer>
+
+      <offer id="fundament-cherez-podryadchika" available="true">
+        <name>Организация фундамента для пристройки</name>
+        <url>https://master-yu-mos.ru/pristroyka.html</url>
+        <category>Исполнители</category>
+        <sets>pristroyka-podolsk</sets>
+
+        <description><![CDATA[
+Если по объекту нужен фундамент под пристройку, могу организовать этот этап через подрядчика. Это удобно, когда заказчику нужен более цельный вариант работ, а не поиск отдельных исполнителей на каждый этап строительства.
+        ]]></description>
+
+        <currencyId>RUR</currencyId>
+        <picture>https://master-yu-mos.ru/images/foto_pristroyka_protsess.jpg</picture>
+
+        <param name="Город">Подольск</param>
+        <param name="Регион">Московская область</param>
+        <param name="Тип услуги">Фундамент для пристройки</param>
+        <param name="Исполнитель">Через подрядчика</param>
+        <param name="Телефон">+7 (926) 790-42-48</param>
+      </offer>
+
+    </offers>
+  </shop>
+</yml_catalog>
